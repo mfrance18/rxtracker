@@ -1,0 +1,38 @@
+.dialog {
+    min-width: 15rem;
+    min-height: 5rem;
+  }
+  
+  .container--login {
+    font-family: "Beatles", sans-serif;
+    word-spacing: 5px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+   
+  }
+  
+  
+  .register {
+    display: flex;
+    justify-content: center;
+  }
+
+/*   
+  .sign-in-button {
+    width: 200px;
+    height: 40px;
+    border-style: solid;
+    color: black;
+    background-color:lightskyblue;
+    margin-bottom: 10px;
+    
+    border-width: 1px;
+    font-size: 15px;
+    transition-duration: 0.4s;  
+    font-family: "Beatles", sans-serif;
+    word-spacing: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    margin-left: 150px;
+  } */
