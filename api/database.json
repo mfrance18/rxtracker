@@ -36,14 +36,6 @@
       "name": "Sunday"
     }
   ],
-  "medications": [
-    {
-      "id": 1,
-      "name": "Claritin",
-      "amount": 1,
-      "dosage": "200mg",
-      "instructions": "Take 1 every 24 hours"
-    }
-  ],
+  "medications": [],
   "dailyMedications": []
 }

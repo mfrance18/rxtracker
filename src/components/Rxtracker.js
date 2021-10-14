@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import { ApplicationViews } from "./ApplicationViews";
 import { NavBar } from "./nav/NavBar";
 
+
 export const RxTracker = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(sessionStorage.getItem("rxtracker_user") !== null)
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { addMedication } from "../../modules/MedicationManager";
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 export const MedicationForm = () => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
@@ -38,45 +39,44 @@ export const MedicationForm = () => {
 
     return (
         <>
-            <form>
+            <Form>
                 <h1>Add a Medication</h1>
-                <fieldset>
-                    <div>
-                        <label htmlFor="name">Medication Name: </label>
-                        <input type="text" id="name"  onChange={handleControlledInputChange} placeholder="Name of Medication" value={medication.name} />
-                    </div>
+                <FormGroup>
+                    <Label htmlFor="name">Medication Name: </Label>
+                    <Input type="text" id="name" onChange={handleControlledInputChange} placeholder="Name of Medication" value={medication.name} />
+                </FormGroup>
 
-                    <div>
-                        <label htmlFor="amount">Amount Per Day: </label>
-                        <select onChange={handleControlledInputChange} value={medication.amount} id="amount">
-                            <option value="0" disabled>Select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
+                <FormGroup>
+                    <Label htmlFor="amount">Amount Per Day: </Label>
+                    <Input type="select" onChange={handleControlledInputChange} value={medication.amount} id="amount">
+                        <option value="0" disabled>Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </Input>
+                </FormGroup>
 
-                    <div>
-                        <label htmlFor="dosage">Dosage: </label>
-                        <input type="text" id="dosage" onChange={handleControlledInputChange} placeholder="Dosage Amount" value={medication.dosage} />
-                    </div>
+                <FormGroup>
+                    <Label htmlFor="dosage">Dosage: </Label>
+                    <Input type="text" id="dosage" onChange={handleControlledInputChange} placeholder="Dosage Amount" value={medication.dosage} />
+                </FormGroup>
 
-                    <div>
-                        <label htmlFor="instructions">Instructions: </label>
-                        <input id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions}/>
-                    </div>
-                </fieldset>
-                <button className=""
+                <FormGroup>
+                    <Label htmlFor="instructions">Instructions: </Label>
+                    <Input id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions} />
+                </FormGroup>
+
+                <Button className=""
                     onClick={handleClickSaveMedication}>
                     Save Medication
-                </button>
-                <button className=""
-                onClick={handleCancelButton}>
-                Cancel
-            </button>
-            </form>
+                </Button>
+                <Button className=""
+                    onClick={handleCancelButton}>
+                    Cancel
+                </Button>
+            </Form >
         </>
     )
 }
