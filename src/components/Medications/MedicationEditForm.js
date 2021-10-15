@@ -34,7 +34,7 @@ export const MedicationEditForm = () => {
             id: medicationId,
             userId: medication.userId,
             name: medication.name,
-            amount: 1,
+            amount: medication.amount,
             dosage: medication.dosage,
             instructions: medication.instructions
         }

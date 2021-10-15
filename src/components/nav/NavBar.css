@@ -22,3 +22,7 @@ a.nav-link {
 a.nav-link:hover {
     color: lightgreen;
 }
+
+a.nav-link::backdrop {
+    color: lightgreen;
+}

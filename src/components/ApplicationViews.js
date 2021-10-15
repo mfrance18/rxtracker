@@ -6,13 +6,27 @@ import { MedicationList } from "./Medications/MedicationList";
 import { Redirect } from "react-router";
 import { MedicationForm } from "./Medications/MedicationForm";
 import { MedicationEditForm } from "./Medications/MedicationEditForm";
+import { MondayList } from "./Monday/MondayList";
+import { TuesdayForm } from "./Tuesday/TuesdayForm";
+import { TuesdayList } from "./Tuesday/TuesdayList";
+import { MondayForm } from "./Monday/MondayForm";
+
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
     return (
         <>
 
             <Route exact path="/">
-            {isAuthenticated ? <MedicationList /> : <Redirect to="/login" />}
+            {isAuthenticated ? <MondayList /> : <Redirect to="/login" />}
+            {isAuthenticated ? <TuesdayList /> : <Redirect to="/login" />}
+            </Route>
+
+            <Route exact path="/monday/create">
+                <MondayForm/>
+            </Route>
+
+            <Route exact path="/tuesday/create">
+                <TuesdayForm/>
             </Route>
 
             <Route exact path="/medications">
