@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
-
+import { Form, FormGroup, Label, Button, Input } from "reactstrap";
 import "./Login.css"
 
 export const Register = ({ setAuthUser }) => {
@@ -61,33 +61,34 @@ export const Register = ({ setAuthUser }) => {
     }
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="container--login">
 
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
+            <Form className="form--login" onSubmit={handleRegister}>
                 <h1 className="h3 mb-3 font-weight-normal">Please Register for Application Name</h1>
-                <fieldset>
-                    <label htmlFor="firstName"> First Name </label>
-                    <input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="lastName"> Last Name </label>
-                    <input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="inputEmail"> Email address </label>
-                    <input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
-                </fieldset>
-                <fieldset>
-                    <button type="submit"> Sign in </button>
-                    <button onClick={handleCancel}> Cancel </button>
-                </fieldset>
+                <FormGroup>
+                    <Label htmlFor="firstName"> First Name </Label>
+                    <Input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
+                </FormGroup>
+                <FormGroup>
+                    <Label htmlFor="lastName"> Last Name </Label>
+                    <Input type="text" name="lastName" id="lastName" className="form-control" placeholder="Last name" required value={registerUser.lastName} onChange={handleInputChange} />
+                </FormGroup>
+                <FormGroup>
+                    <Label htmlFor="inputEmail" className="email"> Email address </Label>
+                    <Input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
+                    <Button type="submit"> Sign in </Button>
+                    <Button onClick={handleCancel}> Cancel </Button>
+                </FormGroup>
 
-            </form>
-        </main>
+
+
+
+            </Form>
+        </main >
     )
 }

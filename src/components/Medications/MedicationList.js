@@ -27,19 +27,20 @@ export const MedicationList = () => {
     return (
         <>
 
-            <div >
+            <div className="medications">
                 <h1>Medications</h1>
                 <div>
                     <Button type="button"
+                        className="medAdd"
                         onClick={() => { history.push("/medications/create") }}>
                         Add New Medication
                     </Button>
                 </div>
             </div>
-            <section>
-                <div>
+            <section className="medList">
+               
                     {medications.map(medication => <MedicationCard medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication}/>)}
-                </div>
+                
             </section>
         </>
     )

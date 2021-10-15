@@ -38,13 +38,27 @@
   ],
   "medications": [
     {
+      "id": 1,
       "name": "Zyrtec",
+      "amount": 1,
+      "dosage": "200mg",
+      "instructions": "Take 1 every 24 hours"
+    },
+    {
+      "name": "Lisinopril",
       "user": 1,
       "amount": "2",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 1
+      "instructions": "Take 2 pills per day with Food or Milk.",
+      "dosage": "40mg",
+      "id": 2
     }
   ],
-  "dailyMedications": []
+  "dailyMedications": [
+    {
+      "id": 1,
+      "medicationId": 1,
+      "dayId": 1,
+      "status": false
+    }
+  ]
 }

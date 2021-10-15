@@ -1,5 +1,9 @@
 .medCard.card {
     width: 250px;
+    margin-left: 10px;
+    border: solid 10px seagreen;
+    border-radius: 18px;
+    background-color: lightyellow;
 }
 
 form.medUpdateForm {
@@ -7,7 +11,6 @@ form.medUpdateForm {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
-    
 }
 
 form.medForm {
@@ -15,6 +18,8 @@ form.medForm {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 18px double seagreen;
+    border-radius: 18px;
 }
 
 button.medCancel.btn.btn-secondary {
@@ -22,11 +27,35 @@ button.medCancel.btn.btn-secondary {
     margin-top: 10px;
 }
 
-button.medSave.btn.btn-secondary{
+button.medSave.btn.btn-secondary {
     margin-top: 10px;
 }
 
 button.medEdit.btn.btn-secondary {
     margin-left: 10px;
+    margin-top: 10px;
 }
 
+button.medDelete.btn.btn-secondary {
+    margin-left: 4px;
+    margin-top: 10px;
+}
+
+button.medAdd.btn.btn-secondary {
+    margin-left: 10px;
+}
+
+.medList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.medications {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}

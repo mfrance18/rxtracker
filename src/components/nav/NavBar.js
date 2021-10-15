@@ -32,7 +32,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                         : null}
                     {isAuthenticated ?
                         <li className="nav-item">
-                            <Link className="nav-link" to="/messages">Messages</Link>
+                            <Link className="nav-link" to="/messages">Public Forum</Link>
                         </li>
                         : null}
                     {isAuthenticated ?

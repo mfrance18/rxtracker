@@ -1,29 +1,31 @@
 .dialog {
-    min-width: 15rem;
-    min-height: 5rem;
-  }
-  
-  .container--login {
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-   
-  }
-  
-  form.form--login {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  min-width: 15rem;
+  min-height: 5rem;
 }
 
-  .register {
-    display: flex;
-    justify-content: center;
-  }
+.container--login {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
 
-  input#email {
-    margin-bottom: 10px;
-    margin-top: -15px;
+form.form--login {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: 18px double seagreen;
+  border-radius: 18px;
+  background-color: lightyellow;
+}
+
+.register {
+  display: flex;
+  justify-content: center;
+}
+
+input#email {
+  margin-bottom: 10px;
+  margin-top: -15px;
 }
 
 button.sign-in-button.btn.btn-secondary {
@@ -32,4 +34,8 @@ button.sign-in-button.btn.btn-secondary {
 
 h1.loginTitle {
   margin-bottom: 20px;
+}
+
+label.email {
+  margin-bottom: 15px;
 }
