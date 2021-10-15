@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { getAllMedications, deleteMedication } from "../../modules/MedicationManager";
 import { MedicationCard } from "./MedicationCard";
+import { Button} from 'reactstrap';
 
 export const MedicationList = () => {
     const [medications, setMedications] = useState([])
@@ -29,10 +30,10 @@ export const MedicationList = () => {
             <div >
                 <h1>Medications</h1>
                 <div>
-                    <button type="button"
+                    <Button type="button"
                         onClick={() => { history.push("/medications/create") }}>
                         Add New Medication
-                    </button>
+                    </Button>
                 </div>
             </div>
             <section>

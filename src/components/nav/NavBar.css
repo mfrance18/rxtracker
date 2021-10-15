@@ -1,0 +1,20 @@
+.mainTitle {
+    text-align: center;
+    color: white;
+
+}
+
+nav.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+   
+}
+
+.header {
+    background-color:seagreen;
+}
+
+a.nav-link {
+    color: white;
+}

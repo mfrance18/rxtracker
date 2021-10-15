@@ -1,0 +1,32 @@
+.medCard.card {
+    width: 250px;
+}
+
+form.medUpdateForm {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    
+}
+
+form.medForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button.medCancel.btn.btn-secondary {
+    margin-left: 4px;
+    margin-top: 10px;
+}
+
+button.medSave.btn.btn-secondary{
+    margin-top: 10px;
+}
+
+button.medEdit.btn.btn-secondary {
+    margin-left: 10px;
+}
+

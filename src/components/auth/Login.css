@@ -4,35 +4,32 @@
   }
   
   .container--login {
-    font-family: "Beatles", sans-serif;
-    word-spacing: 5px;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 200px;
    
   }
   
-  
+  form.form--login {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
   .register {
     display: flex;
     justify-content: center;
   }
 
-/*   
-  .sign-in-button {
-    width: 200px;
-    height: 40px;
-    border-style: solid;
-    color: black;
-    background-color:lightskyblue;
+  input#email {
     margin-bottom: 10px;
-    
-    border-width: 1px;
-    font-size: 15px;
-    transition-duration: 0.4s;  
-    font-family: "Beatles", sans-serif;
-    word-spacing: 10px;
-    border-radius: 10px;
-    border-width: 1px;
-    margin-left: 150px;
-  } */
+    margin-top: -15px;
+}
+
+button.sign-in-button.btn.btn-secondary {
+  margin-bottom: 10px;
+}
+
+h1.loginTitle {
+  margin-bottom: 20px;
+}

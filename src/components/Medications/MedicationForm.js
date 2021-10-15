@@ -39,44 +39,53 @@ export const MedicationForm = () => {
 
     return (
         <>
-            <Form>
+
+            <Form className="medForm">
                 <h1>Add a Medication</h1>
-                <FormGroup>
-                    <Label htmlFor="name">Medication Name: </Label>
-                    <Input type="text" id="name" onChange={handleControlledInputChange} placeholder="Name of Medication" value={medication.name} />
-                </FormGroup>
+                <div >
+                    <FormGroup>
+                        <Label htmlFor="name">Medication Name: </Label>
+                        <Input type="text" id="name" onChange={handleControlledInputChange} placeholder="Name of Medication" value={medication.name} />
 
-                <FormGroup>
-                    <Label htmlFor="amount">Amount Per Day: </Label>
-                    <Input type="select" onChange={handleControlledInputChange} value={medication.amount} id="amount">
-                        <option value="0" disabled>Select</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                    </Input>
-                </FormGroup>
 
-                <FormGroup>
-                    <Label htmlFor="dosage">Dosage: </Label>
-                    <Input type="text" id="dosage" onChange={handleControlledInputChange} placeholder="Dosage Amount" value={medication.dosage} />
-                </FormGroup>
 
-                <FormGroup>
-                    <Label htmlFor="instructions">Instructions: </Label>
-                    <Input id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions} />
-                </FormGroup>
+                        <Label htmlFor="amount">Amount Per Day: </Label>
+                        <Input type="select" onChange={handleControlledInputChange} value={medication.amount} id="amount">
+                            <option value="0" disabled>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </Input>
 
-                <Button className=""
-                    onClick={handleClickSaveMedication}>
-                    Save Medication
-                </Button>
-                <Button className=""
-                    onClick={handleCancelButton}>
-                    Cancel
-                </Button>
+
+
+                        <Label htmlFor="dosage">Dosage: </Label>
+                        <Input type="text" id="dosage" onChange={handleControlledInputChange} placeholder="Dosage Amount" value={medication.dosage} />
+
+
+
+                        <Label htmlFor="instructions">Instructions: </Label>
+                        <Input id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions} />
+                    </FormGroup>
+                </div>
+
+                <div >
+                    <Button className="medSave"
+                        onClick={handleClickSaveMedication}>
+                        Save Medication
+                    </Button>
+
+
+                    <Button className="medCancel"
+                        onClick={handleCancelButton}>
+                        Cancel
+                    </Button>
+                </div>
+
             </Form >
+
         </>
     )
 }

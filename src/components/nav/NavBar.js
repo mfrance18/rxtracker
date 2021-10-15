@@ -1,6 +1,7 @@
 import React from "react"
 import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
+import "./NavBar.css"
 
 
 
@@ -15,11 +16,10 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
-
-
-            <nav className="navbar">
-                <h1 className="beatles-nutshell-title">Rx Tracker</h1>
-                <ul className="nav">
+            <div className="header">
+            {isAuthenticated ? <h1 className="mainTitle">Rx Tracker</h1> : null}
+            {isAuthenticated ?<nav className="navbar">
+                <ul className="nav nav-pills nav-fill">
                     {isAuthenticated ?
                         <li className="nav-item">
                             <Link className="nav-link" to="/">Home</Link>
@@ -42,6 +42,8 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                         : null}
                 </ul>
             </nav>
+             : null}
+            </div>
         </>
     )
 }

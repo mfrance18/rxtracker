@@ -36,6 +36,15 @@
       "name": "Sunday"
     }
   ],
-  "medications": [],
+  "medications": [
+    {
+      "name": "Zyrtec",
+      "user": 1,
+      "amount": "2",
+      "instructions": "Take 1 every 24 hours",
+      "dosage": "200mg",
+      "id": 1
+    }
+  ],
   "dailyMedications": []
 }

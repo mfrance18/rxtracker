@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react"
 import { useParams, useHistory } from "react-router"
 import { getMedicationById, updateMedication } from "../../modules/MedicationManager"
+import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import "./Medications.css"
 
 export const MedicationEditForm = () => {
     const [medication, setMedication] = useState({
@@ -51,46 +53,45 @@ export const MedicationEditForm = () => {
 
     return (
         <>
-            <form>
+            <Form className="medForm">
                 <h1>Update Medication</h1>
-                <fieldset>
-                    <div>
-                        <label htmlFor="name">Medication Name: </label>
-                        <input type="text" id="name" onChange={handleFieldChange} placeholder="Name of Medication" value={medication.name} />
-                    </div>
+                <FormGroup>
+                    <Label htmlFor="name">Medication Name: </Label>
+                    <Input type="text" id="name" onChange={handleFieldChange} placeholder="Name of Medication" value={medication.name} />
+             
 
-                    <div>
-                        <label htmlFor="amount">Amount Per Day: </label>
-                        <select onChange={handleFieldChange} value={medication.amount} id="amount">
-                            <option value="0" disabled>Select</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                    </div>
+                
+                    <Label htmlFor="amount">Amount Per Day: </Label>
+                    <Input type="select" onChange={handleFieldChange} value={medication.amount} id="amount">
+                        <option value="0" disabled>Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </Input>
+                
 
-                    <div>
-                        <label htmlFor="dosage">Dosage: </label>
-                        <input type="text" id="dosage" onChange={handleFieldChange} placeholder="Dosage Amount" value={medication.dosage} />
-                    </div>
+             
+                    <Label htmlFor="dosage">Dosage: </Label>
+                    <Input type="text" id="dosage" onChange={handleFieldChange} placeholder="Dosage Amount" value={medication.dosage} />
+               
 
-                    <div>
-                        <label htmlFor="instructions">Instructions: </label>
-                        <input id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medication.instructions} />
-                    </div>
-                </fieldset>
-                <button className=""
-                    disabled={isLoading}
-                    onClick={updateExistingMedication}>
-                    Update Medication
-                </button>
-                <button className=""
-                    onClick={handleCancelButton}>
-                    Cancel
-                </button>
-            </form>
+                
+                    <Label htmlFor="instructions">Instructions: </Label>
+                    <Input id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medication.instructions} />
+                    </FormGroup>
+               <div>
+                    <Button className="medSave"
+                        onClick={updateExistingMedication}>
+                        Update Medication
+                    </Button>
+                    <Button className="medCancel"
+                        onClick={handleCancelButton}>
+                        Cancel
+                    </Button>
+              </div>
+            </Form >
         </>
     )
 }
