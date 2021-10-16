@@ -1,15 +1,17 @@
 import React from "react";
+import { Card, Button, CardTitle, Input } from "reactstrap";
+import "./Monday.css"
 
 export const MondayMedicineCard = ({monday}) => {
 
-    console.log(monday)
+    
     return (
         <>
-            <div>
-                <h5>{monday.medication.name}</h5>
-                <button>Delete</button>
-                <input type="checkbox"></input>
-            </div>
+            <Card className="mondayCard">
+                <CardTitle>{monday.medication.name}</CardTitle>
+                <Button variant="secondary" size="sm">Delete</Button>
+                <Input type="checkbox"></Input>
+            </Card>
         </>
     )
 }

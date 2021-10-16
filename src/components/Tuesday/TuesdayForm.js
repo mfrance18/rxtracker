@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { addMedicationToTuesday } from '../../modules/TuesdayManager';
 import { getAllMedications } from '../../modules/MedicationManager';
+import "./Tuesday.css"
 
 export const TuesdayForm = () => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
@@ -51,7 +52,8 @@ export const TuesdayForm = () => {
                 </select>
             </div>
 
-            <button className
+            <button 
+            
                 onClick={handleClickSaveTuesdayMedication}>
                 Save 
             </button>

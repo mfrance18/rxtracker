@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useParams, useHistory } from "react-router"
 import { getMedicationById, updateMedication } from "../../modules/MedicationManager"
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 import "./Medications.css"
 
 export const MedicationEditForm = () => {

@@ -3,6 +3,7 @@ import { useHistory } from "react-router";
 import { getAllTuesdayMedication } from "../../modules/TuesdayManager";
 import { TuesdayMedicineCard } from "./TuesdayCard";
 import { Button } from "reactstrap";
+import "./Tuesday.css"
 
 export const TuesdayList = () => {
     const [tuesdays, setTuesdays] = useState([])
@@ -21,15 +22,17 @@ export const TuesdayList = () => {
 
     return (
         <>
-            <section>
+            <section className="mainCard">
+                <div className="cardTitle">
                 <h1>Tuesday</h1>
-                <section className="section-content">
+                
                     <Button type="button"
                         className="btn"
+                        variant="primary" size="sm"
                         onClick={() => { history.push("/tuesday/create") }}>
                         Add Medication
                     </Button>
-                </section>
+              </div>
                 <div>
                     {tuesdays.map(tuesday => <TuesdayMedicineCard tuesday={tuesday} key={tuesday.id} />)}
                 </div>

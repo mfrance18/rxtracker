@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router";
-import { Card, CardText, CardTitle, CardBody, ListGroup, Button, ListGroupItem } from "reactstrap";
+import { Card, CardTitle, CardBody, ListGroup, Button, ListGroupItem } from "reactstrap";
 import "./Medications.css"
 
 export const MedicationCard = ({ medication, handleDeleteMedication }) => {

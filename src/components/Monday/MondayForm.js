@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
 import { addMedicationToMonday } from '../../modules/MondayManager';
 import { getAllMedications } from '../../modules/MedicationManager';
+import { Button, Label } from "reactstrap";
+import "./Monday.css"
 
 export const MondayForm = () => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
@@ -42,7 +44,7 @@ export const MondayForm = () => {
     return (
         <>
             <div>
-                <label htmlFor="medication">Choose Medication</label>
+                <Label htmlFor="medication">Choose Medication</Label>
                 <select value={medication.id} name="medicationId" id="medicationId" onChange={handleControlledInputChange}>
                     <option value="0">Select</option>
                     {medication.map(m => (<option key={m.id} value={m.id}>
@@ -51,10 +53,10 @@ export const MondayForm = () => {
                 </select>
             </div>
 
-            <button className
+            <Button 
                 onClick={handleClickSaveMondayMedication}>
-                Save Employee
-            </button>
+                Save 
+            </Button>
         </>
 
     )

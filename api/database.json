@@ -4,6 +4,11 @@
       "id": 1,
       "name": "Matt France",
       "email": "matt@gmail.com"
+    },
+    {
+      "email": "ashley@gmail.com",
+      "name": "Ashley Morphis",
+      "id": 2
     }
   ],
   "days": [
@@ -51,6 +56,14 @@
       "instructions": "Take 2 pills per day with Food or Milk.",
       "dosage": "40mg",
       "id": 2
+    },
+    {
+      "name": "Dicyclomine",
+      "user": 1,
+      "amount": "2",
+      "instructions": "Take 2 per day with food",
+      "dosage": "10mg",
+      "id": 3
     }
   ],
   "dailyMedications": [
@@ -63,18 +76,30 @@
   ],
   "monday": [
     {
-      "id":1,
+      "id": 1,
       "userId": 1,
       "medicationId": 1,
       "status": false
+    },
+    {
+      "userId": 1,
+      "status": false,
+      "medicationId": "3",
+      "id": 2
     }
   ],
   "tuesday": [
     {
-      "id":1,
+      "id": 1,
       "userId": 1,
       "medicationId": 2,
       "status": false
+    },
+    {
+      "userId": 1,
+      "status": false,
+      "medicationId": "3",
+      "id": 2
     }
   ]
 }

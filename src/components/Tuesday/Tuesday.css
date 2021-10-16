@@ -1,0 +1,16 @@
+.tuesdayCard.card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+}
+
+.cardTitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 275px;
+    justify-content: space-between;
+    align-content: stretch;
+}

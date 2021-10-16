@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router";
 import { addMedication } from "../../modules/MedicationManager";
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
 
 export const MedicationForm = () => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
