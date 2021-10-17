@@ -5,6 +5,8 @@ import { MedicationCard } from "./MedicationCard";
 import { Button} from 'reactstrap';
 
 export const MedicationList = () => {
+
+
     const [medications, setMedications] = useState([])
 
     const history = useHistory()
@@ -23,7 +25,7 @@ export const MedicationList = () => {
     useEffect(() => {
         getMedications()
     }, [])
-
+    
     return (
         <>
 

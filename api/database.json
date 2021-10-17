@@ -4,11 +4,6 @@
       "id": 1,
       "name": "Matt France",
       "email": "matt@gmail.com"
-    },
-    {
-      "email": "ashley@gmail.com",
-      "name": "Ashley Morphis",
-      "id": 2
     }
   ],
   "days": [
@@ -41,65 +36,8 @@
       "name": "Sunday"
     }
   ],
-  "medications": [
-    {
-      "id": 1,
-      "name": "Zyrtec",
-      "amount": 1,
-      "dosage": "200mg",
-      "instructions": "Take 1 every 24 hours"
-    },
-    {
-      "name": "Lisinopril",
-      "user": 1,
-      "amount": "2",
-      "instructions": "Take 2 pills per day with Food or Milk.",
-      "dosage": "40mg",
-      "id": 2
-    },
-    {
-      "name": "Dicyclomine",
-      "user": 1,
-      "amount": "2",
-      "instructions": "Take 2 per day with food",
-      "dosage": "10mg",
-      "id": 3
-    }
-  ],
-  "dailyMedications": [
-    {
-      "id": 1,
-      "medicationId": 1,
-      "dayId": 1,
-      "status": false
-    }
-  ],
-  "monday": [
-    {
-      "id": 1,
-      "userId": 1,
-      "medicationId": 1,
-      "status": false
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": "3",
-      "id": 2
-    }
-  ],
-  "tuesday": [
-    {
-      "id": 1,
-      "userId": 1,
-      "medicationId": 2,
-      "status": false
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": "3",
-      "id": 2
-    }
-  ]
+  "medications": [],
+  "dailyMedications": [],
+  "monday": [],
+  "tuesday": []
 }

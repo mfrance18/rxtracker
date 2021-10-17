@@ -1,32 +1,34 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
-import { addMedicationToMonday } from '../../modules/MondayManager';
+import {addMedicationToMonday} from "../../modules/MondayManager"
+import {addMedicationToTuesday} from "../../modules/TuesdayManager"
 import { getAllMedications } from '../../modules/MedicationManager';
 import { Button, Label } from "reactstrap";
-import "./Monday.css"
 
-export const MondayForm = () => {
+
+export const AllDaysForm = () => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
-    const [monday, setMonday] = useState({
+    const [allDays, setAllDays] = useState({
         userId: user,
         status: false
     })
+
 
     const [medication, setMedication] = useState([])
 
     const history = useHistory()
 
     const handleControlledInputChange = (event) => {
-        const newMondayMedication = { ...monday }
-
+        const newMedication = { ...allDays }
         let selectedVal = event.target.value
 
         if (event.target.value.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        newMondayMedication[event.target.id] = parseInt(selectedVal)
-        setMonday(newMondayMedication)
+        newMedication[event.target.id] = selectedVal
+        setAllDays(newMedication)
+    
     }
 
     useEffect(() => {
@@ -35,16 +37,19 @@ export const MondayForm = () => {
         })
     }, [])
 
-    const handleClickSaveMondayMedication = (event) => {
+    
+
+    const handleClickSaveMedication = (event) => {
         event.preventDefault()
-        addMedicationToMonday(monday)
+        addMedicationToMonday(allDays)
+            .then(data => addMedicationToTuesday(allDays))
             .then(() => history.push("/"))
     }
 
     return (
         <>
             <div>
-                <Label htmlFor="medication">Choose Medication</Label>
+                <h2 htmlFor="medication">Add Medication To Everyday</h2>
                 <select value={medication.id} name="medicationId" id="medicationId" onChange={handleControlledInputChange}>
                     <option value="0">Select</option>
                     {medication.map(m => (<option key={m.id} value={m.id}>
@@ -54,7 +59,7 @@ export const MondayForm = () => {
             </div>
 
             <Button 
-                onClick={handleClickSaveMondayMedication}>
+                onClick={handleClickSaveMedication}>
                 Save 
             </Button>
         </>

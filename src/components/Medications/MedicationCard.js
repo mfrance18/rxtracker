@@ -5,7 +5,9 @@ import "./Medications.css"
 
 export const MedicationCard = ({ medication, handleDeleteMedication }) => {
     const history = useHistory()
+    let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
+    if(user === medication.userId) {
     return (
         <>
             <Card className="medCard">
@@ -25,4 +27,7 @@ export const MedicationCard = ({ medication, handleDeleteMedication }) => {
             </Card>
         </>
     )
+    } else {
+        return null
+    }
 }

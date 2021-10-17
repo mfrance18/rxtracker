@@ -8,7 +8,7 @@ export const MedicationForm = () => {
 
     const [medication, setMedication] = useState({
         name: "",
-        user: user,
+        userId: user,
         amount: 0,
         instructions: "",
         dosage: ""
@@ -24,6 +24,7 @@ export const MedicationForm = () => {
             selectedVal = parseInt(selectedVal)
         }
         newMedication[event.target.id] = selectedVal
+        
         setMedication(newMedication)
     }
 

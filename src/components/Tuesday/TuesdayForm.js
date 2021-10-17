@@ -24,7 +24,7 @@ export const TuesdayForm = () => {
         if (event.target.value.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        newTuesdayMedication[event.target.id] = selectedVal
+        newTuesdayMedication[event.target.id] = parseInt(selectedVal)
         setTuesday(newTuesdayMedication)
     }
 
