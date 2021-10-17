@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { useParams, useHistory } from "react-router"
 import { getMedicationById, updateMedication } from "../../modules/MedicationManager"
-import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import "./Medications.css"
 
 export const MedicationEditForm = () => {
@@ -58,9 +58,9 @@ export const MedicationEditForm = () => {
                 <FormGroup>
                     <Label htmlFor="name">Medication Name: </Label>
                     <Input type="text" id="name" onChange={handleFieldChange} placeholder="Name of Medication" value={medication.name} />
-             
 
-                
+
+
                     <Label htmlFor="amount">Amount Per Day: </Label>
                     <Input type="select" onChange={handleFieldChange} value={medication.amount} id="amount">
                         <option value="0" disabled>Select</option>
@@ -70,19 +70,20 @@ export const MedicationEditForm = () => {
                         <option value="4">4</option>
                         <option value="5">5</option>
                     </Input>
-                
 
-             
+
+
                     <Label htmlFor="dosage">Dosage: </Label>
                     <Input type="text" id="dosage" onChange={handleFieldChange} placeholder="Dosage Amount" value={medication.dosage} />
-               
 
-                
+
+
                     <Label htmlFor="instructions">Instructions: </Label>
                     <Input id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medication.instructions} />
-                    </FormGroup>
-               <div>
+                </FormGroup>
+                <div>
                     <Button className="medSave"
+                        disabled={isLoading}
                         onClick={updateExistingMedication}>
                         Update Medication
                     </Button>
@@ -90,7 +91,7 @@ export const MedicationEditForm = () => {
                         onClick={handleCancelButton}>
                         Cancel
                     </Button>
-              </div>
+                </div>
             </Form >
         </>
     )

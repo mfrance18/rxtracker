@@ -26,3 +26,9 @@ a.nav-link:hover {
 a.nav-link::backdrop {
     color: lightgreen;
 }
+
+.intro {
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}

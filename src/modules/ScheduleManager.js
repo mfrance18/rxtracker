@@ -11,7 +11,6 @@ export const getMedicationByDay = (dayId) => {
     .then(response => response.json())
 }
 
-
 export const getDaysofWeek = () => {
 return fetch (`${remoteURL}/days`)
 .then(response => response.json())

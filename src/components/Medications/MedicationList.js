@@ -14,6 +14,7 @@ export const MedicationList = () => {
     const getMedications = () => {
         return getAllMedications().then(response => {
             setMedications(response)
+            console.log(response)
         })
     }
 
@@ -26,6 +27,7 @@ export const MedicationList = () => {
         getMedications()
     }, [])
     
+   
     return (
         <>
 

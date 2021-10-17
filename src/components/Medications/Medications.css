@@ -20,6 +20,7 @@ form.medForm {
     align-items: center;
     border: 18px double seagreen;
     border-radius: 18px;
+    background-color: lightyellow;
 }
 
 button.medCancel.btn.btn-secondary {

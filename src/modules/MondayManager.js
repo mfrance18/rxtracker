@@ -19,3 +19,12 @@ export const addMedicationToMonday = (newMedication) => {
         body: JSON.stringify(newMedication)
     }).then(result => result.json())
 }
+
+export const deleteMedicationFromMonday = (id) => {
+    return fetch(`${remoteURL}/monday/${id}`,{
+        method: "DELETE"
+    })
+    .then(response => {
+        response.json()
+    })
+}

@@ -7,7 +7,6 @@ import "./Login.css"
 export const Login = ({ setAuthUser }) => {
     const [loginUser, setLoginUser] = useState({ email: "" })
     const [existDialog, setExistDialog] = useState(false)
-    let username = sessionStorage.getItem("rxtracker_username")
 
     const history = useHistory()
 

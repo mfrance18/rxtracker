@@ -52,7 +52,7 @@ export const MedicationForm = () => {
 
                         <Label htmlFor="amount">Amount Per Day: </Label>
                         <Input type="select" onChange={handleControlledInputChange} value={medication.amount} id="amount">
-                            <option value="0" disabled>Select</option>
+                            <option value="0" disabled>Select Amount</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>

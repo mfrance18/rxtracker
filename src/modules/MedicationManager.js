@@ -10,6 +10,12 @@ export const getMedicationById = (medicationId) => {
     .then(response => response.json())
 }
 
+export const getMedicationByUserId = (userId) => {
+    return fetch(`${remoteURL}/medications?userId=${userId}`)
+    .then(response => response.json())
+}
+
+
 export const addMedication = (newMedication) => {
     return fetch (`${remoteURL}/medications`, {
         method: "POST",

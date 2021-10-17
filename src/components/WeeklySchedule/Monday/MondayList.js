@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router";
-import { getAllMondayMedication } from "../../modules/MondayManager";
+import { getAllMondayMedication, deleteMedicationFromMonday } from "../../../modules/MondayManager";
 import { MondayMedicineCard } from "./MondayCard";
 import { Button } from "reactstrap";
 import "./Monday.css"
@@ -16,24 +16,31 @@ export const MondayList = () => {
         })
     }
 
+    const handleDeleteMedication = (id) => {
+        deleteMedicationFromMonday(id)
+        .then(() => getAllMondayMedication().then(setMondays))
+    }
+
     useEffect(() => {
         getMondayMedication()
     }, [])
 
     return (
         <>
-            <section className="mainCard">
-            <div className="cardTitle">
-                <h1 >Monday</h1>
+            <section className="mondayMainCard">
+            <div className="mondayCardTitle">
+                <h3 >Monday</h3>
+               
                     <Button type="button"
-                        className="btn"
+                        className="mondayAdd"
                         variant="primary" size="sm"
                         onClick={() => { history.push("/monday/create") }}>
                         Add Medication
                     </Button>
                 </div>
-                <div>
-                    {mondays.map(monday => <MondayMedicineCard monday={monday} key={monday.id} />)}
+                <hr></hr>
+                <div className="cardList">
+                    {mondays.map(monday => <MondayMedicineCard monday={monday} key={monday.id} handleDeleteMedication={handleDeleteMedication} />)}
                 </div>
             </section>
         </>
