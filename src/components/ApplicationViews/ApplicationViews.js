@@ -32,7 +32,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
     return (
 
         <>
-    {isAuthenticated? 
+    
             <div className="dashboard">
                 <Route exact path="/">
                     <div className="homeTop">
@@ -58,7 +58,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
                     </section>
                 </Route>
             </div>
-            : null}
+
             <Route exact path="/allDays/create">
                 <AllDaysForm />
             </Route>
@@ -114,7 +114,6 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
             <Route path="/register">
                 <Register setAuthUser={setAuthUser} />
             </Route>
-            
         </>
     )
 }

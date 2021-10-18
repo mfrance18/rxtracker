@@ -3,7 +3,7 @@ import { useHistory } from 'react-router';
 import { addMedicationToMonday } from "../../modules/MondayManager"
 import { addMedicationToTuesday } from "../../modules/TuesdayManager"
 import { getMedicationByUserId } from '../../modules/MedicationManager';
-import { Button,  } from "reactstrap";
+import { Button, } from "reactstrap";
 import "./AllDays.css"
 import { addMedicationToWednesday } from '../../modules/WednesdayManager';
 import { addMedicationToThursday } from '../../modules/ThursdayManager';
@@ -42,10 +42,10 @@ export const AllDaysForm = () => {
     }
 
     useEffect(() => {
-        getMedicationByUserId(user).then(response =>{
+        getMedicationByUserId(user).then(response => {
             setUsermedications(response)
         })
-    },[])
+    }, [])
 
 
 
@@ -74,6 +74,7 @@ export const AllDaysForm = () => {
             </div>
             <div className="allDaysButtons">
                 <Button
+                    className="allDaysSave"
                     variant="primary" size="sm"
                     onClick={handleClickSaveMedication}>
                     Save

@@ -15,10 +15,15 @@ export const MondayMedicineCard = ({ monday, handleDeleteMedication, reload }) =
 
         return (
             <>
-                <Card className="mondayCard">
-                    <CardTitle>{monday.medication.name}</CardTitle>
-                    <Button className="mondayDelete" variant="secondary" size="sm" onClick={() => handleDeleteMedication(monday.id)}>Delete</Button>
-                    <Input type="checkbox" onChange={handleCheckboxChange} id="check"></Input>
+                <Card className="mondayCardContainer">
+                    <div className="mondayCard">
+                        <CardTitle className="mondayMedicineTitle">{monday.medication.name}</CardTitle>
+                        <Button className="mondayDelete" variant="secondary" size="sm" onClick={() => handleDeleteMedication(monday.id)}>Delete</Button>
+                        <Input type="checkbox" onChange={handleCheckboxChange} id="check"></Input>
+                    </div>
+                    <div className="mondayInstructions">
+                        <p>{monday.medication.instructions}</p>
+                    </div>
                 </Card>
             </>
         )

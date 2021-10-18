@@ -1,4 +1,4 @@
-.sundayCard.card {
+.sundayCard {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -15,11 +15,22 @@
     align-content: stretch;
 }
 
+.sundayCardContainer.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sundayMedicineTitle.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .sundayButtons {
     margin-top: 10px;
 }
 
-button.sundaySave.btn.btn-secondary.btn-sm{
+button.sundaySave.btn.btn-secondary.btn-sm {
     background-color: seagreen;
     padding-left: 10px;
     padding-right: 10px;
@@ -27,7 +38,7 @@ button.sundaySave.btn.btn-secondary.btn-sm{
     padding-bottom: 1px;
 }
 
-button.sundayCancel.btn.btn-secondary.btn-sm{
+button.sundayCancel.btn.btn-secondary.btn-sm {
     background-color: red;
     margin-left: 5px;
     padding-left: 10px;

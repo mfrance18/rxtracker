@@ -13,7 +13,7 @@ export const MedicationCard = ({ medication, handleDeleteMedication }) => {
             <Card className="medCard">
 
                 <CardBody className="cardTop">
-                    <CardTitle>{medication.name}</CardTitle>
+                    <CardTitle className="medicationCardTitle">{medication.name}</CardTitle>
                 
                 <ListGroup>
                     <ListGroupItem>{medication.instructions}</ListGroupItem>

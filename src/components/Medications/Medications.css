@@ -74,3 +74,8 @@ button.medAdd.btn.btn-secondary {
     align-items: center;
     align-content: stretch;
 }
+
+.medicationCardTitle.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
