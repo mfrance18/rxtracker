@@ -83,11 +83,13 @@ export const MedicationEditForm = () => {
                 </FormGroup>
                 <div>
                     <Button className="medSave"
+                     variant="secondary" size="sm"
                         disabled={isLoading}
                         onClick={updateExistingMedication}>
                         Update Medication
                     </Button>
                     <Button className="medCancel"
+                     variant="secondary" size="sm"
                         onClick={handleCancelButton}>
                         Cancel
                     </Button>

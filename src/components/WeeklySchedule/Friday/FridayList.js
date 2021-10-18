@@ -16,6 +16,10 @@ export const FridayList = () => {
         })
     }
 
+    const reload = () => {
+        getFridayMedication()
+    }
+
     const handleDeleteMedication = (id) => {
         deleteMedicationFromFriday(id)
         .then(() => getAllFridayMedication().then(setFridays))
@@ -39,7 +43,7 @@ export const FridayList = () => {
                 </div>
                 <hr></hr>
                 <div className="cardList">
-                    {fridays.map(friday => <FridayMedicineCard friday={friday} key={friday.id} handleDeleteMedication={handleDeleteMedication} />)}
+                    {fridays.map(friday => <FridayMedicineCard friday={friday} key={friday.id} handleDeleteMedication={handleDeleteMedication} reload={reload}/>)}
                 </div>
             </section>
         </>

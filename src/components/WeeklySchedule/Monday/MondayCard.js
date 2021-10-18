@@ -1,10 +1,15 @@
 import React from "react";
 import { Card, Button, CardTitle, Input } from "reactstrap";
+import { completeMondayMedicine } from "../../../modules/MondayManager";
 import "./Monday.css"
 
-export const MondayMedicineCard = ({ monday, handleDeleteMedication }) => {
+export const MondayMedicineCard = ({ monday, handleDeleteMedication, reload }) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
+
+    const handleCheckboxChange = (event) => {
+        completeMondayMedicine(monday).then(reload)
+    }
 
     if (user === monday.userId) {
 
@@ -13,7 +18,7 @@ export const MondayMedicineCard = ({ monday, handleDeleteMedication }) => {
                 <Card className="mondayCard">
                     <CardTitle>{monday.medication.name}</CardTitle>
                     <Button className="mondayDelete" variant="secondary" size="sm" onClick={() => handleDeleteMedication(monday.id)}>Delete</Button>
-                    <Input type="checkbox"></Input>
+                    <Input type="checkbox" onChange={handleCheckboxChange} id="check"></Input>
                 </Card>
             </>
         )

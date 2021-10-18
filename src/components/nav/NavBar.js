@@ -1,6 +1,7 @@
 import React from "react"
 import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
+import MainLogo2 from "../../images/MainLogo.png"
 import "./NavBar.css"
 
 
@@ -17,15 +18,13 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
+        {isAuthenticated ?
             <section className="header">
-                <section className="introTitle">
-                    <div>
-                        {isAuthenticated ? <h5 className="intro">Welcome, {user }!</h5> : null}
-                    </div>
-                    <div className="mainTitle">
-                        {isAuthenticated ? <h1 >Rx Tracker</h1> : null}
-                    </div>
-                </section>
+            {isAuthenticated ? <div className="mainImage"><img className="logo" src={MainLogo2} alt="Rx Tracker Logo" /></div> : null}
+                {isAuthenticated ? <div className="mainTitle">
+                    {isAuthenticated ? <h5 className="intro">Welcome, {user}!</h5> : null}
+                </div>
+                    : null}
                 {isAuthenticated ? <nav className="navbar">
                     <ul className="nav nav-pills nav-fill">
                         {isAuthenticated ?
@@ -52,6 +51,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                 </nav>
                     : null}
             </section>
+            : null}
         </>
     )
 }

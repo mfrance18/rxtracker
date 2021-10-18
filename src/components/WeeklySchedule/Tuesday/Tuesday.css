@@ -19,7 +19,20 @@
     margin-top: 10px;
 }
 
-.tuesdayCancel {
+button.tuesdaySave.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+button.tuesdayCancel.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
     margin-left: 5px;
 }
 
@@ -28,6 +41,7 @@ button.tuesdayDelete.btn.btn-secondary.btn-sm {
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    background-color: red;
 }
 
 button.tuesdayAdd.btn.btn-secondary.btn-sm {
@@ -35,6 +49,7 @@ button.tuesdayAdd.btn.btn-secondary.btn-sm {
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    background-color: seagreen;
 }
 
 .tuesdayMainCard {
@@ -43,4 +58,5 @@ button.tuesdayAdd.btn.btn-secondary.btn-sm {
     background-color: lightyellow;
     width: 300px;
     margin-top: 10px;
+    margin-right: 10px;
 }

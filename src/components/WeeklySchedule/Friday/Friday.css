@@ -19,8 +19,21 @@
     margin-top: 10px;
 }
 
-.fridayCancel {
+button.fridayCancel.btn.btn-secondary.btn-sm {
     margin-left: 5px;
+    background-color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+button.fridaySave.btn.btn-secondary.btn-sm {
+    background-color: seagreen;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 button.fridayDelete.btn.btn-secondary.btn-sm {
@@ -28,6 +41,7 @@ button.fridayDelete.btn.btn-secondary.btn-sm {
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    background-color: red;
 }
 
 button.fridayAdd.btn.btn-secondary.btn-sm {
@@ -35,6 +49,7 @@ button.fridayAdd.btn.btn-secondary.btn-sm {
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    background-color: seagreen;
 }
 
 .fridayMainCard {
@@ -43,6 +58,7 @@ button.fridayAdd.btn.btn-secondary.btn-sm {
     background-color: lightyellow;
     width: 300px;
     margin-top: 10px;
+    margin-right: 10px;
 }
 
 .cardList {

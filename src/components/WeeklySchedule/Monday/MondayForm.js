@@ -19,7 +19,6 @@ export const MondayForm = () => {
 
     const handleControlledInputChange = (event) => {
         const newMondayMedication = { ...monday }
-
         let selectedVal = event.target.value
 
         if (event.target.value.includes("Id")) {

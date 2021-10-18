@@ -19,8 +19,21 @@
     margin-top: 10px;
 }
 
-.thursdayCancel {
+button.thursdaySave.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+button.thursdayCancel.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     margin-left: 5px;
+    background-color: red;
 }
 
 button.thursdayDelete.btn.btn-secondary.btn-sm {
@@ -28,6 +41,7 @@ button.thursdayDelete.btn.btn-secondary.btn-sm {
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    background-color: red;
 }
 
 button.thursdayAdd.btn.btn-secondary.btn-sm {
@@ -35,6 +49,7 @@ button.thursdayAdd.btn.btn-secondary.btn-sm {
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
+    background-color: seagreen;
 }
 
 .thursdayMainCard {
@@ -43,4 +58,5 @@ button.thursdayAdd.btn.btn-secondary.btn-sm {
     background-color: lightyellow;
     width: 300px;
     margin-top: 10px;
+    margin-right: 10px;
 }

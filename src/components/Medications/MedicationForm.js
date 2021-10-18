@@ -74,12 +74,14 @@ export const MedicationForm = () => {
 
                 <div >
                     <Button className="medSave"
+                     variant="secondary" size="sm"
                         onClick={handleClickSaveMedication}>
                         Save Medication
                     </Button>
 
 
                     <Button className="medCancel"
+                     variant="secondary" size="sm"
                         onClick={handleCancelButton}>
                         Cancel
                     </Button>

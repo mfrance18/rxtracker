@@ -26,6 +26,7 @@ form.medForm {
 button.medCancel.btn.btn-secondary {
     margin-left: 4px;
     margin-top: 10px;
+    margin-right: 22px;
 }
 
 button.medSave.btn.btn-secondary {
@@ -33,24 +34,37 @@ button.medSave.btn.btn-secondary {
 }
 
 button.medEdit.btn.btn-secondary {
-    margin-left: 10px;
+    margin-left: 5px;
     margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
 }
 
 button.medDelete.btn.btn-secondary {
-    margin-left: 4px;
     margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
 }
 
 button.medAdd.btn.btn-secondary {
     margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
 }
 
 .medList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 20px;
 }
 
 .medications {

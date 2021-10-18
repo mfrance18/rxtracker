@@ -35,6 +35,7 @@ export const MedicationList = () => {
                 <h1>Medications</h1>
                 <div>
                     <Button type="button"
+                     variant="secondary" size="sm"
                         className="medAdd"
                         onClick={() => { history.push("/medications/create") }}>
                         Add New Medication

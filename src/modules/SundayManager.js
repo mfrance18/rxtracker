@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088"
 
 export const getAllSundayMedication = () => {
-    return fetch (`${remoteURL}/sunday?_expand=medication`)
+    return fetch (`${remoteURL}/sunday?_expand=medication&status=false`)
     .then(response => response.json())
 }
 
@@ -28,3 +28,14 @@ export const deleteMedicationFromSunday = (id) => {
         response.json()
     })
 }
+
+export const completeSundayMedicine = (medObj) => {
+    medObj.status = true
+      return fetch(`${remoteURL}/sunday/${medObj.id}`, {
+          method: "PATCH",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(medObj)
+      }).then(data => data.json());
+  }

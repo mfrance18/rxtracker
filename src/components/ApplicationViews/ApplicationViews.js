@@ -28,29 +28,37 @@ import "./ApplicationViews.css"
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
     const history = useHistory()
 
+
     return (
+
         <>
-
-        <div className="dashboard">
-            <Route exact path="/">
-                <div className="homeTop">
-                    <h1>Weekly Medication Schedule</h1>
-                    <Button variant="primary" size="sm" onClick={() => { history.push("/allDays/create") }}>
-                        Add To All
-                    </Button>
-                </div>
-                <div className="homeList">
-                {isAuthenticated ? <MondayList /> : <Redirect to="/login" />}
-                {isAuthenticated ? <TuesdayList /> : <Redirect to="/login" />}
-                {isAuthenticated ? <WednesdayList /> : <Redirect to="/login" />}
-                {isAuthenticated ? <ThursdayList /> : <Redirect to="/login" />}
-                {isAuthenticated ? <FridayList /> : <Redirect to="/login" />}
-                {isAuthenticated ? <SaturdayList /> : <Redirect to="/login" />}
-                {isAuthenticated ? <SundayList /> : <Redirect to="/login" />}
-                </div>
-            </Route>
+    {isAuthenticated? 
+            <div className="dashboard">
+                <Route exact path="/">
+                    <div className="homeTop">
+                        <h1>Weekly Medication Schedule</h1>
+                        <Button className="weekAdd" variant="primary" size="sm" onClick={() => { history.push("/allDays/create") }}>
+                            Add To All
+                        </Button>
+                    </div>
+                    <section className="listRows">
+                        <div className="row1">
+                            {isAuthenticated ? <MondayList /> : <Redirect to="/login" />}
+                            {isAuthenticated ? <TuesdayList /> : <Redirect to="/login" />}
+                            {isAuthenticated ? <WednesdayList /> : <Redirect to="/login" />}
+                        </div>
+                        <div className="row2">
+                            {isAuthenticated ? <ThursdayList /> : <Redirect to="/login" />}
+                            {isAuthenticated ? <FridayList /> : <Redirect to="/login" />}
+                        </div>
+                        <div className="row3">
+                            {isAuthenticated ? <SaturdayList /> : <Redirect to="/login" />}
+                            {isAuthenticated ? <SundayList /> : <Redirect to="/login" />}
+                        </div>
+                    </section>
+                </Route>
             </div>
-
+            : null}
             <Route exact path="/allDays/create">
                 <AllDaysForm />
             </Route>
@@ -106,6 +114,7 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
             <Route path="/register">
                 <Register setAuthUser={setAuthUser} />
             </Route>
+            
         </>
     )
 }

@@ -6,7 +6,7 @@ import "./Medications.css"
 export const MedicationCard = ({ medication, handleDeleteMedication }) => {
     const history = useHistory()
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
-
+    
     if(user === medication.userId) {
     return (
         <>
@@ -21,8 +21,8 @@ export const MedicationCard = ({ medication, handleDeleteMedication }) => {
                     <ListGroupItem>Amount Per Day: {medication.amount}</ListGroupItem>
                 </ListGroup>
                 
-                    <Button className="medDelete" type="button" onClick={() => handleDeleteMedication(medication.id)}>Delete</Button>
-                    <Button className="medEdit" type="button" onClick={() => history.push(`/medications/${medication.id}/edit`)}>Edit</Button>
+                    <Button className="medDelete"  variant="secondary" size="sm" type="button" onClick={() => handleDeleteMedication(medication.id)}>Delete</Button>
+                    <Button className="medEdit"  variant="secondary" size="sm" type="button" onClick={() => history.push(`/medications/${medication.id}/edit`)}>Edit</Button>
                 </CardBody>
             </Card>
         </>

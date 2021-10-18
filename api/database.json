@@ -49,276 +49,132 @@
   "medications": [
     {
       "name": "Zyrtec",
-      "userId": 2,
+      "userId": 1,
       "amount": "1",
       "instructions": "Take 1 every 24 hours",
       "dosage": "200mg",
       "id": 1
     },
     {
-      "name": "Eliquis",
+      "name": "Claritin",
       "userId": 1,
-      "amount": "2",
-      "instructions": "Take one tablet twice a day",
-      "dosage": "5mg",
+      "amount": "1",
+      "instructions": "Take 1 every 24 hours",
+      "dosage": "200mg",
       "id": 2
-    },
-    {
-      "name": "Mesalamine",
-      "userId": 1,
-      "amount": "4",
-      "instructions": "Take 4 tablets per day",
-      "dosage": "1.2g",
-      "id": 3
-    },
-    {
-      "name": "Azathioprine",
-      "userId": 1,
-      "amount": "2",
-      "instructions": "Take 2 per day",
-      "dosage": "50mg",
-      "id": 4
-    },
-    {
-      "name": "Citalopram",
-      "userId": 1,
-      "amount": "1",
-      "instructions": "Take one table per day",
-      "dosage": "40mg",
-      "id": 5
-    },
-    {
-      "name": "Tirosint",
-      "userId": 1,
-      "amount": "1",
-      "instructions": "Take one capsule per day",
-      "dosage": "175mg",
-      "id": 6
     }
   ],
   "dailyMedications": [],
   "monday": [
     {
       "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 1
+      "status": true,
+      "medicationId": 1,
+      "id": 1,
+      "medication": {
+        "name": "Zyrtec",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 every 24 hours",
+        "dosage": "200mg",
+        "id": 1
+      }
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 1,
       "id": 2
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 4,
+      "medicationId": 2,
       "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ],
   "tuesday": [
     {
       "userId": 1,
       "status": false,
-      "medicationId": 2,
+      "medicationId": 1,
       "id": 1
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 2,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 4,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ],
   "wednesday": [
     {
       "userId": 1,
       "status": false,
-      "medicationId": 2,
+      "medicationId": 1,
       "id": 1
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 2,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 4,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ],
   "thursday": [
     {
       "userId": 1,
       "status": false,
-      "medicationId": 2,
+      "medicationId": 1,
       "id": 1
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 2,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 4,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ],
   "friday": [
     {
       "userId": 1,
       "status": false,
-      "medicationId": 2,
+      "medicationId": 1,
       "id": 1
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 2,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 4,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ],
   "saturday": [
     {
       "userId": 1,
       "status": false,
-      "medicationId": 2,
+      "medicationId": 1,
       "id": 1
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 2,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 4,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ],
   "sunday": [
     {
       "userId": 1,
       "status": false,
-      "medicationId": 2,
+      "medicationId": 1,
       "id": 1
     },
     {
       "userId": 1,
       "status": false,
-      "medicationId": 3,
+      "medicationId": 2,
       "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 4,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 5,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 6,
-      "id": 5
     }
   ]
 }

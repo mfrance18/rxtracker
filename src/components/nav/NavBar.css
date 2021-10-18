@@ -1,7 +1,9 @@
 .mainTitle {
+    display: flex;
     text-align: center;
     color: white;
-
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 nav.navbar {
@@ -20,15 +22,30 @@ a.nav-link {
 }
 
 a.nav-link:hover {
-    color: lightgreen;
+    color: yellow;
 }
 
-a.nav-link::backdrop {
-    color: lightgreen;
+a.nav-link:focus {
+    color: yellow; 
 }
 
 .intro {
     color: white;
     display: flex;
-    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.mainImage {
+    display: flex;
+    height: 100px;
+    justify-content: center;
+}
+
+.logo {
+    width: 225px;
+    height: 225px;;
+}
+
+h1.title {
+    margin-right: 100px;
 }
