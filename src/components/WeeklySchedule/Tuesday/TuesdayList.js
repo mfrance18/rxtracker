@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 import { getAllTuesdayMedication, deleteMedicationFromTuesday } from "../../../modules/TuesdayManager";
 import { TuesdayMedicineCard } from "./TuesdayCard";
-import { Button } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { TuesdayForm } from "./TuesdayForm";
 import "./Tuesday.css"
 
 export const TuesdayList = () => {
     const [tuesdays, setTuesdays] = useState([])
 
-    const history = useHistory()
+    const [modal, setModal] = useState(false);
 
     const getTuesdayMedication = () => {
         return getAllTuesdayMedication().then(response => {
             setTuesdays(response)
         })
     }
+
+    const toggle = () => {
+        setModal(!modal)
+    };
 
     const reload = () => {
         getTuesdayMedication()
@@ -39,7 +43,7 @@ export const TuesdayList = () => {
                     <Button type="button"
                         className="tuesdayAdd"
                         variant="primary" size="sm"
-                        onClick={() => { history.push("/tuesday/create") }}>
+                        onClick={toggle}>
                         Add Medication
                     </Button>
                 </div>
@@ -48,6 +52,13 @@ export const TuesdayList = () => {
                     {tuesdays.map(tuesday => <TuesdayMedicineCard tuesday={tuesday} key={tuesday.id} handleDeleteMedication={handleDeleteMedication} reload={reload} />)}
                 </div>
             </section>
+
+            <Modal isOpen={modal} toggle={toggle}>
+                <ModalHeader toggle={toggle}>Add to Tuesday</ModalHeader>
+                <ModalBody>
+                    <TuesdayForm toggler={toggle} reload={reload} />
+                </ModalBody>
+            </Modal>
         </>
     )
 

@@ -54,43 +54,15 @@
       "instructions": "Take 1 every 24 hours",
       "dosage": "200mg",
       "id": 1
-    },
-    {
-      "name": "Claritin",
-      "userId": 1,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 2
     }
   ],
   "dailyMedications": [],
   "monday": [
     {
       "userId": 1,
-      "status": true,
-      "medicationId": 1,
-      "id": 1,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "200mg",
-        "id": 1
-      }
-    },
-    {
-      "userId": 1,
       "status": false,
       "medicationId": 1,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 3
+      "id": 1
     }
   ],
   "tuesday": [
@@ -99,12 +71,6 @@
       "status": false,
       "medicationId": 1,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 2
     }
   ],
   "wednesday": [
@@ -113,12 +79,6 @@
       "status": false,
       "medicationId": 1,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 2
     }
   ],
   "thursday": [
@@ -127,12 +87,6 @@
       "status": false,
       "medicationId": 1,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 2
     }
   ],
   "friday": [
@@ -140,12 +94,6 @@
       "userId": 1,
       "status": false,
       "medicationId": 1,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
       "id": 2
     }
   ],
@@ -155,12 +103,6 @@
       "status": false,
       "medicationId": 1,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 2
     }
   ],
   "sunday": [
@@ -169,12 +111,6 @@
       "status": false,
       "medicationId": 1,
       "id": 1
-    },
-    {
-      "userId": 1,
-      "status": false,
-      "medicationId": 2,
-      "id": 2
     }
   ]
 }

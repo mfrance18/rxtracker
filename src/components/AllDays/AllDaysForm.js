@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory } from 'react-router';
-import { addMedicationToMonday } from "../../modules/MondayManager"
+import { addMedicationToMonday, getAllMondayMedication } from "../../modules/MondayManager"
 import { addMedicationToTuesday } from "../../modules/TuesdayManager"
 import { getMedicationByUserId } from '../../modules/MedicationManager';
-import { Button, } from "reactstrap";
+import { Button, Modal, } from "reactstrap";
 import "./AllDays.css"
 import { addMedicationToWednesday } from '../../modules/WednesdayManager';
 import { addMedicationToThursday } from '../../modules/ThursdayManager';
@@ -12,18 +12,21 @@ import { addMedicationToSaturday } from '../../modules/SaturdayManager';
 import { addMedicationToSunday } from '../../modules/SundayManager';
 
 
+
 export const AllDaysForm = () => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
+    const history = useHistory()
+
+    const [modal, setModal] = useState(false);
+
+ 
     const [allDays, setAllDays] = useState({
         userId: user,
         status: false
     })
 
     const [usermedications, setUsermedications] = useState([])
-
-
-    const history = useHistory()
 
     const handleControlledInputChange = (event) => {
         const newMedication = { ...allDays }
@@ -47,24 +50,23 @@ export const AllDaysForm = () => {
         })
     }, [])
 
-
-
     const handleClickSaveMedication = (event) => {
         event.preventDefault()
         addMedicationToMonday(allDays)
-            .then(data => addMedicationToTuesday(allDays))
-            .then(data => addMedicationToWednesday(allDays))
-            .then(data => addMedicationToThursday(allDays))
-            .then(data => addMedicationToFriday(allDays))
-            .then(data => addMedicationToSaturday(allDays))
-            .then(data => addMedicationToSunday(allDays))
-            .then(() => history.push("/"))
+            .then(() => addMedicationToTuesday(allDays))
+            .then(() => addMedicationToWednesday(allDays))
+            .then(() => addMedicationToThursday(allDays))
+            .then(() => addMedicationToFriday(allDays))
+            .then(() => addMedicationToSaturday(allDays))
+            .then(() => addMedicationToSunday(allDays))
+            .then(() => getAllMondayMedication())      
+            .then(() => history.push("/")) 
     }
 
     return (
         <>
             <div>
-                <h2 htmlFor="medication">Add Medication To Everyday</h2>
+                <h2>Add Medication to Each Day</h2>
                 <select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
                     <option value="0">Select</option>
                     {usermedications.map(u => (<option key={u.id} value={u.id}>
@@ -79,7 +81,8 @@ export const AllDaysForm = () => {
                     onClick={handleClickSaveMedication}>
                     Save
                 </Button>
-                <Button className="allDaysCancel"
+                <Button
+                    className="allDaysCancel"
                     variant="primary" size="sm"
                     onClick={handleCancelButton}>
                     Cancel

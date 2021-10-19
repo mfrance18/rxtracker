@@ -5,7 +5,7 @@ import { getMedicationByUserId } from '../../../modules/MedicationManager';
 import { Button } from 'reactstrap';
 import "./Sunday.css"
 
-export const SundayForm = () => {
+export const SundayForm = ({toggler, reload}) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
     const [sunday, setSunday] = useState({
@@ -29,10 +29,6 @@ export const SundayForm = () => {
         setSunday(newSundayMedication)
     }
 
-    const handleCancelButton = () => {
-        history.push("/")
-    }
-
     useEffect(() => {
         getMedicationByUserId(user).then(response =>{
             setUsermedications(response)
@@ -42,14 +38,13 @@ export const SundayForm = () => {
     const handleClickSaveSundayMedication = (event) => {
         event.preventDefault()
         addMedicationToSunday(sunday)
-            .then(() => history.push("/"))
+            .then(toggler)
+            .then(reload)
     }
 
         return (
             <>
-                <div>
-                    <h2 htmlFor="medication">Add Medication To Sunday</h2>
-                    
+                <div>  
                     <select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
                         <option value="0" >Select</option>
                         {usermedications.map(u => (<option key={u.id} value={u.id}>
@@ -64,11 +59,6 @@ export const SundayForm = () => {
                         variant="primary" size="sm"
                         onClick={handleClickSaveSundayMedication}>
                         Save
-                    </Button>
-                    <Button className="sundayCancel"
-                        variant="primary" size="sm"
-                        onClick={handleCancelButton}>
-                        Cancel
                     </Button>
                 </div>
             </>

@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useHistory } from 'react-router';
 import { addMedicationToSaturday } from '../../../modules/SaturdayManager';
 import { getMedicationByUserId } from '../../../modules/MedicationManager';
 import { Button } from 'reactstrap';
 import "./Saturday.css"
 
-export const SaturdayForm = () => {
+export const SaturdayForm = ({toggler, reload}) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
     const [saturday, setSaturday] = useState({
@@ -14,8 +13,6 @@ export const SaturdayForm = () => {
     })
 
     const [usermedications, setUsermedications] = useState([])
-
-    const history = useHistory()
 
     const handleControlledInputChange = (event) => {
         const newSaturdayMedication = { ...saturday }
@@ -29,9 +26,6 @@ export const SaturdayForm = () => {
         setSaturday(newSaturdayMedication)
     }
 
-    const handleCancelButton = () => {
-        history.push("/")
-    }
 
     useEffect(() => {
         getMedicationByUserId(user).then(response =>{
@@ -42,14 +36,13 @@ export const SaturdayForm = () => {
     const handleClickSaveSaturdayMedication = (event) => {
         event.preventDefault()
         addMedicationToSaturday(saturday)
-            .then(() => history.push("/"))
+            .then(toggler)
+            .then(reload)
     }
 
         return (
             <>
                 <div>
-                    <h2 htmlFor="medication">Add Medication To Saturday</h2>
-                    
                     <select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
                         <option value="0" >Select</option>
                         {usermedications.map(u => (<option key={u.id} value={u.id}>
@@ -64,11 +57,6 @@ export const SaturdayForm = () => {
                         variant="primary" size="sm"
                         onClick={handleClickSaveSaturdayMedication}>
                         Save
-                    </Button>
-                    <Button className="saturdayCancel"
-                        variant="primary" size="sm"
-                        onClick={handleCancelButton}>
-                        Cancel
                     </Button>
                 </div>
             </>

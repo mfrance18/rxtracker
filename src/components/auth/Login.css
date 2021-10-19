@@ -57,7 +57,7 @@ label.email {
 }
 
 button.regCancel.btn.btn-secondary.btn-sm {
-  background-color: seagreen;
+  background-color: red;
   margin-left: 5px;
   margin-bottom: 2px;
 }

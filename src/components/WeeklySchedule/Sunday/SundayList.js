@@ -1,20 +1,24 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 import { getAllSundayMedication, deleteMedicationFromSunday } from "../../../modules/SundayManager";
 import { SundayMedicineCard } from "./SundayCard";
-import { Button } from "reactstrap";
+import { Button, Modal, ModalHeader, ModalBody  } from "reactstrap";
+import { SundayForm } from "./SundayForm";
 import "./Sunday.css"
 
 export const SundayList = () => {
     const [sundays, setSundays] = useState([])
 
-    const history = useHistory()
+    const [modal, setModal] = useState(false);
 
     const getSundayMedication = () => {
         return getAllSundayMedication().then(response => {
             setSundays(response)
         })
     }
+
+    const toggle = () => {
+        setModal(!modal)
+    };
 
     const reload = () => {
         getSundayMedication()
@@ -38,7 +42,7 @@ export const SundayList = () => {
                     <Button type="button"
                         className="sundayAdd"
                         variant="primary" size="sm"
-                        onClick={() => { history.push("/sunday/create") }}>
+                        onClick={toggle}>
                         Add Medication
                     </Button>
                 </div>
@@ -47,6 +51,13 @@ export const SundayList = () => {
                     {sundays.map(sunday => <SundayMedicineCard sunday={sunday} key={sunday.id} handleDeleteMedication={handleDeleteMedication} reload={reload} />)}
                 </div>
             </section>
+
+            <Modal isOpen={modal} toggle={toggle}>
+                <ModalHeader toggle={toggle}>Add to Monday</ModalHeader>
+                <ModalBody>
+                    <SundayForm toggler={toggle} reload={reload} />
+                </ModalBody>
+            </Modal>
         </>
     )
 

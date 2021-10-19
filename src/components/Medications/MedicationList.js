@@ -1,33 +1,41 @@
 import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 import { getAllMedications, deleteMedication } from "../../modules/MedicationManager";
 import { MedicationCard } from "./MedicationCard";
-import { Button} from 'reactstrap';
+import { MedicationForm } from "./MedicationForm";
+import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 
 export const MedicationList = () => {
 
 
     const [medications, setMedications] = useState([])
 
-    const history = useHistory()
+    const [modal, setModal] = useState(false);
+
+    const toggle = () => {
+        setModal(!modal)
+    };
+
 
     const getMedications = () => {
         return getAllMedications().then(response => {
             setMedications(response)
-            console.log(response)
         })
+    }
+
+    const render = () => {
+        getMedications()
     }
 
     const handleDeleteMedication = (id) => {
         deleteMedication(id)
-        .then(() => getAllMedications().then(setMedications))
+            .then(() => getAllMedications().then(setMedications))
     }
 
     useEffect(() => {
         getMedications()
     }, [])
-    
-   
+
+
     return (
         <>
 
@@ -35,18 +43,25 @@ export const MedicationList = () => {
                 <h1>Medications</h1>
                 <div>
                     <Button type="button"
-                     variant="secondary" size="sm"
+                        variant="secondary" size="sm"
                         className="medAdd"
-                        onClick={() => { history.push("/medications/create") }}>
+                        onClick={toggle}>
                         Add New Medication
                     </Button>
                 </div>
             </div>
             <section className="medList">
-               
-                    {medications.map(medication => <MedicationCard medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication}/>)}
-                
+
+                {medications.map(medication => <MedicationCard render={render} medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication} />)}
+
             </section>
+
+            <Modal isOpen={modal} toggle={toggle}>
+                <ModalHeader toggle={toggle}>New Medication</ModalHeader>
+                <ModalBody>
+                    <MedicationForm toggler={toggle} render={render} />
+                </ModalBody>
+            </Modal>
         </>
     )
 }
