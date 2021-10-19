@@ -1,11 +1,19 @@
-import React from "react"
+import React,{useState} from "react"
+import { DailyMedicineList } from "./DailyMedicationList"
+import { Button } from "reactstrap";
 
-export const DailyMedicine = (medicine) => {
+
+
+
+
+export const DailyCard = ({day}) => {
+   
     return (
-        <div>
-            <h5>{medicine.name}</h5>
-            <button>Delete</button>
-            <input type="checkbox"></input>
+        <div className="dailyCard">
+            <h5>{day.name}</h5>
+            <DailyMedicineList dayId={day.id} day={day}/>
         </div>
+        
     )
 }
+

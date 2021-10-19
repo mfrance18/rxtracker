@@ -45,16 +45,19 @@ button.weekAdd.btn.btn-secondary.btn-sm {
     display: flex;
     align-items: baseline;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .row2 {
     display: flex;
+    align-items: baseline;
     flex-direction: row;
-
+    flex-wrap: wrap;
 }
 
 .row3 {
     display: flex;
-    justify-content: center;
+    align-items: baseline;
     flex-direction: row;
+    flex-wrap: wrap;
 }

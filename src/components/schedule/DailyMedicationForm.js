@@ -1,44 +1,45 @@
 import React, { useEffect, useState } from 'react';
-import { addMedicationToThursday } from '../../../modules/ThursdayManager';
-import { getMedicationByUserId } from '../../../modules/MedicationManager';
-import { Button } from 'reactstrap';
-import "./Thursday.css"
+import { getMedicationByUserId } from '../../modules/MedicationManager';
+import { addMedicationToDay } from '../../modules/DayManager';
+import { Button} from "reactstrap";
 
-export const ThursdayForm = ({toggler, reload}) => {
+
+export const DailyMedicationForm = ({toggle, day, reload}) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
-    const [thursday, setThursday] = useState({
+    const [days, setDays] = useState({
         userId: user,
+        medicationId: 0,
+        dayId: day,
         status: false
     })
 
     const [usermedications, setUsermedications] = useState([])
 
-    const handleControlledInputChange = (event) => {
-        const newThursdayMedication = { ...thursday }
 
+    const handleControlledInputChange = (event) => {
+        const newMedication = { ...days }
         let selectedVal = event.target.value
 
         if (event.target.value.includes("Id")) {
             selectedVal = parseInt(selectedVal)
         }
-        newThursdayMedication[event.target.id] = parseInt(selectedVal)
-        setThursday(newThursdayMedication)
+        newMedication[event.target.id] = parseInt(selectedVal)
+        setDays(newMedication)
     }
 
 
- 
     useEffect(() => {
         getMedicationByUserId(user).then(response =>{
             setUsermedications(response)
         })
     },[])
 
-    const handleClickSaveThursdayMedication = (event) => {
+    const handleClickSaveMedication = (event) => {
         event.preventDefault()
-        addMedicationToThursday(thursday)
-            .then(toggler)
-            .then(reload)
+        addMedicationToDay(days)
+        .then(toggle)
+        .then(reload)
     }
 
         return (
@@ -52,15 +53,14 @@ export const ThursdayForm = ({toggler, reload}) => {
                     </select>
                 </div>
 
-                <div className="thursdayButtons">
+                <div className="dayButtons">
                     <Button
-                        className="thursdaySave"
+                        className="daySave"
                         variant="primary" size="sm"
-                        onClick={handleClickSaveThursdayMedication}>
+                        onClick={handleClickSaveMedication}>
                         Save
                     </Button>
                 </div>
             </>
         )
-
 }

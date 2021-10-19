@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import { Route } from "react-router-dom"
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
-import { AllDaysList } from "../AllDays/AllDaysList";
 import { MedicationList } from "../Medications/MedicationList";
 import { Redirect } from "react-router";
-import { AllDaysForm } from "../AllDays/AllDaysForm";
+import { DayList } from "../schedule/DayList";
+import { AllDaysList } from "../AllDays/AllDaysList";
 
 
 
@@ -18,11 +18,8 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
         <>
 
             <Route exact path="/">
-                {isAuthenticated ? <AllDaysList /> : null}
-            </Route>
-
-            <Route exact path="/allDays/create">
-                <AllDaysForm />
+               
+              {isAuthenticated ? <AllDaysList /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/medications">

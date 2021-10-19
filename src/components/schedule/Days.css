@@ -1,0 +1,63 @@
+.dayCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+}
+
+.dayCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 230px;
+}
+
+.dayMedicineTitle.card-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+section.dailyMedicineCardList {
+    overflow-y: scroll;
+    padding-bottom: 120px;
+    height: 300px;
+    padding: 10px;
+}
+
+button.dayDelete.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+.dailyCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 10px solid seagreen;
+    border-radius: 18px;
+    background-color: lightyellow;
+    width: 400px;
+    height: auto;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.dailyList {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+button.addButton.btn.btn-secondary {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
