@@ -1,30 +1,29 @@
 import React from "react";
 import { Route } from "react-router-dom"
-import { Login } from "./auth/Login";
-import { Register } from "./auth/Register";
-import { MedicationList } from "./Medications/MedicationList";
+import { Login } from "../auth/Login";
+import { Register } from "../auth/Register";
+import { MedicationList } from "../Medications/MedicationList";
 import { Redirect } from "react-router";
-import { MedicationForm } from "./Medications/MedicationForm";
-import { MedicationEditForm } from "./Medications/MedicationEditForm";
+import { DayList } from "../schedule/DayList";
+import { AllDaysList } from "../AllDays/AllDaysList";
+
+
+
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
+
+
     return (
+
         <>
 
             <Route exact path="/">
-            {isAuthenticated ? <MedicationList /> : <Redirect to="/login" />}
+               
+              {isAuthenticated ? <AllDaysList /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/medications">
-            {isAuthenticated ? <MedicationList /> : <Redirect to="/login" />}
-            </Route>
-
-            <Route exact path="/medications/create">
-                <MedicationForm/>
-            </Route>
-
-            <Route  exact path= "/medications/:medicationId(\d+)/edit">
-                <MedicationEditForm/>
+                {isAuthenticated ? <MedicationList /> : <Redirect to="/login" />}
             </Route>
 
             <Route path="/messages">

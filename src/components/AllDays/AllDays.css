@@ -1,0 +1,63 @@
+.allDaysButtons {
+    margin-top: 10px;
+   
+}
+
+button.allDaysSave.btn.btn-secondary.btn-sm {
+    background-color: seagreen;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+button.allDaysCancel.btn.btn-secondary.btn-sm {
+    margin-left: 5px;
+    background-color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.homeTop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+button.weekAdd.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-left: 10px;
+    background-color: seagreen;
+}
+
+.listRows {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.row1 {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row2 {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.row3 {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+    flex-wrap: wrap;
+}

@@ -1,6 +1,7 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
 import { Form, FormGroup, Label, Button, Input } from "reactstrap";
+import MainLogo from "../../images/MainLogo.png"
 import "./Login.css"
 
 export const Register = ({ setAuthUser }) => {
@@ -41,7 +42,7 @@ export const Register = ({ setAuthUser }) => {
                         },
                         body: JSON.stringify({
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            name: `${registerUser.firstName} ${registerUser.lastName}` 
                         })
                     })
                         .then(res => res.json())
@@ -61,15 +62,17 @@ export const Register = ({ setAuthUser }) => {
     }
 
     return (
+        <>
+        <section className="mainLogin">
         <main className="container--login">
-
+        <div className="login-logo"><img className="loginImage" src={MainLogo} alt="Rx Tracker Logo" /></div>
             <dialog className="dialog dialog--password" open={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => setConflictDialog(false)}>Close</button>
             </dialog>
 
             <Form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Application Name</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Register Your Account Below</h1>
                 <FormGroup>
                     <Label htmlFor="firstName"> First Name </Label>
                     <Input type="text" name="firstName" id="firstName" className="form-control" placeholder="First name" required autoFocus value={registerUser.firstName} onChange={handleInputChange} />
@@ -81,14 +84,12 @@ export const Register = ({ setAuthUser }) => {
                 <FormGroup>
                     <Label htmlFor="inputEmail" className="email"> Email address </Label>
                     <Input type="email" name="email" id="email" className="form-control" placeholder="Email address" required value={registerUser.email} onChange={handleInputChange} />
-                    <Button type="submit"> Sign in </Button>
-                    <Button onClick={handleCancel}> Cancel </Button>
+                    <Button className="regSignIn" type="submit" variant="secondary" size="sm"> Sign in </Button>
+                    <Button onClick={handleCancel} className="regCancel" variant="secondary" size="sm"> Cancel </Button>
                 </FormGroup>
-
-
-
-
             </Form>
         </main >
+        </section>
+       </> 
     )
 }

@@ -4,6 +4,16 @@
       "id": 1,
       "name": "Matt France",
       "email": "matt@gmail.com"
+    },
+    {
+      "email": "ashley@gmail.com",
+      "name": "Ashley Morphis",
+      "id": 2
+    },
+    {
+      "email": "gerson@gmail.com",
+      "name": "Gerson Diketama",
+      "id": 3
     }
   ],
   "days": [
@@ -38,27 +48,63 @@
   ],
   "medications": [
     {
-      "id": 1,
       "name": "Zyrtec",
-      "amount": 1,
+      "userId": 1,
+      "amount": "1",
+      "instructions": "Take 1 every 24 hours",
       "dosage": "200mg",
-      "instructions": "Take 1 every 24 hours"
-    },
-    {
-      "name": "Lisinopril",
-      "user": 1,
-      "amount": "2",
-      "instructions": "Take 2 pills per day with Food or Milk.",
-      "dosage": "40mg",
-      "id": 2
+      "id": 1
     }
   ],
   "dailyMedications": [
     {
-      "id": 1,
+      "userId": 1,
       "medicationId": 1,
       "dayId": 1,
-      "status": false
+      "status": false,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 2,
+      "status": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 3,
+      "status": false,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 4,
+      "status": false,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 5,
+      "status": false,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 6,
+      "status": false,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 7,
+      "status": false,
+      "id": 7
     }
   ]
 }

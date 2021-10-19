@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { ApplicationViews } from "./ApplicationViews";
+import { ApplicationViews } from "../components/ApplicationViews/ApplicationViews";
 import { NavBar } from "./nav/NavBar";
 
 
