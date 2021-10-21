@@ -16,9 +16,10 @@ npm start
 #Tech Used
 
 The tech used to create this app:
--JavaScript
--React
--React-Bootstrap
--JSON server
-
+<ul>
+<li>JavaScript</li>
+<li>React</li>
+<li>React-Bootstrap</li>
+<li>JSON server</li>
+</ul>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
