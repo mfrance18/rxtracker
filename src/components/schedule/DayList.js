@@ -6,6 +6,7 @@ import { DailyCard } from "./DailyCard";
 export const DayList = () => {
     const [days, setDays] = useState([])
 
+
     const getDays = () => {
         return getAllDays().then(response => {
             setDays(response)
@@ -16,11 +17,12 @@ export const DayList = () => {
         getDays()
     }, [])
 
-    
-    return (    
-        <section className="dailyList">
-            {days.map(day => <DailyCard day={day} key={day.id}/>)}
-        </section>
-    
+    return (
+        <>
+            <h1 style={{ textAlign: "center" }}> Weekly Medication Schedule</h1>
+            <section className="dailyList">
+                {days.map(day => <DailyCard day={day} key={day.id} />)}
+            </section>
+        </>
     )
 }

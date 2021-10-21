@@ -1,48 +1,46 @@
-import React, {useState}from "react";
-import { useHistory } from "react-router";
+import React, { useState } from "react";
 import { Card, CardTitle, CardBody, ListGroup, Button, ListGroupItem, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { MedicationEditForm } from "./MedicationEditForm";
 import "./Medications.css"
 
 export const MedicationCard = ({ medication, handleDeleteMedication, render }) => {
-    const history = useHistory()
+
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
-    const [selectedMedication, setMedication] = useState({medication: {}})
+    const [selectedMedication, setMedication] = useState({ medication: {} })
 
     const [editModal, setEditModal] = useState(false);
     const toggleEdit = () => setEditModal(!editModal);
-    
-    if(user === medication.userId) {
-    return (
-        <>
-            <Card className="medCard">
 
-                <CardBody className="cardTop">
-                    <CardTitle className="medicationCardTitle">{medication.name}</CardTitle>
-                
-                <ListGroup>
-                    <ListGroupItem>{medication.instructions}</ListGroupItem>
-                    <ListGroupItem>Dosage: {medication.dosage}</ListGroupItem>
-                    <ListGroupItem>Amount Per Day: {medication.amount}</ListGroupItem>
-                </ListGroup>
-                
-                    <Button className="medDelete"  
-                    variant="secondary" size="sm" type="button" 
-                    onClick={() => handleDeleteMedication(medication.id)}>Delete</Button>
-                    <Button className="medEdit"  variant="secondary" size="sm" type="button" 
-                    onClick={() => {setMedication({ medication }); toggleEdit()}}>Edit</Button>
-                </CardBody>
-            </Card>
+    if (user === medication.userId) {
+        return (
+            <>
+                <Card className="medCard">
+                    <CardBody className="cardTop">
+                        <CardTitle className="medicationCardTitle">{medication.name}</CardTitle>
 
-            <Modal isOpen={editModal} toggle={toggleEdit}>
-                <ModalHeader toggle={toggleEdit}>New Medication</ModalHeader>
-                <ModalBody>
-                    <MedicationEditForm render={render} medication={medication} key={medication.id} toggleEdit={toggleEdit}  {...selectedMedication}/>
-                </ModalBody>
-            </Modal>
-        </>
-    )
+                        <ListGroup>
+                            <ListGroupItem>{medication.instructions}</ListGroupItem>
+                            <ListGroupItem>Dosage: {medication.dosage}</ListGroupItem>
+                            <ListGroupItem>Amount: {medication.amount}</ListGroupItem>
+                        </ListGroup>
+
+                        <Button className="medDelete"
+                            variant="secondary" size="sm" type="button"
+                            onClick={() => handleDeleteMedication(medication.id)}>Delete</Button>
+                        <Button className="medEdit" variant="secondary" size="sm" type="button"
+                            onClick={() => { setMedication({ medication }); toggleEdit() }}>Edit</Button>
+                    </CardBody>
+                </Card>
+
+                <Modal isOpen={editModal} toggle={toggleEdit}>
+                    <ModalHeader toggle={toggleEdit}>New Medication</ModalHeader>
+                    <ModalBody>
+                        <MedicationEditForm render={render} medication={medication} key={medication.id} toggleEdit={toggleEdit}  {...selectedMedication} />
+                    </ModalBody>
+                </Modal>
+            </>
+        )
     } else {
         return null
     }

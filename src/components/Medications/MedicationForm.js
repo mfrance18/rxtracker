@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-import { addMedication} from "../../modules/MedicationManager";
+import { addMedication } from "../../modules/MedicationManager";
+import { Form } from "react-bootstrap";
+import { Button, Label, Input } from 'reactstrap';
 
-import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
-
-export const MedicationForm = ({toggler, render}) => {
+export const MedicationForm = ({ toggler, render }) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
-
-    
 
     const [medication, setMedication] = useState({
         name: "",
@@ -24,7 +22,6 @@ export const MedicationForm = ({toggler, render}) => {
             selectedVal = parseInt(selectedVal)
         }
         newMedication[event.target.id] = selectedVal
-
         setMedication(newMedication)
     }
 
@@ -35,39 +32,34 @@ export const MedicationForm = ({toggler, render}) => {
             .then(render)
     }
 
-
     return (
         <>
             <section className="medFormContainer">
                 <Form className="medForm">
                     <h1>Add a Medication</h1>
                     <div >
-                        <FormGroup>
+                        <Form.Group>
                             <Label htmlFor="name">Medication Name: </Label>
                             <Input className="form-control" type="text" id="name" onChange={handleControlledInputChange} placeholder="Name of Medication" value={medication.name} />
 
-
-
-                            <Label htmlFor="amount">Amount Per Day: </Label>
-                            <Input className="form-control" type="select" onChange={handleControlledInputChange} value={medication.amount} id="amount">
+                            <Label htmlFor="amount">Amount: </Label>
+                            <Form.Select type="select" className="form-control" onChange={handleControlledInputChange} value={medication.amount} id="amount">
                                 <option value="0" disabled>Select Amount</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
                                 <option value="4">4</option>
                                 <option value="5">5</option>
-                            </Input>
+                            </Form.Select>
 
 
 
                             <Label htmlFor="dosage">Dosage: </Label>
                             <Input className="form-control" type="text" id="dosage" onChange={handleControlledInputChange} placeholder="Dosage Amount" value={medication.dosage} />
 
-
-
                             <Label htmlFor="instructions">Instructions: </Label>
                             <Input className="form-control" id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions} />
-                        </FormGroup>
+                        </Form.Group>
                     </div>
 
                     <div >
@@ -75,9 +67,8 @@ export const MedicationForm = ({toggler, render}) => {
                             variant="secondary" size="sm"
                             onClick={handleClickSaveMedication}>
                             Save Medication
-                        </Button> 
+                        </Button>
                     </div>
-
                 </Form >
             </section>
 

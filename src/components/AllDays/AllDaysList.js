@@ -1,38 +1,40 @@
-import React, { useState } from "react";
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-import { AllDaysForm } from "./AllDaysForm";
-import { DayList } from "../schedule/DayList";
+// import React, { useState } from "react";
+// import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+// import { AllDaysForm } from "./AllDaysForm";
+// import { DayList } from "../schedule/DayList";
 
 
 
 
-export const AllDaysList = () => {
 
-    const [modal, setModal] = useState(false);
 
-    const toggle = () => {
-        setModal(!modal)
-    };
+// export const AllDaysList = () => {
+    
+   
+//     const [modal, setModal] = useState(false);
 
-    return (
-        <>
-            <div>
-                <h1 style={{ textAlign: "center" }}> Weekly Medication Schedule</h1>
-                <Button type="button"
-                    className="mondayAdd"
-                    variant="primary" size="sm"
-                    onClick={toggle}>
-                    Add Medication
-                </Button>
-            </div>
-            <DayList />
+//     const toggle = () => {
+//         setModal(!modal)
+//     };
 
-            <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}>Add to Everyday</ModalHeader>
-                <ModalBody>
-                    <AllDaysForm toggler={toggle} />
-                </ModalBody>
-            </Modal>
-        </>
-    )
-}
+//     return (
+//         <>
+//             <div>
+//                 <Button type="button"
+//                     className="mondayAdd"
+//                     variant="primary" size="sm"
+//                     onClick={toggle}>
+//                     Add Medication
+//                 </Button>
+//             </div>
+//             <DayList />
+
+//             <Modal isOpen={modal} toggle={toggle}>
+//                 <ModalHeader toggle={toggle}>Add to Everyday</ModalHeader>
+//                 <ModalBody>
+//                     <AllDaysForm toggler={toggle}/>
+//                 </ModalBody>
+//             </Modal>
+//         </>
+//     )
+// }

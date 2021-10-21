@@ -1,6 +1,5 @@
-import React,{useState} from "react"
+import React from "react"
 import { DailyMedicineList } from "./DailyMedicationList"
-import { Button } from "reactstrap";
 
 
 
@@ -10,7 +9,7 @@ export const DailyCard = ({day}) => {
    
     return (
         <div className="dailyCard">
-            <h5>{day.name}</h5>
+            <h3>{day.name}</h3>
             <DailyMedicineList dayId={day.id} day={day}/>
         </div>
         

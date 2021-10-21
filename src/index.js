@@ -6,12 +6,13 @@ import { RxTracker } from './components/Rxtracker';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+
 ReactDOM.render(
-  <React.StrictMode>
+  <React.Fragment>
     <Router>
       <RxTracker />
     </Router>
-  </React.StrictMode>,
+  </React.Fragment>,
   document.getElementById('root')
 );
 

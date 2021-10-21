@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getMedicationByUserId } from '../../modules/MedicationManager';
 import { addMedicationToDay } from '../../modules/DayManager';
 import { Button} from "reactstrap";
+import { Form } from 'react-bootstrap';
 
 
 export const DailyMedicationForm = ({toggle, day, reload}) => {
@@ -29,10 +30,14 @@ export const DailyMedicationForm = ({toggle, day, reload}) => {
     }
 
 
+    const getUserMeds = () => {
+       return getMedicationByUserId(user).then(response => {
+           setUsermedications(response)
+       })
+    }
+
     useEffect(() => {
-        getMedicationByUserId(user).then(response =>{
-            setUsermedications(response)
-        })
+      getUserMeds()
     },[])
 
     const handleClickSaveMedication = (event) => {
@@ -45,12 +50,14 @@ export const DailyMedicationForm = ({toggle, day, reload}) => {
         return (
             <>
                 <div>
-                    <select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
+                    <Form>
+                    <Form.Select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
                         <option value="0" >Select</option>
                         {usermedications.map(u => (<option key={u.id} value={u.id}>
-                            {u.name}
+                            {u.name}, Instructions: {u.instructions}
                         </option>))}
-                    </select>
+                    </Form.Select>
+                    </Form>
                 </div>
 
                 <div className="dayButtons">

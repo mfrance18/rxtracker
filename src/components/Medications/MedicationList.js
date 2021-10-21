@@ -15,7 +15,6 @@ export const MedicationList = () => {
         setModal(!modal)
     };
 
-
     const getMedications = () => {
         return getAllMedications().then(response => {
             setMedications(response)
@@ -35,11 +34,9 @@ export const MedicationList = () => {
         getMedications()
     }, [])
 
-
     return (
         <>
-
-            <div className="medications">
+            <section className="medications">
                 <h1>Medications</h1>
                 <div>
                     <Button type="button"
@@ -49,11 +46,10 @@ export const MedicationList = () => {
                         Add New Medication
                     </Button>
                 </div>
-            </div>
+            </section>
+
             <section className="medList">
-
                 {medications.map(medication => <MedicationCard render={render} medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication} />)}
-
             </section>
 
             <Modal isOpen={modal} toggle={toggle}>

@@ -1,7 +1,7 @@
 import React from "react"
 import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
-import MainLogo2 from "../../images/MainLogo.png"
+import MainLogo from "../../images/HomeLogo.png"
 import "./NavBar.css"
 
 
@@ -18,35 +18,47 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
     return (
         <>
-        {isAuthenticated ?
-            <section className="header">
-            {isAuthenticated ? <div className="mainImage"><img className="logo" src={MainLogo2} alt="Rx Tracker Logo" /></div> : null}
-                {isAuthenticated ? <div className="mainTitle">
-                    {isAuthenticated ? <h5 className="intro">Welcome, {user}!</h5> : null}
-                </div>
-                    : null}
-                {isAuthenticated ? <nav className="navbar">
-                    <ul className="nav nav-pills nav-fill">
-                        {isAuthenticated ?
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/">Home</Link>
-                            </li>
-                            : null}
-                        {isAuthenticated ?
-                            <li className="nav-item">
-                                <Link className="nav-link" to="/medications">Medications</Link>
-                            </li>
-                            : null}
-                        {isAuthenticated ?
-                            <li className="nav-item" >
-                                <Link className="nav-link" onClick={handleLogout} to="/login">Logout</Link>
-                            </li>
-                            : null}
-                    </ul>
-                </nav>
-                    : null}
-            </section>
-            : null}
+            {isAuthenticated ?
+                <header className="headerContainer">
+                    <section className="imageContainer">
+                        <div className="navImage">
+                            <img className="navLogo" src={MainLogo} alt="Rx Tracker Logo" />
+                        </div>
+                    </section>
+
+                    <section>
+                        <h1 className="mainTitle">Welcome to Rx Tracker</h1>
+                    </section>
+
+                    <section className="navContainer">
+                        <div>
+                            <h2 className="intro">Welcome, {user}!</h2> :
+                        </div>
+                        <div>
+                            <nav className="navbar">
+
+                                <ul className="nav nav-pills nav-fill">
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/">Weekly Schedule</Link>
+                                    </li>
+
+
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/medications">Medications</Link>
+                                    </li>
+
+                                    <li className="nav-item" >
+                                        <Link className="nav-link" onClick={handleLogout} to="/login">Logout</Link>
+                                    </li>
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </section>
+                </header>
+                : null}
         </>
+
     )
 }

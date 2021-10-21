@@ -6,17 +6,34 @@
 .container--login {
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
 }
 
 form.form--login {
   display: flex;
   align-items: center;
+  height: 600px;
+  width: 600px;
   flex-direction: column;
   border: 18px double seagreen;
   border-radius: 18px;
   background-color: lightyellow;
+}
+
+.belowInput {
+  display: flex;
+  flex-direction: column;
+}
+
+img.loginImage {
+  margin-left: 80px;
+}
+
+h2.signIn {
+  margin-top: 10px;
+  margin-bottom: 100px;
+  font-size: 50px;
 }
 
 .register {
@@ -25,20 +42,23 @@ form.form--login {
 }
 
 input#email {
+  text-align: center;
+  padding: 6px 100px 6px 100px;
   margin-bottom: 10px;
-  margin-top: -15px;
   border: 2px solid seagreen;
 }
 
 input#firstName {
+  text-align: center;
+  padding: 6px 100px 6px 100px;
+  margin-bottom: 10px;
   border: 2px solid seagreen;
 }
 
-img.loginImage {
-  height: 300px;
-}
-
 input#lastName {
+  text-align: center;
+  padding: 6px 100px 6px 100px;
+  margin-bottom: 10px;
   border: 2px solid seagreen;
 }
 
@@ -52,8 +72,9 @@ h1.loginTitle {
   color: white;
 }
 
-label.email {
-  margin-bottom: 15px;
+h2.registerTitle {
+  font-size: 40px;
+  margin-bottom: 70px;
 }
 
 button.regCancel.btn.btn-secondary.btn-sm {
@@ -68,8 +89,16 @@ button.regSignIn.btn.btn-secondary.btn-sm {
 }
 
 .mainLogin {
+  display: flex;
   background-color: seagreen;
   width: auto;
   height: auto;
   min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+label {
+  display: inline-block;
+  font-weight: 600;
 }

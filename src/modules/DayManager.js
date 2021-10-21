@@ -11,14 +11,15 @@ export const getAllDailyMedications = () => {
 }
 
 export const getMedicationByDay = (dayId) => {
-    return fetch(`${remoteURL}/dailyMedications?dayId=${dayId}&_expand=medication`)
+    return fetch(`${remoteURL}/dailyMedications?dayId=${dayId}&status=false&_expand=medication`)
     .then(response => response.json())
 }
 
-export const getMedicationForMonday = ()  => {
-    return fetch(`${remoteURL}/dailyMedications?dayId=1`)
+export const getMedicationBySingleDay = (dayId) => {
+    return fetch(`${remoteURL}/dailyMedications?dayId=${dayId}`)
     .then(response => response.json())
 }
+
 
 export const addMedicationToDay = (newMedication) => {
     return fetch (`${remoteURL}/dailyMedications`, {
@@ -38,3 +39,14 @@ export const deleteMedicationFromDay = (id) => {
         response.json()
     })
 }
+
+export const completeMedicine = (medObj) => {
+    medObj.status = true
+      return fetch(`${remoteURL}/dailyMedications/${medObj.id}`, {
+          method: "PATCH",
+          headers: {
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify(medObj)
+      }).then(data => data.json());
+  }

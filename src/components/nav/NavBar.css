@@ -1,24 +1,41 @@
 .mainTitle {
-    display: flex;
-    text-align: center;
     color: white;
-    flex-direction: row;
-    justify-content: flex-end;
+    font-size: 60px;
+    margin-left: 200px;
 }
 
 nav.navbar {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-   
 }
 
-.header {
-    background-color:seagreen;
+
+nav.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerContainer {
+    background-color: seagreen;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.navContainer {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: flex-end;
+    margin-top: 100px;
 }
 
 a.nav-link {
     color: white;
+    font-size: x-large;
 }
 
 a.nav-link:hover {
@@ -31,21 +48,11 @@ a.nav-link:focus {
 
 .intro {
     color: white;
+}
+
+section.welcome {
     display: flex;
-    margin-right: 20px;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.mainImage {
-    display: flex;
-    height: 100px;
-    justify-content: center;
-}
-
-.logo {
-    width: 225px;
-    height: 225px;;
-}
-
-h1.title {
-    margin-right: 100px;
-}
