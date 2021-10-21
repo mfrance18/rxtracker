@@ -1,0 +1,77 @@
+button.messageAdd.btn.btn-secondary.btn-sm {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+button.messageDelete.btn.btn-secondary{
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+button.messageEdit.btn.btn-secondary {
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+.message-update-buttons.card-footer {
+    background-color: lightyellow;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+button.messageComment.btn.btn.btn-secondary {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+.messages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+}
+
+.messageList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.message.card {
+    width: 500px;
+    font-size: 20px;
+}
+
+section.messagesIntro {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.messageOrder {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}

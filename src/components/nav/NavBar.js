@@ -48,6 +48,10 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
                                         <Link className="nav-link" to="/medications">Medications</Link>
                                     </li>
 
+                                    <li className="nav-item">
+                                        <Link className="nav-link" to="/publicforum">Public Forum</Link>
+                                    </li>
+
                                     <li className="nav-item" >
                                         <Link className="nav-link" onClick={handleLogout} to="/login">Logout</Link>
                                     </li>

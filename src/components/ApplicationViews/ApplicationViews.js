@@ -5,6 +5,7 @@ import { Register } from "../auth/Register";
 import { MedicationList } from "../Medications/MedicationList";
 import { Redirect } from "react-router";
 import { DayList } from "../schedule/DayList";
+import { MessageList } from "../messages/MessageList";
 
 
 
@@ -24,6 +25,10 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
 
             <Route exact path="/medications">
                 {isAuthenticated ? <MedicationList /> : <Redirect to="/login" />}
+            </Route>
+
+            <Route exact path="/publicforum">
+                {isAuthenticated ? <MessageList /> : <Redirect to="/login" />}
             </Route>
 
             <Route exact path="/login">
