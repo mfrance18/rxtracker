@@ -94,6 +94,7 @@ button.regSignIn.btn.btn-secondary.btn-sm {
   width: auto;
   height: auto;
   min-height: 100vh;
+  min-width: 150vh;
   align-items: center;
   justify-content: center;
 }

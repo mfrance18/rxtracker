@@ -79,6 +79,7 @@ button.medAdd.btn.btn-secondary {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .medications {
