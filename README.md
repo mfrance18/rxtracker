@@ -23,3 +23,4 @@ The tech used to create this app:
 <li>JSON server</li>
 </ul>
 This project was bootstrapped with [Create-React-App](https://github.com/facebook/create-react-app)
+[Matt France](https://www.linkedin.com/in/matt-france-4338a058/)
