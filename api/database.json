@@ -11,6 +11,12 @@
       "firstName": "Ashley",
       "lastName": "Morphis",
       "email": "ashley@gmail.com"
+    },
+    {
+      "email": "jeff@gmail.com",
+      "firstName": "Jeff",
+      "lastName": "G",
+      "id": 3
     }
   ],
   "days": [
@@ -85,14 +91,6 @@
       "id": 5
     },
     {
-      "name": "Lisinopril",
-      "userId": 4,
-      "amount": "2",
-      "instructions": "Take 2 per day",
-      "dosage": "40mg",
-      "id": 6
-    },
-    {
       "name": "Zyrtec",
       "userId": 2,
       "amount": "1",
@@ -135,8 +133,16 @@
       "userId": 1,
       "medicationId": 5,
       "dayId": 1,
-      "status": false,
-      "id": 5
+      "status": true,
+      "id": 5,
+      "medication": {
+        "name": "Fluconazole",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 tablet per week",
+        "dosage": "150mg",
+        "id": 5
+      }
     },
     {
       "userId": 1,
@@ -312,6 +318,28 @@
       "dayId": 7,
       "status": false,
       "id": 37
+    },
+    {
+      "userId": 1,
+      "medicationId": 5,
+      "dayId": 1,
+      "status": false,
+      "id": 38
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 1,
+      "status": true,
+      "id": 39,
+      "medication": {
+        "id": 1,
+        "userId": 1,
+        "name": "Zyrtec",
+        "amount": "1",
+        "dosage": "200mg",
+        "instructions": "Take 1 every 24 hours"
+      }
     }
   ]
 }
