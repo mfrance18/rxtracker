@@ -12,7 +12,7 @@ export const RxTracker = () => {
 
     const setAuthUser = (user) => {
         sessionStorage.setItem("rxtracker_user", user.id)
-        sessionStorage.setItem("rxtracker_username", user.name)
+        sessionStorage.setItem("rxtracker_username", user.firstName)
         setIsAuthenticated(sessionStorage.getItem("rxtracker_user") !== null)
         
     }

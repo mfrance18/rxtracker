@@ -115,15 +115,15 @@
 
 //     return (
 //         <>
-//             <div>
-//                 <h2>Add Medication to Each Day</h2>
-//                 <select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
-//                     <option value="0">Select</option>
-//                     {usermedications.map(u => (<option key={u.id} value={u.id}>
-//                         {u.name}
-//                     </option>))}
-//                 </select>
-//             </div>
+            // <div>
+            //     <h2>Add Medication to Each Day</h2>
+            //     <select value={usermedications.id} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
+            //         <option value="0">Select</option>
+            //         {usermedications.map(u => (<option key={u.id} value={u.id}>
+            //             {u.name}
+            //         </option>))}
+            //     </select>
+            // </div>
 //             <div className="allDaysButtons">
 //                 <Button
 //                     className="allDaysSave"

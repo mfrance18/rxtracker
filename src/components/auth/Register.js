@@ -41,7 +41,8 @@ export const Register = ({ setAuthUser }) => {
                         },
                         body: JSON.stringify({
                             email: registerUser.email,
-                            name: `${registerUser.firstName} ${registerUser.lastName}`
+                            firstName: registerUser.firstName,
+                            lastName: registerUser.lastName
                         })
                     })
                         .then(res => res.json())
