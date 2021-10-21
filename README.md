@@ -22,6 +22,5 @@ The tech used to create this app:
 <li>React-Bootstrap</li>
 <li>JSON server</li>
 </ul>
-This project was bootstrapped with [Create-React-App](https://github.com/facebook/create-react-app)
 <a href="https://github.com/facebook/create-react-app" target="_blank">Create-React-App</a>
 
