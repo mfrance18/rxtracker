@@ -1,4 +1,4 @@
-#Rx Tracker
+# Rx Tracker
 
 Rx Tracker is a Single Page Application that easily allows any user to keep track of their medications, and also make a schedule of medications they have to take each day. Inside of each day, the use is able to check off each medicine they take as they take it. Once a medication has been checked, it no longer appears. In the medication catalog, the user is able to enter new medications, edit current medications, or delete current medications. 
 
