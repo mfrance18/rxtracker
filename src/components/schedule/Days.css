@@ -2,24 +2,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 230px;
+    width: 300px;
 }
 
 .dayCard {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 230px;
+    width: 250px;
 }
 
-.dayMedicineTitle.card-title {
+.dayMedicineTitle {
     font-size: 20px;
     font-weight: bold;
 }
 
 section.dailyMedicineCardList {
-    overflow-y: scroll;
+    overflow-y: auto;
     padding-bottom: 120px;
     height: 300px;
     padding: 10px;
@@ -40,6 +40,11 @@ button.daySave.btn.btn-secondary.btn-sm {
     padding-bottom: 1px;
     margin-top: 5px;
     background-color: seagreen;
+}
+
+.dayCardButtons {
+    display: flex;
+    align-items: center;
 }
 
 .dailyCard {
@@ -79,4 +84,8 @@ button.addButton.btn.btn-secondary {
     background-color: seagreen;
     color: white;
     
+}
+
+input#check {
+    margin-left: 20px;
 }

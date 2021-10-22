@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Card, CardTitle, Input } from "reactstrap";
+import { Button, Card, CardTitle, Input, ListGroup, ListGroupItem } from "reactstrap";
 import { completeMedicine } from "../../modules/DayManager";
 import "./Days.css"
 
@@ -14,16 +14,19 @@ export const DailyMedicineCard = ({ reload, medication, medicine, handleDeleteMe
     if (user === medicine.userId) {
         return (
             <>
-                <Card className="dayCardContainer">
+                <section className="dayCardContainer">
                     <div className="dayCard">
-                        <CardTitle className="dayMedicineTitle">{medication.name}</CardTitle>
-                        <Button className="dayDelete" variant="secondary" size="sm" onClick={() => handleDeleteMedication(medicine.id)}>Delete</Button>
-                        <Input type="checkbox"  onChange={handleCheckboxChange} id="check"></Input>
+                        <div className="dayMedicineTitle">
+                            {medication.name}
+                        </div>
+
+                        <div className="dayCardButtons">
+                            <Button className="dayDelete" variant="secondary" size="sm" onClick={() => handleDeleteMedication(medicine.id)}>Delete</Button>
+                            <Input className="dayCheck" type="checkbox" onChange={handleCheckboxChange} id="check"></Input>
+                        </div>
                     </div>
-                    <div className="dayInstructions">
-                        <p>{medication.instructions}</p>
-                    </div>
-                </Card>
+                </section>
+                <hr></hr>
             </>
         )
     } else {
