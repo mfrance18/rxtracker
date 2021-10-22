@@ -32,8 +32,6 @@ button.messageEdit.btn.btn-secondary {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
     padding: .5rem 1rem;
     background-color: lightyellow
 }
@@ -79,7 +77,7 @@ button.comment-save-button.btn.btn-secondary.btn-sm {
 }
 
 .messageBody.card-body {
-    background-color: lightblue;
+    background-color: lightyellow;
 }
 
 section.messagesIntro {
@@ -150,8 +148,9 @@ button.commentEdit.btn.btn-secondary.btn-sm {
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     font-size: 23px;
-    background-color: lavender;
+    background-color: seagreen;
     font-weight: bold;
+    color: white;
 }
 
 .time {
@@ -201,7 +200,7 @@ section.commentCard {
 }
 
 section.messageCardContainer {
-    border: 2px solid lightblue;
+    border: 2px solid lightslategrey;
     border-radius: 22px;
     margin-bottom: 10px;
 }

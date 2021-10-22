@@ -48,15 +48,7 @@
       "id": 5
     }
   ],
-  "comments": [
-    {
-      "id": 1,
-      "messageId": 5,
-      "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
-      "commenter": "Matt France",
-      "userId": 1
-    }
-  ],
+  "comments": [],
   "days": [
     {
       "id": 1,
@@ -164,8 +156,16 @@
       "userId": 1,
       "medicationId": 4,
       "dayId": 1,
-      "status": false,
-      "id": 4
+      "status": true,
+      "id": 4,
+      "medication": {
+        "name": "Hydroxyzine",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 tablet as needed per day",
+        "dosage": "25 mg",
+        "id": 4
+      }
     },
     {
       "userId": 1,
@@ -386,6 +386,28 @@
       "dayId": 4,
       "status": false,
       "id": 39
+    },
+    {
+      "userId": 1,
+      "medicationId": 5,
+      "dayId": 1,
+      "status": true,
+      "id": 40,
+      "medication": {
+        "name": "Fluconazole",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 tablet per week",
+        "dosage": "150mg",
+        "id": 5
+      }
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 1,
+      "status": false,
+      "id": 41
     }
   ]
 }
