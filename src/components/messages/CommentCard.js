@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { CardBody, Modal, ModalBody, ModalHeader, Button } from "reactstrap";
+import { Modal, ModalBody, ModalHeader, Button } from "reactstrap";
+import { CommentEditForm } from "./CommentEditForm";
 
-export const CommentCard = ({ comment, handleDeleteComment, reload }) => {
+export const CommentCard = ({ comment, handleDeleteComment, reload, message }) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
@@ -39,7 +40,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload }) => {
                 <Modal isOpen={editModal} toggle={toggleEdit}>
                     <ModalHeader toggle={toggleEdit}>New Message</ModalHeader>
                     <ModalBody>
-                        {/* <CommentEditForm reload={reload} comment={comment} key={comment.id} toggleEdit={toggleEdit}  {...selectedComment} /> */}
+                        <CommentEditForm message={message} reload={reload} comment={comment} key={comment.id} toggleEdit={toggleEdit}  {...selectedComment} />
                     </ModalBody>
                 </Modal>
             </>

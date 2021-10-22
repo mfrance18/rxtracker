@@ -34,55 +34,27 @@
       "id": 2
     },
     {
-      "userId": 3,
-      "messenger": "Robyn Boyce",
-      "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
-      "timestamp": "Fri Oct 22 2021 2:49 pm",
-      "id": 3
-    },
-    {
       "userId": 1,
       "messenger": "Matt France",
       "message": "Has anyone taken Zyrtec for Allergies? How did it work for you?",
       "timestamp": "Fri Oct 22 2021 3:04 pm",
       "id": 4
+    },
+    {
+      "userId": 3,
+      "messenger": "Robyn Boyce",
+      "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
+      "timestamp": "Fri Oct 22 2021 3:58 pm",
+      "id": 5
     }
   ],
   "comments": [
     {
-      "userId": 4,
-      "messageId": 2,
-      "commenter": "David France",
-      "comment": "It has been working well for me so far. No side effects as well.",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "messageId": 2,
-      "commenter": "Matt France",
-      "comment": "I have had the same experience as David so far. ",
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "messageId": 3,
-      "commenter": "Matt France",
+      "id": 1,
+      "messageId": 5,
       "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
-      "id": 3
-    },
-    {
-      "userId": 2,
-      "messageId": 4,
-      "commenter": "Ashley Morphis",
-      "comment": "I have taken the offbrand of zyrtec and it seems to work very well. The ingredients seem the same. ",
-      "id": 4
-    },
-    {
-      "userId": 4,
-      "messageId": 4,
-      "commenter": "David France",
-      "comment": "I have taken Zyrtec and it doesn't seem to work as well as claritin. That is just my personal opinion. ",
-      "id": 5
+      "commenter": "Matt France",
+      "userId": 1
     }
   ],
   "days": [

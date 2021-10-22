@@ -49,7 +49,7 @@ export const CommentList = ({ messageId }) => {
 
             <section className="commentList">
                 <div>
-                    {comments.map(comment => <CommentCard comment={comment} key={comment.id} handleDeleteComment={handleDeleteComment} reload={reload} />)}
+                    {comments.map(comment => <CommentCard message={messageId} comment={comment} key={comment.id} handleDeleteComment={handleDeleteComment} reload={reload} />)}
                 </div>
             </section>
             

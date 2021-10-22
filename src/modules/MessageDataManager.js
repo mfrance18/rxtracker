@@ -53,6 +53,11 @@ export const getAllComments = () => {
      .then(response => response.json())
  }
 
+ export const getCommentById = (commentId) => {
+    return fetch(`${remoteURL}/comments/${commentId}`)
+    .then(response => response.json())
+    }
+
 export const getCommentByMessage = (messageId) => {
     return fetch(`${remoteURL}/comments?messageId=${messageId}&_expand=message`)
     .then(response => response.json())
@@ -66,6 +71,16 @@ export const addComment = (newComment) => {
         },
         body: JSON.stringify(newComment)
     }).then(response => response.json())
+}
+
+export const updateComment = (commentObj) => {
+	return fetch(`${remoteURL}/comments/${commentObj.id}`, {
+		method: "PUT",
+		headers: {
+			"Content-Type": "application/json"
+		},
+		body: JSON.stringify(commentObj)
+	}).then(data => data.json());
 }
 
 export const deleteComment = (id) => {
