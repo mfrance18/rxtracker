@@ -1,0 +1,207 @@
+button.messageAdd.btn.btn-secondary.btn-sm {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+button.messageDelete.btn.btn-secondary{
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+button.messageEdit.btn.btn-secondary {
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+.message-update-buttons {
+    background-color: lightyellow;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: .5rem 1rem;
+    background-color: lightyellow
+}
+
+button.messageComment.btn.btn.btn-secondary {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen  ;
+    margin-right: 16px;
+}
+
+button.comment-save-button.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 10px;
+    background-color: seagreen  ;
+}
+
+.messages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch
+}
+
+.messageList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    width: 700px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.messageBody.card-body {
+    background-color: lightblue;
+}
+
+section.messagesIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.messageOrder {
+    display: flex;
+    flex-direction: row;
+}
+button.showAll.btn.btn-secondary.btn-sm {
+    margin-left: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blueviolet;
+}
+
+button.message-save-button.btn.btn-secondary {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+select.orderDrop {
+    margin-left: 4px;
+    background-color: lightyellow;
+}
+
+button.myMessages.btn.btn-secondary.btn-sm {
+    margin-left: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+button.commentDelete.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+button.commentEdit.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+
+
+.messenger {
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 23px;
+    background-color: lavender;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.messageMainTitle {
+    display: flex;
+    align-items: center;
+}
+
+
+section.commentButtonContainer {
+    width: 700px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentList {
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+section.commentCard {
+    margin-bottom: 5px;
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+    background: aliceblue;
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.commentTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.comButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.messageCardContainer {
+    border: 2px solid lightblue;
+    border-radius: 22px;
+    margin-bottom: 10px;
+}

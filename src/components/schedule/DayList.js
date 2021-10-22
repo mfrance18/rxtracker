@@ -19,7 +19,8 @@ export const DayList = () => {
 
     return (
         <>
-            <h1 style={{ textAlign: "center" }}> Weekly Medication Schedule</h1>
+            <h1 className="listTitles"> Weekly Medication Schedule</h1>
+            <hr></hr>
             <section className="dailyList">
                 {days.map(day => <DailyCard day={day} key={day.id} />)}
             </section>

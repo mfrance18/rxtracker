@@ -11,6 +11,50 @@
       "firstName": "Ashley",
       "lastName": "Morphis",
       "email": "ashley@gmail.com"
+    },
+    {
+      "email": "robyn@gmail.com",
+      "firstName": "Robyn",
+      "lastName": "Boyce",
+      "id": 3
+    },
+    {
+      "email": "david@gmail.com",
+      "firstName": "David",
+      "lastName": "France",
+      "id": 4
+    }
+  ],
+  "messages": [
+    {
+      "userId": 2,
+      "messenger": "Ashley Morphis",
+      "message": "Have you taken OTC Prilosec? Did you have any side effects?",
+      "timestamp": "Fri Oct 22 2021 2:48 pm",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "messenger": "Matt France",
+      "message": "Has anyone taken Zyrtec for Allergies? How did it work for you?",
+      "timestamp": "Fri Oct 22 2021 3:04 pm",
+      "id": 4
+    },
+    {
+      "userId": 3,
+      "messenger": "Robyn Boyce",
+      "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
+      "timestamp": "Fri Oct 22 2021 3:58 pm",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "messageId": 5,
+      "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
+      "commenter": "Matt France",
+      "userId": 1
     }
   ],
   "days": [
@@ -85,14 +129,6 @@
       "id": 5
     },
     {
-      "name": "Lisinopril",
-      "userId": 4,
-      "amount": "2",
-      "instructions": "Take 2 per day",
-      "dosage": "40mg",
-      "id": 6
-    },
-    {
       "name": "Zyrtec",
       "userId": 2,
       "amount": "1",
@@ -135,8 +171,16 @@
       "userId": 1,
       "medicationId": 5,
       "dayId": 1,
-      "status": false,
-      "id": 5
+      "status": true,
+      "id": 5,
+      "medication": {
+        "name": "Fluconazole",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 tablet per week",
+        "dosage": "150mg",
+        "id": 5
+      }
     },
     {
       "userId": 1,
@@ -191,15 +235,31 @@
       "userId": 1,
       "medicationId": 3,
       "dayId": 4,
-      "status": false,
-      "id": 16
+      "status": true,
+      "id": 16,
+      "medication": {
+        "name": "Duloxetine",
+        "userId": 1,
+        "amount": "2",
+        "instructions": "Take 2 per day",
+        "dosage": "20mg",
+        "id": 3
+      }
     },
     {
       "userId": 1,
       "medicationId": 4,
       "dayId": 4,
-      "status": false,
-      "id": 17
+      "status": true,
+      "id": 17,
+      "medication": {
+        "name": "Hydroxyzine",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 tablet as needed per day",
+        "dosage": "25 mg",
+        "id": 4
+      }
     },
     {
       "userId": 1,
@@ -312,6 +372,20 @@
       "dayId": 7,
       "status": false,
       "id": 37
+    },
+    {
+      "userId": 1,
+      "medicationId": 3,
+      "dayId": 4,
+      "status": false,
+      "id": 38
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 4,
+      "status": false,
+      "id": 39
     }
   ]
 }
