@@ -26,21 +26,26 @@ button.messageEdit.btn.btn-secondary {
     background-color: blue;
 }
 
-.message-update-buttons.card-footer {
+.message-update-buttons {
     background-color: lightyellow;
     color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: .5rem 1rem;
+    background-color: lightyellow
 }
 
 button.messageComment.btn.btn.btn-secondary {
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
-    background-color: seagreen;
+    background-color: seagreen  ;
 }
 
 .messages {
@@ -58,16 +63,22 @@ button.messageComment.btn.btn.btn-secondary {
     justify-content: center;
 }
 
-.message.card {
-    width: 500px;
+.message {
+    width: 700px;
     font-size: 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.messageBody.card-body {
+    background-color: lightblue;
 }
 
 section.messagesIntro {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .messageOrder {
@@ -75,3 +86,45 @@ section.messagesIntro {
     justify-content: flex-end;
     flex-direction: row;
 }
+button.showAll.btn.btn-secondary.btn-sm {
+    margin-left: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+select.orderDrop {
+    margin-left: 4px;
+    background-color: lightyellow;
+}
+
+button.myMessages.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+.messenger {
+    padding-bottom: 5px;
+    padding-left: 15px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 23px;
+    background-color: lavender;
+    font-weight: bold;
+}
+
+.time {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.publicTitle {
+    margin-left: 160px;
+}
+
+

@@ -3,3 +3,7 @@
 html,body{
     font-family: 'Quicksand', sans-serif!important; 
     }
+
+.listTitles {
+    text-align: center;
+}

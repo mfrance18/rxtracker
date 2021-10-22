@@ -18,25 +18,28 @@ export const MessageCard = ({ message, handleDeleteMessage, reload }) => {
     if (message.userId === loggedinuserId) {
         return (
             <>
-                <Card className="message">
-                    <CardTitle className="messenger">{message.messenger}</CardTitle>
+                <section className="message">
+                    <div className="messenger">{message.messenger}</div>
                     <CardBody className="messageBody">{message.message}</CardBody>
-                    <CardFooter className="message-update-buttons">
-                        <div>
+                    <div className="message-update-buttons">
+                        <div className="time">
                             {message.timestamp}
                         </div>
                         <div>
-                            <Button className="messageDelete" type="button"
+                            <Button className="messageDelete" type="button" variant="secondary" size="sm"
                                 onClick={() => handleDeleteMessage(message.id)}>
                                 Delete
                             </Button>
-                            <Button className="messageEdit" type="button"
+                            <Button className="messageEdit" type="button" variant="secondary" size="sm"
                                 onClick={() => { setSelectedMessage({ message }); toggleEdit() }}>
                                 Edit
                             </Button>
+                            <Button className="messageComment" type="button" variant="secondary" size="sm">
+                                Comment
+                            </Button>
                         </div>
-                    </CardFooter>
-                </Card>
+                    </div>
+                </section>
 
                 <Modal isOpen={editModal} toggle={toggleEdit}>
                     <ModalHeader toggle={toggleEdit}>New Message</ModalHeader>
@@ -50,20 +53,20 @@ export const MessageCard = ({ message, handleDeleteMessage, reload }) => {
     } else {
         return (
 
-            <Card className="message">
-                <CardTitle className="messenger">{message.messenger} </CardTitle>
+            <section className="message">
+                <div className="messenger">{message.messenger} </div>
                 <CardBody className="messageBody">{message.message}</CardBody>
-                <CardFooter className="message-update-buttons">
-                    <div>
+                <div className="message-update-buttons">
+                    <div className="time">
                         {message.timestamp}
                     </div>
                     <div>
-                        <Button className="messageComment" type="button">
+                        <Button className="messageComment" type="button" variant="secondary" size="sm">
                             Comment
                         </Button>
                     </div>
-                </CardFooter>
-            </Card>
+                </div>
+            </section>
 
 
 
