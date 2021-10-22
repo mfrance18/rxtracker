@@ -67,7 +67,6 @@ button.medDelete.btn.btn-secondary {
 }
 
 button.medAdd.btn.btn-secondary {
-    margin-left: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
@@ -84,7 +83,7 @@ button.medAdd.btn.btn-secondary {
 
 .medications {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: stretch;
@@ -95,15 +94,3 @@ button.medAdd.btn.btn-secondary {
     font-weight: bold;
 }
 
-.modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background-color: none !important;
-    pointer-events: auto;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: .3rem;
-    outline: 0;
-}

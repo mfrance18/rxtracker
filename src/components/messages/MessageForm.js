@@ -1,7 +1,7 @@
-import React from "react";
-import { useState } from "react/cjs/react.development";
+import React, {useState} from "react";
 import { addMessage} from "../../modules/MessageDataManager";
-import { Form, FormGroup, Button, Input, Label } from "reactstrap";
+import {  Button, Input, Label } from "reactstrap";
+import { Form } from "react-bootstrap";
 import { formatAMPM } from "./Date";
 
 
@@ -43,16 +43,16 @@ export const MessageForm = ({toggle, reload}) => {
         <div >
         <Form >
         <h1>Add a Post</h1>
-            <FormGroup className="messageForm">
+            <Form.Group className="messageForm">
                 <div>
                     <Label htmlFor="message"> </Label>
-                    <Input type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" size="50" value={message.message} />
+                    <Input className="form-control" type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat"  value={message.message} />
                 </div>
                 <Button className="message-save-button"
                     onClick={handleClickSaveNewMessage}>
                     Save
                 </Button>
-            </FormGroup>
+            </Form.Group>
         </Form>
     </div>
 

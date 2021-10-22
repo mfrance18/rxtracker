@@ -11,22 +11,78 @@
       "firstName": "Ashley",
       "lastName": "Morphis",
       "email": "ashley@gmail.com"
+    },
+    {
+      "email": "robyn@gmail.com",
+      "firstName": "Robyn",
+      "lastName": "Boyce",
+      "id": 3
+    },
+    {
+      "email": "david@gmail.com",
+      "firstName": "David",
+      "lastName": "France",
+      "id": 4
     }
   ],
   "messages": [
     {
+      "userId": 2,
+      "messenger": "Ashley Morphis",
+      "message": "Have you taken OTC Prilosec? Did you have any side effects?",
+      "timestamp": "Fri Oct 22 2021 2:48 pm",
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "messenger": "Robyn Boyce",
+      "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
+      "timestamp": "Fri Oct 22 2021 2:49 pm",
+      "id": 3
+    },
+    {
       "userId": 1,
       "messenger": "Matt France",
-      "message": "Hey Guys, Have you tried Zyrtec? It is really helping out with my allergies",
-      "timestamp": "Thu Oct 21 2021 5:27 pm",
+      "message": "Has anyone taken Zyrtec for Allergies? How did it work for you?",
+      "timestamp": "Fri Oct 22 2021 3:04 pm",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "userId": 4,
+      "messageId": 2,
+      "commenter": "David France",
+      "comment": "It has been working well for me so far. No side effects as well.",
       "id": 1
     },
     {
-      "userId": 2,
-      "messenger": "Ashley Morphis",
-      "message": "Hello, I am trying to see if anyone has tried the OTC of Prilosec. How has it worked for you?",
-      "timestamp": "Thu Oct 21 2021 5:42 pm",
+      "userId": 1,
+      "messageId": 2,
+      "commenter": "Matt France",
+      "comment": "I have had the same experience as David so far. ",
       "id": 2
+    },
+    {
+      "userId": 1,
+      "messageId": 3,
+      "commenter": "Matt France",
+      "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "messageId": 4,
+      "commenter": "Ashley Morphis",
+      "comment": "I have taken the offbrand of zyrtec and it seems to work very well. The ingredients seem the same. ",
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "messageId": 4,
+      "commenter": "David France",
+      "comment": "I have taken Zyrtec and it doesn't seem to work as well as claritin. That is just my personal opinion. ",
+      "id": 5
     }
   ],
   "days": [
@@ -143,8 +199,16 @@
       "userId": 1,
       "medicationId": 5,
       "dayId": 1,
-      "status": false,
-      "id": 5
+      "status": true,
+      "id": 5,
+      "medication": {
+        "name": "Fluconazole",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 tablet per week",
+        "dosage": "150mg",
+        "id": 5
+      }
     },
     {
       "userId": 1,

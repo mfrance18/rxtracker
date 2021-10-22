@@ -11,7 +11,7 @@ export const getMessagesByUser = (userId) => {
  }
 
 export const getAllMessagesReversed = () => {
-    return fetch(`http://localhost:8088/messages?_sort=timestamp&_order=ascending`)
+    return fetch(`http://localhost:8088/messages?_sort=timestamp&_order=asc`)
      .then(response => response.json())
  }
 
@@ -45,4 +45,32 @@ export const updateMessage = (messageObj) => {
 		},
 		body: JSON.stringify(messageObj)
 	}).then(data => data.json());
+}
+
+
+export const getAllComments = () => {
+    return fetch(`http://localhost:8088/comments`)
+     .then(response => response.json())
+ }
+
+export const getCommentByMessage = (messageId) => {
+    return fetch(`${remoteURL}/comments?messageId=${messageId}&_expand=message`)
+    .then(response => response.json())
+}
+
+export const addComment = (newComment) => {
+    return fetch(`${remoteURL}/comments`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newComment)
+    }).then(response => response.json())
+}
+
+export const deleteComment = (id) => {
+    return fetch(`${remoteURL}/comments/${id}`, {
+        method: "DELETE"
+    }).then(result => result.json())
+
 }

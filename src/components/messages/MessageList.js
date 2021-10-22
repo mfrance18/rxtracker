@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { MessageCard } from "./MessageCard";
 import { getAllMessages, getAllMessagesReversed, getMessagesByUser } from "../../modules/MessageDataManager"
 import { deleteMessage } from "../../modules/MessageDataManager";
-import { Modal, ModalBody, ModalHeader, Button, Form } from "reactstrap";
+import { Modal, ModalBody, ModalHeader, Button } from "reactstrap";
 import "./Message.css"
 import { MessageForm } from "./MessageForm";
 
@@ -69,20 +69,17 @@ export const MessageList = () => {
         <>
 
             <section className="messagesIntro">
-                <div>
-                    <Button type="button"
+                <div className="messageMainTitle">
+                <h1>Public Forum</h1>
+                </div>
+            
+                <div className="messageOrder">
+                <Button type="button"
                         variant="secondary" size="sm"
                         className="messageAdd"
                         onClick={toggle}>
                         Add New Message
                     </Button>
-                </div>
-                <div className="publicTitle">
-                    <h1>Public Forum</h1>
-                   
-                </div>
-
-                <div className="messageOrder">
                     <Button onClick={myMessages} className="myMessages" type="button" variant="secondary" size="sm">My Messages</Button>
                     <Button onClick={reload} className="showAll" type="button" variant="secondary" size="sm">Show All</Button>
                     <select onChange={handleOnChange} type="button" variant="secondary" size="sm" className="orderDrop">
@@ -94,7 +91,7 @@ export const MessageList = () => {
             </section>
             <hr></hr>
             <section className="messageList">
-                {messages.map(message => <MessageCard message={message} key={message.id} handleDeleteMessage={handleDeleteMessage} reload={reload} />)}
+                {messages.map(message => <MessageCard message={message} messageId={message.id} key={message.id} handleDeleteMessage={handleDeleteMessage} reload={reload} />)}
             </section>
 
             <Modal isOpen={modal} toggle={toggle}>

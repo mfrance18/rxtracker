@@ -1,5 +1,4 @@
-import React from "react";
-import { useEffect, useState } from "react/cjs/react.development";
+import React, {useState, useEffect} from "react";
 import { getMedicationByDay, deleteMedicationFromDay } from "../../modules/DayManager";
 import { DailyMedicineCard } from "./DailyMedicineCard";
 import { DailyMedicationForm } from "./DailyMedicationForm";

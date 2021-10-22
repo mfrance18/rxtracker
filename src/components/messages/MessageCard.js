@@ -1,15 +1,16 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router";
 import { MessageEditForm } from "./MessageEditForm";
+import { CommentList } from "./CommentList"
 import "./Message.css"
-import { Card, CardTitle, CardBody, Button, ListGroup, ListGroupItem, ModalHeader, Modal, ModalBody, CardFooter } from "reactstrap";
+import { CardBody, Button, ModalHeader, Modal, ModalBody, } from "reactstrap";
 
-export const MessageCard = ({ message, handleDeleteMessage, reload }) => {
-    const history = useHistory()
+export const MessageCard = ({ message, handleDeleteMessage, reload, messageId }) => {
+
 
     const [selectedMessage, setSelectedMessage] = useState({ message: {} })
 
     const [editModal, setEditModal] = useState(false);
+
     const toggleEdit = () => setEditModal(!editModal);
 
 
@@ -18,26 +19,29 @@ export const MessageCard = ({ message, handleDeleteMessage, reload }) => {
     if (message.userId === loggedinuserId) {
         return (
             <>
-                <section className="message">
-                    <div className="messenger">{message.messenger}</div>
-                    <CardBody className="messageBody">{message.message}</CardBody>
-                    <div className="message-update-buttons">
-                        <div className="time">
-                            {message.timestamp}
+                <section className="messageCardContainer">
+                    <section className="message">
+                        <div className="messenger">{message.messenger}</div>
+                        <CardBody className="messageBody">{message.message}</CardBody>
+                        <div className="message-update-buttons">
+                            <div className="time">
+                                {message.timestamp}
+                            </div>
+                            <div>
+                                <Button className="messageDelete" type="button" variant="secondary" size="sm"
+                                    onClick={() => handleDeleteMessage(message.id)}>
+                                    Delete
+                                </Button>
+                                <Button className="messageEdit" type="button" variant="secondary" size="sm"
+                                    onClick={() => { setSelectedMessage({ message }); toggleEdit() }}>
+                                    Edit
+                                </Button>
+                            </div>
                         </div>
-                        <div>
-                            <Button className="messageDelete" type="button" variant="secondary" size="sm"
-                                onClick={() => handleDeleteMessage(message.id)}>
-                                Delete
-                            </Button>
-                            <Button className="messageEdit" type="button" variant="secondary" size="sm"
-                                onClick={() => { setSelectedMessage({ message }); toggleEdit() }}>
-                                Edit
-                            </Button>
-                            <Button className="messageComment" type="button" variant="secondary" size="sm">
-                                Comment
-                            </Button>
-                        </div>
+                    </section>
+
+                    <div >
+                        <CommentList messageId={messageId} />
                     </div>
                 </section>
 
@@ -52,22 +56,23 @@ export const MessageCard = ({ message, handleDeleteMessage, reload }) => {
         )
     } else {
         return (
+            <>
+                <section className="messageCardContainer">
+                    <section className="message">
+                        <div className="messenger">{message.messenger} </div>
+                        <CardBody className="messageBody">{message.message}</CardBody>
+                        <div className="message-update-buttons">
+                            <div className="time">
+                                {message.timestamp}
+                            </div>
+                        </div>
+                    </section>
 
-            <section className="message">
-                <div className="messenger">{message.messenger} </div>
-                <CardBody className="messageBody">{message.message}</CardBody>
-                <div className="message-update-buttons">
-                    <div className="time">
-                        {message.timestamp}
-                    </div>
-                    <div>
-                        <Button className="messageComment" type="button" variant="secondary" size="sm">
-                            Comment
-                        </Button>
-                    </div>
-                </div>
-            </section>
-
+                    <section>
+                        <CommentList messageId={messageId} />
+                    </section>
+                </section>
+            </>
 
 
         )

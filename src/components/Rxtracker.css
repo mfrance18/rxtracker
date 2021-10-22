@@ -7,3 +7,12 @@ html,body{
 .listTitles {
     text-align: center;
 }
+
+.modal-content {
+    position: relative;
+    background-color: seagreen !important;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}

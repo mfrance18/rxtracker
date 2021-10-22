@@ -39,13 +39,12 @@ button.messageEdit.btn.btn-secondary {
 }
 
 button.messageComment.btn.btn.btn-secondary {
-    margin-left: 5px;
-    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
     background-color: seagreen  ;
+    margin-right: 16px;
 }
 
 .messages {
@@ -53,7 +52,7 @@ button.messageComment.btn.btn.btn-secondary {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    align-content: stretch;
+    align-content: stretch
 }
 
 .messageList {
@@ -61,13 +60,13 @@ button.messageComment.btn.btn.btn-secondary {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .message {
     width: 700px;
     font-size: 20px;
     border-radius: 20px;
-    margin-bottom: 10px;
 }
 
 .messageBody.card-body {
@@ -76,18 +75,25 @@ button.messageComment.btn.btn.btn-secondary {
 
 section.messagesIntro {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
 }
 
 .messageOrder {
     display: flex;
-    justify-content: flex-end;
     flex-direction: row;
 }
 button.showAll.btn.btn-secondary.btn-sm {
     margin-left: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blueviolet;
+}
+
+button.message-save-button.btn.btn-secondary {
+    margin-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
@@ -101,12 +107,33 @@ select.orderDrop {
 }
 
 button.myMessages.btn.btn-secondary.btn-sm {
+    margin-left: 4px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
     padding-bottom: 1px;
     background-color: blue;
 }
+
+button.commentDelete.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+button.commentEdit.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+
 
 .messenger {
     padding-bottom: 5px;
@@ -123,8 +150,49 @@ button.myMessages.btn.btn-secondary.btn-sm {
     margin-top: 10px;
 }
 
-.publicTitle {
-    margin-left: 160px;
+.messageMainTitle {
+    display: flex;
+    align-items: center;
 }
 
 
+section.commentButtonContainer {
+    width: 700px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentList {
+    margin-left: 100px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+section.commentCard {
+    margin-bottom: 5px;
+    border: 2px solid lightblue;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+    background: aliceblue;
+    min-width: 500px;
+    max-width: 500px;
+}
+
+.commentTitle {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.comButtons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+section.messageCardContainer {
+    border: 2px solid lightblue;
+    border-radius: 22px;
+    margin-bottom: 10px;
+}
