@@ -7,7 +7,7 @@ export const CommentForm = ({toggle,  message, reload}) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
-    const commenter = sessionStorage.getItem("rxtracker_fullname")
+    const commenter = sessionStorage.getItem("rxtracker_username")
 
     const [comment, setComment] = useState({
         userId: user,
