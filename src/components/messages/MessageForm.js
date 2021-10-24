@@ -1,12 +1,12 @@
-import React, {useState} from "react";
-import { addMessage} from "../../modules/MessageDataManager";
-import {  Button, Input, Label } from "reactstrap";
+import React, { useState } from "react";
+import { addMessage } from "../../modules/MessageDataManager";
+import { Button, Input, Label } from "reactstrap";
 import { Form } from "react-bootstrap";
 import { formatAMPM } from "./Date";
 
 
 
-export const MessageForm = ({toggle, reload}) => {
+export const MessageForm = ({ toggle, reload }) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
@@ -41,20 +41,20 @@ export const MessageForm = ({toggle, reload}) => {
 
     return (
         <div >
-        <Form >
-        <h1>Add a Post</h1>
-            <Form.Group className="messageForm">
-                <div>
-                    <Label htmlFor="message"> </Label>
-                    <Input className="form-control" type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat"  value={message.message} />
-                </div>
-                <Button className="message-save-button"
-                    onClick={handleClickSaveNewMessage}>
-                    Save
-                </Button>
-            </Form.Group>
-        </Form>
-    </div>
+            <Form >
+                <h1>Add a Post</h1>
+                <Form.Group className="messageForm">
+                    <div>
+                        <Label htmlFor="message"> </Label>
+                        <Input className="form-control" type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" value={message.message} />
+                    </div>
+                    <Button className="message-save-button"
+                        onClick={handleClickSaveNewMessage}>
+                        Save
+                    </Button>
+                </Form.Group>
+            </Form>
+        </div>
 
     )
 

@@ -1,0 +1,35 @@
+.intro {
+    color: white;
+    margin-left: 70px;
+}
+
+img.introPic {
+    height: 100px;
+    width: 100px;
+    margin-left: 70px;
+}
+
+.NoPic {
+    height: 100px;
+    width: 100px;
+    margin-right: 70px;
+}
+  
+  .img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .img__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.img__description {
+    background: seagreen;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    margin-right: 10px;
+}

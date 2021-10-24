@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { getCommentByMessage, deleteComment, getAllComments } from "../../modules/MessageDataManager";
+import { getCommentByMessage, deleteComment} from "../../modules/MessageDataManager";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { CommentCard } from "./CommentCard";
 import { CommentForm } from "./CommentForm";
@@ -39,7 +39,7 @@ export const CommentList = ({ messageId }) => {
     return (
         <>
             <section className="commentButtonContainer">
-            <h5 style={{fontWeight: "bold", marginLeft: 5}}>Comments</h5>
+            <h5 style={{fontWeight: "bold", marginLeft: 5, marginTop: 10}}>Comments</h5>
                 <div className="commentButton">
                     <Button onClick={toggle} className="messageComment" type="button" variant="secondary" size="sm">
                         Add Comment

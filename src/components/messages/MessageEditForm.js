@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { getMessageById, updateMessage } from "../../modules/MessageDataManager"
-import { Label, Button, Input} from "reactstrap"
+import { Label, Button, Input } from "reactstrap"
 import { Form } from "react-bootstrap";
 import "./Message.css"
 
@@ -51,13 +51,13 @@ export const MessageEditForm = ({ toggleEdit, message, reload }) => {
                     <Form.Group>
                         <div>
                             <Label className="update-message-header" htmlFor="message">New Message:</Label>
-                            <Input className="form-control"  type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" value={messages.message} />
+                            <Input className="form-control" type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" value={messages.message} />
                         </div>
                         <Button className="message-save-button"
                             variant="secondary" size="sm"
                             disabled={isLoading}
                             onClick={updateExistingMessage}>
-                            Update 
+                            Update
                         </Button>
                     </Form.Group>
                 </Form>

@@ -70,11 +70,11 @@ export const MessageList = () => {
 
             <section className="messagesIntro">
                 <div className="messageMainTitle">
-                <h1>Public Forum</h1>
+                    <h1>Public Forum</h1>
                 </div>
-            
+
                 <div className="messageOrder">
-                <Button type="button"
+                    <Button type="button"
                         variant="secondary" size="sm"
                         className="messageAdd"
                         onClick={toggle}>

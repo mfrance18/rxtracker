@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { getMedicationByDay, deleteMedicationFromDay } from "../../modules/DayManager";
 import { DailyMedicineCard } from "./DailyMedicineCard";
 import { DailyMedicationForm } from "./DailyMedicationForm";
@@ -11,6 +11,7 @@ export const DailyMedicineList = ({ dayId, day }) => {
 
 
     const [modal, setModal] = useState(false);
+
     const toggle = () => {
         setModal(!modal)
     };
@@ -23,7 +24,6 @@ export const DailyMedicineList = ({ dayId, day }) => {
     const reload = () => {
         getDailyMedicine(dayId)
     }
-    
 
     const handleDeleteMedication = (id) => {
         deleteMedicationFromDay(id)
@@ -35,21 +35,22 @@ export const DailyMedicineList = ({ dayId, day }) => {
         return () => {
             setState({})
         }
-    },[])
+    }, [])
 
     return (
         <>
+
             <div>
                 <Button className="addButton" onClick={toggle}>Add Medication</Button>
             </div>
             <section className="dailyMedicineCardList">
-                {dailyMedicines.map(medicine => <DailyMedicineCard handleDeleteMedication={handleDeleteMedication} key={medicine.id} medicine={medicine} medication={medicine.medication} reload={reload}/>)}
+                {dailyMedicines?.map(medicine => <DailyMedicineCard handleDeleteMedication={handleDeleteMedication} key={medicine.id} medicine={medicine} medication={medicine.medication} reload={reload} />)}
             </section>
 
             <Modal isOpen={modal} toggle={toggle} className="dailyModal">
                 <ModalHeader toggle={toggle}>Add Medication to {day.name}</ModalHeader>
                 <ModalBody>
-                    <DailyMedicationForm day={dayId} toggle={toggle} reload={reload} />
+                    <DailyMedicationForm day={dayId} toggle={toggle} reload={reload}/>
                 </ModalBody>
             </Modal>
         </>

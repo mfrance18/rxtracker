@@ -46,11 +46,6 @@ a.nav-link:focus {
     color: yellow; 
 }
 
-.intro {
-    color: white;
-    margin-right: 13px;
-}
-
 section.welcome {
     display: flex;
     flex-direction: column;

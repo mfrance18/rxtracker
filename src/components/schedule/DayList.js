@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react/cjs/react.development";
 import { getAllDays } from "../../modules/DayManager";
 import { DailyCard } from "./DailyCard";
+import { Button } from "reactstrap";
 
 export const DayList = () => {
     const [days, setDays] = useState([])
@@ -22,7 +23,7 @@ export const DayList = () => {
             <h1 className="listTitles"> Weekly Medication Schedule</h1>
             <hr></hr>
             <section className="dailyList">
-                {days.map(day => <DailyCard day={day} key={day.id} />)}
+                {days.map(day => <DailyCard day={day} key={day.id} dayId={day.id} />)}
             </section>
         </>
     )

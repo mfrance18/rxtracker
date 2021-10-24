@@ -17,8 +17,12 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
             <>
                 <section className="commentCard">
                     <section>
+                        <div className="commentImage">
+                            <img className="commentPic" src="" alt="User Image" />
+                        </div>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>
+
                     <section className="commentArea">
                         <div className="comment"> {comment.comment}</div>
                         <div className="comButtons">
@@ -30,9 +34,10 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                                 onClick={() => { setSelectedComment({ comment }); toggleEdit() }}>
                                 Edit
                             </Button>
-
                         </div>
                     </section>
+
+
                 </section>
                 <div>
                     <hr></hr>
@@ -52,6 +57,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                     <section>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>
+
                     <section className="commentArea">
                         <div className="comment"> {comment.comment}</div>
                     </section>

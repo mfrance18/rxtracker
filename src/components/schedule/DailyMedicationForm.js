@@ -47,6 +47,8 @@ export const DailyMedicationForm = ({toggle, day, reload}) => {
         .then(reload)
     }
 
+    
+
         return (
             <>
                 <div>
