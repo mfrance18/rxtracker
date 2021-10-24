@@ -48,7 +48,15 @@
       "id": 5
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "userId": 1,
+      "messageId": 5,
+      "commenter": "Matt France",
+      "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
+      "id": 1
+    }
+  ],
   "days": [
     {
       "id": 1,
