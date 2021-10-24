@@ -5,6 +5,7 @@ import { CommentEditForm } from "./CommentEditForm";
 export const CommentCard = ({ comment, handleDeleteComment, reload, message }) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
+    let userImage= sessionStorage.getItem("rxtracker_image")
 
     const [selectedComment, setSelectedComment] = useState({ comment: {} })
 
@@ -18,7 +19,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                 <section className="commentCard">
                     <section>
                         <div className="commentImage">
-                            <img className="commentPic" src="" alt="User Image" />
+                            <img className="commentPic" src={userImage} alt="User Image" />
                         </div>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>

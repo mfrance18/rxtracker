@@ -1,42 +1,36 @@
 {
   "users": [
     {
-      "email": "matt@gmail.com",
+      "id": 1,
       "firstName": "Matt",
       "lastName": "France",
-      "id": 1
+      "email": "matt@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635099392/i4yvvxh1nouoslzgqf0p.jpg"
+    },
+    {
+      "email": "ashley@gmail.com",
+      "firstName": "Ashley",
+      "lastName": "Morphis",
+      "image": "",
+      "id": 2
     }
   ],
   "messages": [
-    {
-      "id": 2,
-      "message": "Has anyone taken OTC Prilosec? Did you have any side effects?",
-      "messenger": "Ashley Morphis",
-      "timestamp": "Fri Oct 22 2021 2:48 pm",
-      "userId": 2
-    },
     {
       "userId": 1,
       "messenger": "Matt France",
       "message": "Has anyone taken Zyrtec for Allergies? How did it work for you?",
       "timestamp": "Fri Oct 22 2021 3:04 pm",
       "id": 4
-    },
-    {
-      "userId": 3,
-      "messenger": "Robyn Boyce",
-      "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
-      "timestamp": "Fri Oct 22 2021 3:58 pm",
-      "id": 5
     }
   ],
   "comments": [
     {
       "userId": 1,
-      "messageId": 5,
+      "messageId": 4,
       "commenter": "Matt",
       "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
-      "id": 4
+      "id": 1
     }
   ],
   "days": [
@@ -109,22 +103,6 @@
       "instructions": "Take 1 tablet per week",
       "dosage": "150mg",
       "id": 5
-    },
-    {
-      "name": "Zyrtec",
-      "userId": 2,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 7
-    },
-    {
-      "name": "Claritin",
-      "userId": 2,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 8
     }
   ],
   "dailyMedications": [
@@ -187,55 +165,6 @@
         "dosage": "25 mg",
         "id": 4
       }
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 1,
-      "status": false,
-      "id": 31
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 2,
-      "status": false,
-      "id": 32
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 3,
-      "status": false,
-      "id": 33
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 4,
-      "status": false,
-      "id": 34
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 5,
-      "status": false,
-      "id": 35
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 6,
-      "status": false,
-      "id": 36
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 7,
-      "status": false,
-      "id": 37
     },
     {
       "userId": 1,

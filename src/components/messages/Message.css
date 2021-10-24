@@ -142,8 +142,6 @@ button.commentEdit.btn.btn-secondary.btn-sm {
 }
 
 .messenger {
-    padding-bottom: 5px;
-    padding-left: 15px;
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
     font-size: 23px;
@@ -252,4 +250,16 @@ section.messageCardContainer {
     border-top: none;
     border-radius: 20px;
     margin-bottom: 10px;
+}
+
+img.commentPic {
+    height: 100px;
+    width: 100px;
+}
+
+img.messagePic {
+    height: 95px;
+    border-top-left-radius: 20px;
+    width: 95px;
+    margin-right: 10px;
 }

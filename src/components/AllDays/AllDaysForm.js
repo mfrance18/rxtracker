@@ -9,7 +9,7 @@
 
 
 
-// export const AllDaysForm = ({ toggler, reload }) => {
+// export const AllDaysForm = ({ toggler, reloadAll }) => {
 //     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
 //     const history = useHistory()
@@ -94,28 +94,11 @@
 //         setSunday(newSundayMedication)
 //     }
 
-//     const [allDays, setAlldays] = useState([])
-
 //     useEffect(() => {
 //         getMedicationByUserId(user).then(response => {
 //             setUsermedications(response)
 //         })
 //     }, [])
-
-    
-//     useEffect(() => {
-//         getMedicationByDay(monday)
-//         .then(getMedicationByDay(tuesday))
-//         .then(getMedicationByDay(wednesday))
-//         .then(getMedicationByDay(thursday))
-//         .then(getMedicationByDay(friday))
-//         .then(getMedicationByDay(saturday))
-//         .then(getMedicationByDay(sunday))
-//         .then(allDays)
-//         .then(setAlldays(sunday))
-//     }, []);
-
-
 
 //     const handleClickSaveMedication = (event) => {
 //         event.preventDefault()
@@ -127,7 +110,7 @@
 //             .then(() => addMedicationToDay(saturday))
 //             .then(() => addMedicationToDay(sunday))
 //             .then(toggler)
-//             .then(reload)
+//             .then(reloadAll)
 //     }
 
 //     return (

@@ -6,6 +6,7 @@ import { MedicationList } from "../Medications/MedicationList";
 import { Redirect } from "react-router";
 import { DayList } from "../schedule/DayList";
 import { MessageList } from "../messages/MessageList";
+import { AllDaysList } from "../AllDays/AllDaysList";
 
 
 

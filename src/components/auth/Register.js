@@ -6,7 +6,7 @@ import "./Login.css"
 
 export const Register = ({ setAuthUser }) => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: ""})
+    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", image:""})
 
     const history = useHistory()
 
@@ -43,6 +43,7 @@ export const Register = ({ setAuthUser }) => {
                             email: registerUser.email,
                             firstName: registerUser.firstName,
                             lastName: registerUser.lastName, 
+                            image: registerUser.image
                         })
                     })
                         .then(res => res.json())
