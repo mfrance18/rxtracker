@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react/cjs/react.development";
 import { getAllDays } from "../../modules/DayManager";
 import { DailyCard } from "./DailyCard";
-import { Button } from "reactstrap";
+
 
 export const DayList = () => {
     const [days, setDays] = useState([])
@@ -13,6 +13,8 @@ export const DayList = () => {
             setDays(response)
         })
     }
+
+
 
     useEffect(() => {
         getDays()

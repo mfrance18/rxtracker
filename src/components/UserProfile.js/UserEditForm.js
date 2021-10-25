@@ -4,11 +4,10 @@ import { getUserById, updateUser } from "../../modules/UserManager";
 import { Form } from "react-bootstrap";
 
 
-export const UserEditForm = ({ toggleEdit, userId }) => {
-   let userImage = sessionStorage.getItem("rxtracker_image")
+export const UserEditForm = ({ toggleEdit, userId, handleUpdateUserInfo, setAuthUser }) => {
 
     const [users, setUsers] = useState({
-        firstName:"",
+        firstName: "",
         lastName: "",
         email: "",
         image: ""
@@ -32,21 +31,21 @@ export const UserEditForm = ({ toggleEdit, userId }) => {
         data.append("upload_preset", "fcfo8agr");
         setIsLoading(true);
         const res = await fetch(
-          "https://api.cloudinary.com/v1_1/mfrance18/image/upload",
-          {
-            method: "POST",
-            body: data,
-          }
+            "https://api.cloudinary.com/v1_1/mfrance18/image/upload",
+            {
+                method: "POST",
+                body: data,
+            }
         );
         const file = await res.json();
         setImage(file.secure_url);
         setIsLoading(false);
-      };
+    };
 
 
 
     const updateExistingUser = event => {
-        event.preventDefault()
+
         setIsLoading(true)
 
         const editedUser = {
@@ -58,7 +57,11 @@ export const UserEditForm = ({ toggleEdit, userId }) => {
         }
 
         updateUser(editedUser)
-            .then(toggleEdit)
+            .then(() => {
+                setAuthUser(editedUser)
+                toggleEdit()
+            })
+
     }
 
     useEffect(() => {
@@ -68,6 +71,12 @@ export const UserEditForm = ({ toggleEdit, userId }) => {
                 setIsLoading(false)
             })
     }, [])
+
+    const handleUserUpdate = (event) => {
+        event.preventDefault()
+        updateExistingUser(event)
+        handleUpdateUserInfo()
+    }
 
     return (
         <>
@@ -90,16 +99,18 @@ export const UserEditForm = ({ toggleEdit, userId }) => {
                         <div>
                             <Label className="update-user-header" htmlFor="image">Add Image:</Label>{" "}
                             <Input className="form-control" type="file" id="image" onChange={uploadImage} placeholder="Email" />
+                        </div>
+                        <div className="profileImageEdit">
                             {isLoading ? (
                                 <h4>Loading...</h4>
                             ) : (
                                 <>
-                                    <img src={image} style={{ width: "100px" }} alt=" " />
+                                    <img className="mainImage" src={image}   />
 
                                     <Button className="comment-save-button"
                                         variant="secondary" size="sm"
                                         disabled={isLoading}
-                                        onClick={updateExistingUser}>
+                                        onClick={handleUserUpdate}>
                                         Update
                                     </Button>
 

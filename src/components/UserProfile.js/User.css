@@ -1,18 +1,12 @@
 .intro {
     color: white;
-    margin-left: 70px;
+    margin-left: 132px;
 }
 
-img.introPic {
-    height: 100px;
-    width: 100px;
-    margin-left: 70px;
-}
-
-.NoPic {
-    height: 100px;
-    width: 100px;
-    margin-right: 70px;
+.profilePic {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
 }
   
   .img__wrap:hover .img__description {
@@ -32,4 +26,27 @@ img.introPic {
     opacity: 0;
     transition: opacity .2s, visibility .2s;
     margin-right: 10px;
+}
+
+.profileImageEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.introContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-around;
+    margin-right: 20px;
+}
+
+.mainImage {
+    width: 300px;
+    margin-top: 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
 }

@@ -1,26 +1,29 @@
 import React, { useState } from "react";
 import { Modal, ModalBody, ModalHeader } from "reactstrap";
 import { UserEditForm } from "./UserEditForm";
-import UserPicture from "../../images/blankprofile.png"
 import "./User.css"
 
-export const UserCard = () => {
+export const UserCard = ({userInfo, handleUpdateUserInfo, setAuthUser}) => {
 
-    const userId = sessionStorage.getItem("rxtracker_user")
-    const userName = sessionStorage.getItem("rxtracker_username")
-    const userImage = sessionStorage.getItem("rxtracker_image")
+
+
+   const [userId, setUserId] = useState(sessionStorage.getItem("rxtracker_user"))
+   const [userName, setUserName] = useState(sessionStorage.getItem("rxtracker_username"))
+   const [userImage, setUserImage] = useState(sessionStorage.getItem("rxtracker_image"))
 
     const [editModal, setEditModal] = useState(false);
 
-    const toggleEdit = () => setEditModal(!editModal);
+    const toggleEdit = () => {
+        setEditModal(!editModal)
+        setUserId(sessionStorage.getItem("rxtracker_user"))
+        setUserName(sessionStorage.getItem("rxtracker_username"))
+        setUserImage(sessionStorage.getItem("rxtracker_image"))
+    };
 
-
-
-    if (userImage) {
 
         return (
             <>
-                <section>
+                <section className="introContainer">
                     <div className="intro">
                         <h2>Welcome, {userName}!</h2>
                     </div>
@@ -29,7 +32,7 @@ export const UserCard = () => {
                             <p className="img__description">Click To Edit Profile</p>
                         </div>
                         <div>
-                            <img className="NoPic" onClick={() => toggleEdit()} src={userImage} alt="User Image" />
+                            <img className="profilePic" onClick={() => toggleEdit()} src={userImage} alt="Profile Image" />
                         </div>
                     </div>
                 </section>
@@ -37,36 +40,9 @@ export const UserCard = () => {
                 <Modal isOpen={editModal} toggle={toggleEdit} className="commentModal">
                     <ModalHeader toggle={toggleEdit}>Edit User Info</ModalHeader>
                     <ModalBody>
-                        <UserEditForm let userId={userId} key={userId} toggleEdit={toggleEdit} />
+                        <UserEditForm userId={userId} key={userId} toggleEdit={toggleEdit} handleUpdateUserInfo={handleUpdateUserInfo} setAuthUser={setAuthUser}/>
                     </ModalBody>
                 </Modal>
             </>
         )
-    } else {
-        return (
-            <>
-                <section>
-                    <div className="intro">
-                        <h2>Welcome, {userName}!</h2>
-                    </div>
-                    <div className="img__wrap">
-                        <div>
-                            <p className="img__description">Click To Add Image</p>
-                        </div>
-                        <div>
-                            <img className="NoPic" onClick={() => toggleEdit()} src={UserPicture} alt="blankimage" />
-                        </div>
-                    </div>
-                </section>
-
-                <Modal isOpen={editModal} toggle={toggleEdit} className="commentModal">
-                    <ModalHeader toggle={toggleEdit}>Edit User Info</ModalHeader>
-                    <ModalBody>
-                        <UserEditForm let userId={userId} key={userId} toggleEdit={toggleEdit} />
-                    </ModalBody>
-                </Modal>
-            </>
-        )
-
-    }
 }

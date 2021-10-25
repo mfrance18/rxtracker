@@ -17,7 +17,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
         return (
             <>
                 <section className="commentCard">
-                    <section>
+                    <section className="nameContainer">
                         <div className="commentImage">
                             <img className="commentPic" src={userImage} alt="User Image" />
                         </div>

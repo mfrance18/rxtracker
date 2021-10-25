@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
 import MainLogo from "../../images/HomeLogo.png"
@@ -7,7 +7,22 @@ import "./NavBar.css"
 
 
 
-export const NavBar = ({ clearUser, isAuthenticated }) => {
+export const NavBar = ({ clearUser, isAuthenticated, setAuthUser}) => {
+
+    const [userInfo, setUserInfo] = useState({
+        userId: sessionStorage.getItem("rxtracker_user"),
+        userName: sessionStorage.getItem("rxtracker_username"),
+        userImage: sessionStorage.getItem("rxtracker_image")
+    })
+
+    const handleUpdateUserInfo = () => {
+        setUserInfo({
+            userId: sessionStorage.getItem("rxtracker_user"),
+            userName: sessionStorage.getItem("rxtracker_username"),
+            userImage: sessionStorage.getItem("rxtracker_image")
+        })
+    }
+    
 
     const history = useHistory()
 
@@ -32,7 +47,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
                     <section className="navContainer">
                         <div>
-                            <UserCard />
+                            <UserCard userInfo={userInfo}  setAuthUser={setAuthUser} handleUpdateUserInfo={handleUpdateUserInfo}/>
                         </div>
                         <div>
                             <nav className="navbar">
