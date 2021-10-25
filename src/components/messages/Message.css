@@ -190,6 +190,44 @@ section.commentCard {
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
+<<<<<<< HEAD
+}
+
+section.commentArea {
+    background-color: lightblue;
+    position: relative;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    min-width: 350px;
+    max-width: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section.commentArea:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: lightblue;
+}
+
+section.commentArea:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+=======
+>>>>>>> main
 }
 
 section.commentArea {
@@ -227,6 +265,11 @@ section.commentArea:after {
     border-bottom-right-radius: 10px;
 }
 
+/* section.commentArea {
+    margin-left: 10px;
+    max-width: 400px;
+} */
+
 .commentTitle {
     font-size: 18px;
     font-weight: bold;
@@ -245,6 +288,7 @@ section.messageCardContainer {
     border-top: none;
     border-radius: 20px;
     margin-bottom: 10px;
+<<<<<<< HEAD
 }
 
 img.commentPic {
@@ -267,4 +311,6 @@ img.messagePic {
     display: flex;
     flex-direction: column;
     align-items: center;
+=======
+>>>>>>> main
 }
