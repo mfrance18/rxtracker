@@ -44,7 +44,7 @@ export const DailyMedicineList = ({ dayId, day }) => {
                 <Button className="addButton" onClick={toggle}>Add Medication</Button>
             </div>
             <section className="dailyMedicineCardList">
-                {dailyMedicines?.map(medicine => <DailyMedicineCard handleDeleteMedication={handleDeleteMedication} key={medicine.id} medicine={medicine} medication={medicine.medication} reload={reload} />)}
+                {dailyMedicines.map(medicine => <DailyMedicineCard handleDeleteMedication={handleDeleteMedication} key={medicine.id} medicine={medicine} medication={medicine.medication} reload={reload} />)}
             </section>
 
             <Modal isOpen={modal} toggle={toggle} className="dailyModal">

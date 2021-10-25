@@ -20,6 +20,20 @@
       "lastName": "France",
       "email": "david@gmail.com",
       "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635196534/yybgupn5rjmxixd47rnt.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "Robyn",
+      "lastName": "Boyce",
+      "email": "robyn@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635198189/mziqnasw34yjwl7alte3.jpg"
+    },
+    {
+      "id": 5,
+      "firstName": "Rebecca",
+      "lastName": "France",
+      "email": "rebecca@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635199028/mxuowqxfuqdmaepngomq.jpg"
     }
   ],
   "messages": [
@@ -29,9 +43,52 @@
       "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
       "timestamp": "Mon Oct 25 2021 4:28 pm",
       "id": 1
+    },
+    {
+      "userId": 2,
+      "messenger": "Ashley Morphis",
+      "message": "My doctor recommended Zyrtec to help with my allergies. Did it help you and did you have any side effects?",
+      "timestamp": "Mon Oct 25 2021 4:35 pm",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "messenger": "Matt France",
+      "message": "Any suggestions for OTC heartburn medicine?",
+      "timestamp": "Mon Oct 25 2021 4:44 pm",
+      "id": 3
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "userId": 4,
+      "messageId": 1,
+      "commenter": "Robyn",
+      "comment": "Yes, I usually feel really tired when I take it so I take it at night. ",
+      "id": 1
+    },
+    {
+      "userId": 3,
+      "messageId": 3,
+      "commenter": "David",
+      "comment": "Prilosec has worked wonders for me, but I would recommend checking with your doctor first. ",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "messageId": 2,
+      "commenter": "Matt",
+      "comment": "I am currently taking Zyrtec and it has help tremendously with my allergies. No side effects, for me at least. ",
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "messageId": 3,
+      "commenter": "Rebecca",
+      "comment": "I personally prefer Nexium, however, I have taken Prilosec before and it did work ok for me. ",
+      "id": 4
+    }
+  ],
   "days": [
     {
       "id": 1,
