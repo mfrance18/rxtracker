@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, Card, CardTitle, Input, ListGroup, ListGroupItem } from "reactstrap";
+import { Button,  Input,  } from "reactstrap";
 import { completeMedicine } from "../../modules/DayManager";
 import "./Days.css"
 

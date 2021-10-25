@@ -5,6 +5,7 @@ import { CommentEditForm } from "./CommentEditForm";
 export const CommentCard = ({ comment, handleDeleteComment, reload, message }) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
+    let userImage= sessionStorage.getItem("rxtracker_image")
 
     const [selectedComment, setSelectedComment] = useState({ comment: {} })
 
@@ -16,9 +17,13 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
         return (
             <>
                 <section className="commentCard">
-                    <section>
+                    <section className="nameContainer">
+                        <div className="commentImage">
+                            <img className="commentPic" src={userImage} alt="User Image" />
+                        </div>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>
+
                     <section className="commentArea">
                         <div className="comment"> {comment.comment}</div>
                         <div className="comButtons">
@@ -30,9 +35,10 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                                 onClick={() => { setSelectedComment({ comment }); toggleEdit() }}>
                                 Edit
                             </Button>
-
                         </div>
                     </section>
+
+
                 </section>
                 <div>
                     <hr></hr>
@@ -52,6 +58,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                     <section>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>
+
                     <section className="commentArea">
                         <div className="comment"> {comment.comment}</div>
                     </section>

@@ -13,6 +13,7 @@ import { MessageList } from "../messages/MessageList";
 
 
 
+
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
 
 

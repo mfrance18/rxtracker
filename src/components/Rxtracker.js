@@ -12,10 +12,10 @@ export const RxTracker = () => {
 
     const setAuthUser = (user) => {
         sessionStorage.setItem("rxtracker_user", user.id)
+        sessionStorage.setItem("rxtracker_image", user.image)
         sessionStorage.setItem("rxtracker_username", user.firstName)
         sessionStorage.setItem("rxtracker_fullname", user.firstName + " " + user.lastName)
-        setIsAuthenticated(sessionStorage.getItem("rxtracker_user") !== null)
-        
+        setIsAuthenticated(sessionStorage.getItem("rxtracker_user") !== null) 
     }
 
     const clearUser = () => {
@@ -25,7 +25,7 @@ export const RxTracker = () => {
 
     return (
         <>
-            <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
+            <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} setAuthUser={setAuthUser}/>
             <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
         </>
     )

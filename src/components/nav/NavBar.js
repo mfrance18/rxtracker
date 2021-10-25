@@ -1,15 +1,30 @@
-import React from "react"
+import React, { useState } from "react"
 import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
 import MainLogo from "../../images/HomeLogo.png"
+import { UserCard } from "../UserProfile.js/UserCard"
 import "./NavBar.css"
 
 
 
-export const NavBar = ({ clearUser, isAuthenticated }) => {
+export const NavBar = ({ clearUser, isAuthenticated, setAuthUser}) => {
+
+    const [userInfo, setUserInfo] = useState({
+        userId: sessionStorage.getItem("rxtracker_user"),
+        userName: sessionStorage.getItem("rxtracker_username"),
+        userImage: sessionStorage.getItem("rxtracker_image")
+    })
+
+    const handleUpdateUserInfo = () => {
+        setUserInfo({
+            userId: sessionStorage.getItem("rxtracker_user"),
+            userName: sessionStorage.getItem("rxtracker_username"),
+            userImage: sessionStorage.getItem("rxtracker_image")
+        })
+    }
+    
 
     const history = useHistory()
-    let user = sessionStorage.getItem("rxtracker_username")
 
     const handleLogout = () => {
         history.push('/login');
@@ -32,7 +47,7 @@ export const NavBar = ({ clearUser, isAuthenticated }) => {
 
                     <section className="navContainer">
                         <div>
-                            <h2 className="intro">Welcome, {user}!</h2> :
+                            <UserCard userInfo={userInfo}  setAuthUser={setAuthUser} handleUpdateUserInfo={handleUpdateUserInfo}/>
                         </div>
                         <div>
                             <nav className="navbar">

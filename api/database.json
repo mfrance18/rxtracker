@@ -4,51 +4,35 @@
       "id": 1,
       "firstName": "Matt",
       "lastName": "France",
-      "email": "matt@gmail.com"
+      "email": "matt@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635192354/v9esq4mo36muyfmhaxc6.jpg"
     },
     {
-      "id": 2,
+      "email": "ashley@gmail.com",
       "firstName": "Ashley",
       "lastName": "Morphis",
-      "email": "ashley@gmail.com"
-    },
-    {
-      "email": "robyn@gmail.com",
-      "firstName": "Robyn",
-      "lastName": "Boyce",
-      "id": 3
-    },
-    {
-      "email": "david@gmail.com",
-      "firstName": "David",
-      "lastName": "France",
-      "id": 4
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png",
+      "id": 2
     }
   ],
   "messages": [
     {
-      "userId": 2,
-      "messenger": "Ashley Morphis",
-      "message": "Have you taken OTC Prilosec? Did you have any side effects?",
-      "timestamp": "Fri Oct 22 2021 2:48 pm",
-      "id": 2
-    },
-    {
       "userId": 1,
       "messenger": "Matt France",
-      "message": "Has anyone taken Zyrtec for Allergies? How did it work for you?",
-      "timestamp": "Fri Oct 22 2021 3:04 pm",
-      "id": 4
-    },
-    {
-      "userId": 3,
-      "messenger": "Robyn Boyce",
       "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
-      "timestamp": "Fri Oct 22 2021 3:58 pm",
-      "id": 5
+      "timestamp": "Mon Oct 25 2021 3:45 pm",
+      "id": 1
     }
   ],
-  "comments": [],
+  "comments": [
+    {
+      "userId": 1,
+      "messageId": 1,
+      "commenter": "Matt",
+      "comment": "It makes me quite drowsy after I take it. I usually take it at night.",
+      "id": 1
+    }
+  ],
   "days": [
     {
       "id": 1,
@@ -119,39 +103,9 @@
       "instructions": "Take 1 tablet per week",
       "dosage": "150mg",
       "id": 5
-    },
-    {
-      "name": "Zyrtec",
-      "userId": 2,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 7
-    },
-    {
-      "name": "Claritin",
-      "userId": 2,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 8
     }
   ],
   "dailyMedications": [
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 1,
-      "status": false,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 1,
-      "status": false,
-      "id": 3
-    },
     {
       "userId": 1,
       "medicationId": 4,
@@ -181,55 +135,6 @@
         "dosage": "150mg",
         "id": 5
       }
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 2,
-      "status": false,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 2,
-      "status": false,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 2,
-      "status": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 3,
-      "status": false,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 3,
-      "status": false,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 3,
-      "status": false,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 4,
-      "status": false,
-      "id": 15
     },
     {
       "userId": 1,
@@ -263,132 +168,6 @@
     },
     {
       "userId": 1,
-      "medicationId": 2,
-      "dayId": 5,
-      "status": false,
-      "id": 19
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 5,
-      "status": false,
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 5,
-      "status": false,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 6,
-      "status": false,
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 6,
-      "status": false,
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 6,
-      "status": false,
-      "id": 25
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 7,
-      "status": false,
-      "id": 28
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 7,
-      "status": false,
-      "id": 29
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 7,
-      "status": false,
-      "id": 30
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 1,
-      "status": false,
-      "id": 31
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 2,
-      "status": false,
-      "id": 32
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 3,
-      "status": false,
-      "id": 33
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 4,
-      "status": false,
-      "id": 34
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 5,
-      "status": false,
-      "id": 35
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 6,
-      "status": false,
-      "id": 36
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 7,
-      "status": false,
-      "id": 37
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 4,
-      "status": false,
-      "id": 38
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 4,
-      "status": false,
-      "id": 39
-    },
-    {
-      "userId": 1,
       "medicationId": 5,
       "dayId": 1,
       "status": true,
@@ -404,59 +183,157 @@
     },
     {
       "userId": 1,
-      "medicationId": 4,
-      "dayId": 1,
-      "status": false,
-      "id": 41
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
+      "medicationId": 2,
       "dayId": 1,
       "status": false,
       "id": 42
     },
     {
       "userId": 1,
-      "medicationId": 1,
+      "medicationId": 3,
       "dayId": 1,
       "status": false,
       "id": 43
     },
     {
       "userId": 1,
-      "medicationId": 1,
-      "dayId": 2,
+      "medicationId": 4,
+      "dayId": 1,
       "status": false,
       "id": 44
     },
     {
       "userId": 1,
-      "medicationId": 1,
-      "dayId": 3,
+      "medicationId": 5,
+      "dayId": 1,
       "status": false,
       "id": 45
     },
     {
       "userId": 1,
-      "medicationId": 1,
-      "dayId": 4,
-      "status": false,
-      "id": 46
-    },
-    {
-      "userId": 1,
-      "medicationId": 1,
-      "dayId": 5,
+      "medicationId": 2,
+      "dayId": 2,
       "status": false,
       "id": 47
     },
     {
       "userId": 1,
-      "medicationId": 1,
-      "dayId": 6,
+      "medicationId": 3,
+      "dayId": 2,
       "status": false,
       "id": 48
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 2,
+      "status": false,
+      "id": 49
+    },
+    {
+      "userId": 1,
+      "medicationId": 2,
+      "dayId": 3,
+      "status": false,
+      "id": 51
+    },
+    {
+      "userId": 1,
+      "medicationId": 3,
+      "dayId": 3,
+      "status": false,
+      "id": 52
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 3,
+      "status": false,
+      "id": 53
+    },
+    {
+      "userId": 1,
+      "medicationId": 2,
+      "dayId": 4,
+      "status": false,
+      "id": 55
+    },
+    {
+      "userId": 1,
+      "medicationId": 3,
+      "dayId": 4,
+      "status": false,
+      "id": 56
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 4,
+      "status": false,
+      "id": 57
+    },
+    {
+      "userId": 1,
+      "medicationId": 2,
+      "dayId": 5,
+      "status": false,
+      "id": 59
+    },
+    {
+      "userId": 1,
+      "medicationId": 3,
+      "dayId": 5,
+      "status": false,
+      "id": 60
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 5,
+      "status": false,
+      "id": 61
+    },
+    {
+      "userId": 1,
+      "medicationId": 2,
+      "dayId": 6,
+      "status": false,
+      "id": 62
+    },
+    {
+      "userId": 1,
+      "medicationId": 3,
+      "dayId": 6,
+      "status": false,
+      "id": 63
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 6,
+      "status": false,
+      "id": 64
+    },
+    {
+      "userId": 1,
+      "medicationId": 2,
+      "dayId": 7,
+      "status": false,
+      "id": 65
+    },
+    {
+      "userId": 1,
+      "medicationId": 3,
+      "dayId": 7,
+      "status": false,
+      "id": 66
+    },
+    {
+      "userId": 1,
+      "medicationId": 4,
+      "dayId": 7,
+      "status": false,
+      "id": 67
     }
   ]
 }
