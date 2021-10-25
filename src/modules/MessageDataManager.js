@@ -1,7 +1,7 @@
 const remoteURL = "http://localhost:8088"
 
 export const getAllMessages = () => {
-   return fetch(`http://localhost:8088/messages?_sort=timestamp&_order=desc`)
+   return fetch(`http://localhost:8088/messages?_sort=timestamp&_order=desc&_expand=user`)
     .then(response => response.json())
 }
 
@@ -59,7 +59,7 @@ export const getAllComments = () => {
     }
 
 export const getCommentByMessage = (messageId) => {
-    return fetch(`${remoteURL}/comments?messageId=${messageId}&_expand=message`)
+    return fetch(`${remoteURL}/comments?messageId=${messageId}&_expand=message&_expand=user`)
     .then(response => response.json())
 }
 

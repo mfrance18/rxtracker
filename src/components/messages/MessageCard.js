@@ -6,7 +6,7 @@ import { CardBody, Button, ModalHeader, Modal, ModalBody, } from "reactstrap";
 
 export const MessageCard = ({ message, handleDeleteMessage, reload, messageId }) => {
 
-    let userImage = sessionStorage.getItem("rxtracker_image")
+    let userImage = message.user.image
 
     const [selectedMessage, setSelectedMessage] = useState({ message: {} })
 
@@ -66,7 +66,10 @@ export const MessageCard = ({ message, handleDeleteMessage, reload, messageId })
             <>
                 <section className="messageCardContainer">
                     <section className="message">
-                        <div className="messenger">{message.messenger} </div>
+                        <div className="messenger">
+                            <img className="messagePic" src={userImage} alt="User Image" />
+                            {message.messenger}
+                        </div>
                         <CardBody className="messageBody">{message.message}</CardBody>
                         <div className="message-update-buttons">
                             <div className="time">

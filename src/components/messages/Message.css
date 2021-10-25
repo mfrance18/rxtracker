@@ -190,7 +190,6 @@ section.commentCard {
     flex-direction: row;
     align-items: flex-end;
     justify-content: flex-end;
-<<<<<<< HEAD
 }
 
 section.commentArea {
@@ -226,8 +225,6 @@ section.commentArea:after {
     height: 20px;
     background: white;
     border-bottom-right-radius: 10px;
-=======
->>>>>>> main
 }
 
 section.commentArea {
@@ -288,7 +285,6 @@ section.messageCardContainer {
     border-top: none;
     border-radius: 20px;
     margin-bottom: 10px;
-<<<<<<< HEAD
 }
 
 img.commentPic {
@@ -311,6 +307,4 @@ img.messagePic {
     display: flex;
     flex-direction: column;
     align-items: center;
-=======
->>>>>>> main
 }
