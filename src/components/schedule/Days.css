@@ -76,6 +76,15 @@ button.addButton.btn.btn-secondary {
     background-color: seagreen;
 }
 
+button.addAllButton.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-left: 10px;
+    background-color: seagreen;
+}
+
 .modal-body {
     background-color: lightyellow;
 }
@@ -88,4 +97,11 @@ button.addButton.btn.btn-secondary {
 
 input#check {
     margin-left: 20px;
+}
+
+.addAllContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
