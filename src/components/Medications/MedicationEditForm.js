@@ -30,6 +30,7 @@ export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
             dosage: medications.dosage,
             instructions: medications.instructions
         }
+
         updateMedication(editedMedication)
             .then(toggleEdit)
             .then(render)

@@ -9,7 +9,7 @@ import { DailyMedicineList } from "./DailyMedicationList"
 export const DailyCard = ({ day }) => {
 
 
-
+    
     return (
         <>
             <div className="dailyCard">
