@@ -1,7 +1,7 @@
 .mainTitle {
     color: white;
     font-size: 60px;
-    margin-left: 400px;
+    margin-left: 380px;
 }
 
 nav.navbar {
@@ -30,7 +30,7 @@ section.navContainer {
     flex-direction: column;
     align-content: stretch;
     align-items: flex-end;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 a.nav-link {

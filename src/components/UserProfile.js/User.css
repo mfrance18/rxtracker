@@ -4,9 +4,9 @@
 }
 
 .profilePic {
-    height: 200px;
-    width: 200px;
-    border-radius: 100px;
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
 }
   
   .img__wrap:hover .img__description {

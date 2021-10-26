@@ -47,7 +47,7 @@ export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
         <>
             <section className="medFormContainer">
                 <Form className="medForm">
-                    <h1>Update Medication</h1>
+                    <h1>Edit Medication</h1>
                     <Form.Group>
                         <Label htmlFor="name">Medication Name: </Label>
                         <Input type="text" id="name" onChange={handleFieldChange} placeholder="Name of Medication" value={medications.name} />

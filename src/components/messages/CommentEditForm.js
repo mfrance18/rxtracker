@@ -48,7 +48,7 @@ export const CommentEditForm = ({ toggleEdit, comment, reload, message}) => {
         <>
             <div>
                 <Form className="commentForm">
-                    <h1>Edit Post</h1>
+                    <h1>Edit Comment</h1>
                     <Form.Group>
                         <div>
                             <Label className="update-comment-header" htmlFor="comment">New Comment:</Label>

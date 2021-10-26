@@ -3,6 +3,7 @@ import { useHistory } from "react-router"
 import { Link } from "react-router-dom"
 import MainLogo from "../../images/HomeLogo.png"
 import { UserCard } from "../UserProfile.js/UserCard"
+import HeaderLogo from "../../images/HeaderLogo.png"
 import "./NavBar.css"
 
 
@@ -42,7 +43,7 @@ export const NavBar = ({ clearUser, isAuthenticated, setAuthUser}) => {
                     </section>
 
                     <section>
-                        <h1 className="mainTitle">Welcome to Rx Tracker</h1>
+                        <img className="mainTitle" src={HeaderLogo} alt="Rx Tracker Logo" />
                     </section>
 
                     <section className="navContainer">

@@ -102,7 +102,7 @@ export const UserEditForm = ({ toggleEdit, userId, handleUpdateUserInfo, setAuth
                         </div>
                         <div className="profileImageEdit">
                             {isLoading ? (
-                                <h4>Loading...</h4>
+                                <h4 style={{marginTop: 20}}>Loading...</h4>
                             ) : (
                                 <>
                                     <img className="mainImage" src={image}   />
