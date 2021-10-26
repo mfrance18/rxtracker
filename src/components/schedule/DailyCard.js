@@ -1,5 +1,4 @@
 import React from "react"
-import { Button } from "reactstrap"
 import { DailyMedicineList } from "./DailyMedicationList"
 
 
@@ -7,7 +6,6 @@ import { DailyMedicineList } from "./DailyMedicationList"
 
 
 export const DailyCard = ({ day }) => {
-
 
     
     return (

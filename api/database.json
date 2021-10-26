@@ -127,6 +127,14 @@
       "amount": "1",
       "dosage": "10mg",
       "instructions": "Take 1 every 24 hours"
+    },
+    {
+      "name": "Advil",
+      "userId": 1,
+      "amount": "1",
+      "instructions": "Take 1 every 4 hours",
+      "dosage": "500mg",
+      "id": 2
     }
   ],
   "dailyMedications": [
@@ -279,7 +287,7 @@
     },
     {
       "userId": 1,
-      "dayId": 1,
+      "dayId": 7,
       "medicationId": 1,
       "status": false,
       "id": 15

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route } from "react-router-dom"
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
@@ -6,6 +6,10 @@ import { MedicationList } from "../Medications/MedicationList";
 import { Redirect } from "react-router";
 import { DayList } from "../schedule/DayList";
 import { MessageList } from "../messages/MessageList";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { AllDaysForm } from "../AllDays/AllDaysForm";
+import { AllDaysList } from "../AllDays/AllDaysList";
+
 
 
 
@@ -16,12 +20,15 @@ import { MessageList } from "../messages/MessageList";
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
 
-
     return (
         <>
 
             <Route exact path="/">
-                {isAuthenticated ? <DayList /> : <Redirect to="/login" />}
+                {isAuthenticated ? <AllDaysList /> : <Redirect to="/login" />}
+            </Route>
+
+            <Route exact path="/create">
+                <AllDaysForm  />
             </Route>
 
             <Route exact path="/medications">

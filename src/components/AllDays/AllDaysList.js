@@ -1,62 +1,49 @@
-// import React, { useEffect, useState } from "react";
-// import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
-// import { AllDaysForm } from "./AllDaysForm";
-// import { DayList } from "../schedule/DayList";
-// import { getAllDays } from "../../modules/DayManager";
+import React, { useEffect, useState } from "react";
+import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
+import { AllDaysForm } from "./AllDaysForm";
+import { DayList } from "../schedule/DayList";
+import { getAllDays } from "../../modules/DayManager";
+import { useHistory } from "react-router";
 
 
 
 
 
 
-// export const AllDaysList = () => {
+export const AllDaysList = () => {
 
-//     const [allDays, setAllDays] = useState([])
-    
-   
-//     const [modal, setModal] = useState(false);
+    const history = useHistory()
 
-//     const getEveryDay = () => {
-//         return getAllDays()
-//             .then(response => {
-//                 setAllDays(response)
-//             })
-//     }
+    // const [allDays, setAllDays] = useState([])
 
 
-//     const reloadAll =  () => {
-//         getEveryDay()
-//     }
+    // const [modal, setModal] = useState(false);
 
-//     const toggle = () => {
-//         setModal(!modal)
-//     };
+    // const getEveryDay = () => {
+    //     return getAllDays()
+    //         .then(response => {
+    //             setAllDays(response)
+    //         })
+    // }
 
-//     useEffect(() => {
-//         getEveryDay()
-//     }, [])
 
-    
+    // const reloadAll =  () => {
+    //     getEveryDay()
+    // }
 
-//     return (
-//         <>
-//             <div>
-//                 <Button type="button"
-//                     className="mondayAdd"
-//                     variant="primary" size="sm"
-//                     onClick={toggle}>
-//                     Add Medication
-//                 </Button>
-//             </div>
-           
-//             <DayList />
+    // const toggle = () => {
+    //     setModal(!modal)
+    // };
 
-//             <Modal isOpen={modal} toggle={toggle}>
-//                 <ModalHeader toggle={toggle}>Add to Everyday</ModalHeader>
-//                 <ModalBody>
-//                     <AllDaysForm toggler={toggle} reloadAll={reloadAll}/>
-//                 </ModalBody>
-//             </Modal>
-//         </>
-//     )
-// }
+    // useEffect(() => {
+    //     getEveryDay()
+    // }, [])
+
+
+
+    return (
+        <>
+            <DayList />
+        </>
+    )
+}
