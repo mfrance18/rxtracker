@@ -3,6 +3,7 @@ import { getMedicationById, updateMedication } from "../../modules/MedicationMan
 import { Button,  Label, Input } from 'reactstrap';
 import { Form } from "react-bootstrap";
 import "./Medications.css"
+import 'animate.css';
 
 export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
 

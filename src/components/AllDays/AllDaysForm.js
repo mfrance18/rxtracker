@@ -4,13 +4,13 @@ import { getMedicationByUserId } from '../../modules/MedicationManager';
 import { Button } from "reactstrap";
 import { addMedicationToDay } from '../../modules/DayManager';
 import { Form } from 'react-bootstrap';
-import { DayList } from '../schedule/DayList';
 import "./AllDays.css"
 
 
 
 
-export const AllDaysForm = ({ toggler, reloadAll }) => {
+
+export const AllDaysForm = ({ toggler}) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
     const history = useHistory()

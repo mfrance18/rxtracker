@@ -5,7 +5,7 @@
       "firstName": "Matt",
       "lastName": "France",
       "email": "matt@gmail.com",
-      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635192354/v9esq4mo36muyfmhaxc6.jpg"
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
     },
     {
       "id": 2,
@@ -127,14 +127,6 @@
       "amount": "1",
       "dosage": "10mg",
       "instructions": "Take 1 every 24 hours"
-    },
-    {
-      "name": "Advil",
-      "userId": 1,
-      "amount": "1",
-      "instructions": "Take 1 every 4 hours",
-      "dosage": "500mg",
-      "id": 2
     }
   ],
   "dailyMedications": [
@@ -242,55 +234,6 @@
         "dosage": "10mg",
         "id": 1
       }
-    },
-    {
-      "userId": 1,
-      "medicationId": 1,
-      "dayId": 2,
-      "status": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "medicationId": 1,
-      "dayId": 3,
-      "status": false,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "medicationId": 1,
-      "dayId": 4,
-      "status": false,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "medicationId": 1,
-      "dayId": 5,
-      "status": false,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "medicationId": 1,
-      "dayId": 6,
-      "status": false,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "dayId": 1,
-      "medicationId": 1,
-      "status": false,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "dayId": 7,
-      "medicationId": 1,
-      "status": false,
-      "id": 15
     }
   ]
 }

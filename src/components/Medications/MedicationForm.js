@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { addMedication } from "../../modules/MedicationManager";
 import { Form } from "react-bootstrap";
 import { Button, Label, Input } from 'reactstrap';
+import 'animate.css';
 
 export const MedicationForm = ({ toggler, render }) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))

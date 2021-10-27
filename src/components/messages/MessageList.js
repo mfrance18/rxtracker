@@ -6,6 +6,7 @@ import { getAllMessages, getAllMessagesReversed, getMessagesByUser } from "../..
 import { deleteMessage } from "../../modules/MessageDataManager";
 import { Modal, ModalBody, ModalHeader, Button } from "reactstrap";
 import "./Message.css"
+import 'animate.css';
 import { MessageForm } from "./MessageForm";
 
 

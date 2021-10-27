@@ -3,6 +3,7 @@ import { getAllMedications, deleteMedication } from "../../modules/MedicationMan
 import { MedicationCard } from "./MedicationCard";
 import { MedicationForm } from "./MedicationForm";
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import 'animate.css';
 
 export const MedicationList = () => {
 

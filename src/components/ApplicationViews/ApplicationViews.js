@@ -3,10 +3,8 @@ import { Route } from "react-router-dom"
 import { Login } from "../auth/Login";
 import { Register } from "../auth/Register";
 import { MedicationList } from "../Medications/MedicationList";
-import { Redirect } from "react-router";
-import { DayList } from "../schedule/DayList";
+import { Redirect } from "react-router"
 import { MessageList } from "../messages/MessageList";
-import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { AllDaysForm } from "../AllDays/AllDaysForm";
 import { AllDaysList } from "../AllDays/AllDaysList";
 
@@ -19,6 +17,7 @@ import { AllDaysList } from "../AllDays/AllDaysList";
 
 
 export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
+
 
     return (
         <>

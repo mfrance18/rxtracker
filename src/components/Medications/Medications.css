@@ -79,6 +79,8 @@ button.medAdd.btn.btn-secondary {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    animation: fadeIn; 
+    animation-duration: 1s; 
 }
 
 .medications {
@@ -87,10 +89,11 @@ button.medAdd.btn.btn-secondary {
     justify-content: center;
     align-items: center;
     align-content: stretch;
+    animation: fadeIn; 
+    animation-duration: 1s; 
 }
 
 .medicationCardTitle.card-title {
     font-size: 20px;
     font-weight: bold;
 }
-

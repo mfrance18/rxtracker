@@ -4,6 +4,7 @@ import { DailyMedicineCard } from "./DailyMedicineCard";
 import { DailyMedicationForm } from "./DailyMedicationForm";
 import { Button, Modal, ModalHeader, ModalBody } from "reactstrap";
 import "./Days.css"
+import 'animate.css';
 
 export const DailyMedicineList = ({ dayId, day }) => {
     const [dailyMedicines, setDailyMedicines] = useState([])
