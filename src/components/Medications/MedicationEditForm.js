@@ -68,7 +68,7 @@ export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
                         <Input type="text" id="dosage" onChange={handleFieldChange} placeholder="Dosage Amount" value={medications.dosage} />
 
                         <Label htmlFor="instructions">Instructions: </Label>
-                        <Input id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medications.instructions} />
+                        <Form.Control as="textarea" className="form-control" id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medications.instructions} />
                     </Form.Group>
 
                     <div>

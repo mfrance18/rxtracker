@@ -52,7 +52,7 @@ export const CommentEditForm = ({ toggleEdit, comment, reload, message}) => {
                     <Form.Group>
                         <div>
                             <Label className="update-comment-header" htmlFor="comment">New Comment:</Label>
-                            <Input className="form-control"  type="text" id="comment" onChange={handleFieldChange} placeholder="Enter New comment" value={comments.comment} />
+                            <Form.Control className="form-control" as="textarea" id="comment" onChange={handleFieldChange} placeholder="Enter comment"  value={comments.comment} />
                         </div>
                         <Button className="comment-save-button"
                             variant="secondary" size="sm"

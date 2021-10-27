@@ -46,7 +46,7 @@ export const MessageForm = ({ toggle, reload }) => {
                 <Form.Group className="messageForm">
                     <div>
                         <Label htmlFor="message"> </Label>
-                        <Input className="form-control" type="text" id="message" onChange={handleControlledInputChange} placeholder="Enter Message for the chat" value={message.message} />
+                        <Form.Control className="form-control" as="textarea" id="message" onChange={handleControlledInputChange} placeholder="Enter Message" value={message.message} />
                     </div>
                     <Button className="message-save-button"
                         onClick={handleClickSaveNewMessage}>

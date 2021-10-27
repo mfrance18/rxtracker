@@ -34,6 +34,13 @@
       "lastName": "France",
       "email": "rebecca@gmail.com",
       "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635199028/mxuowqxfuqdmaepngomq.jpg"
+    },
+    {
+      "id": 6,
+      "firstName": "Austin",
+      "lastName": "Shelton",
+      "email": "austin@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635343743/kceu3umthxsu6fxwbcob.jpg"
     }
   ],
   "messages": [
@@ -87,6 +94,13 @@
       "commenter": "Rebecca",
       "comment": "I personally prefer Nexium, however, I have taken Prilosec before and it did work ok for me. ",
       "id": 4
+    },
+    {
+      "userId": 6,
+      "messageId": 2,
+      "commenter": "Austin",
+      "comment": "Yeah it works really well for me, no side effects",
+      "id": 5
     }
   ],
   "days": [
@@ -233,6 +247,21 @@
         "instructions": "Take 1 every 24 hours",
         "dosage": "10mg",
         "id": 1
+      }
+    },
+    {
+      "userId": 1,
+      "medicationId": 1,
+      "dayId": 3,
+      "status": true,
+      "id": 10,
+      "medication": {
+        "id": 1,
+        "userId": 1,
+        "name": "Zyrtec",
+        "amount": "1",
+        "dosage": "10mg",
+        "instructions": "Take 1 every 24 hours"
       }
     }
   ]

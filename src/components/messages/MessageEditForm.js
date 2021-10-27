@@ -51,7 +51,7 @@ export const MessageEditForm = ({ toggleEdit, message, reload }) => {
                     <Form.Group>
                         <div>
                             <Label className="update-message-header" htmlFor="message">New Message:</Label>
-                            <Input className="form-control" type="text" id="message" onChange={handleFieldChange} placeholder="Enter New Message" value={messages.message} />
+                            <Form.Control className="form-control" as="textarea" id="message" onChange={handleFieldChange} placeholder="Enter Message" value={messages.message} />
                         </div>
                         <Button className="message-save-button"
                             variant="secondary" size="sm"

@@ -43,7 +43,7 @@ export const CommentForm = ({toggle,  message, reload}) => {
             <Form.Group className="commentForm">
                 <div>
                     <Label htmlFor="comment"> </Label>
-                    <Input className="form-control" type="text" id="comment" onChange={handleControlledInputChange} placeholder="Enter comment for the chat"  value={comment.comment} />
+                    <Form.Control className="form-control" as="textarea" id="comment" onChange={handleControlledInputChange} placeholder="Enter comment"  value={comment.comment} />
                 </div>
                 <div>
                 <Button className="message-save-button" 
