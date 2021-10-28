@@ -54,7 +54,7 @@ export const getAllComments = () => {
  }
 
  export const getCommentById = (commentId) => {
-    return fetch(`${remoteURL}/comments/${commentId}/_expand=user`)
+    return fetch(`${remoteURL}/comments/${commentId}?_expand=user`)
     .then(response => response.json())
     }
 

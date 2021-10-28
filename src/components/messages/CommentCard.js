@@ -19,7 +19,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                 <section className="commentCard">
                     <section className="nameContainer">
                         <div className="commentImage">
-                            <img className="commentPic" src={userImage} alt="User Image" />
+                            <img className="commentPic" src={userImage} alt="User" />
                         </div>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>
@@ -57,7 +57,7 @@ export const CommentCard = ({ comment, handleDeleteComment, reload, message }) =
                 <section className="commentCard">
                     <section className="nameContainer">
                         <div className="commentImage">
-                            <img className="commentPic" src={userImage} alt="User Image" />
+                            <img className="commentPic" src={userImage} alt="User" />
                         </div>
                         <div className="commentTitle">{comment.commenter}</div>
                     </section>

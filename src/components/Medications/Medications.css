@@ -80,8 +80,8 @@ button.medAdd.btn.btn-secondary {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    animation: fadeIn; 
-    animation-duration: 1s; 
+    min-height: 50vh;
+
 }
 
 .medications {
@@ -90,8 +90,7 @@ button.medAdd.btn.btn-secondary {
     justify-content: center;
     align-items: center;
     align-content: stretch;
-    animation: fadeIn; 
-    animation-duration: 1s; 
+
 }
 
 .medicationCardTitle.card-title {

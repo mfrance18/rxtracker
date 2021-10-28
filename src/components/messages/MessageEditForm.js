@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { getMessageById, updateMessage } from "../../modules/MessageDataManager"
-import { Label, Button, Input } from "reactstrap"
+import { Label, Button} from "reactstrap"
 import { Form } from "react-bootstrap";
 import "./Message.css"
 

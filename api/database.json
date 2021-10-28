@@ -5,7 +5,7 @@
       "firstName": "Matt",
       "lastName": "France",
       "email": "matt@gmail.com",
-      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635384674/nhybeuxjif8elpgsy2xj.jpg"
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
     },
     {
       "id": 2,
@@ -57,13 +57,6 @@
       "message": "My doctor recommended Zyrtec to help with my allergies. Did it help you and did you have any side effects?",
       "timestamp": "Mon Oct 25 2021 4:35 pm",
       "id": 2
-    },
-    {
-      "userId": 1,
-      "messenger": "Matt France",
-      "message": "Any suggestions for OTC heartburn medicine?",
-      "timestamp": "Mon Oct 25 2021 4:44 pm",
-      "id": 3
     }
   ],
   "comments": [
@@ -75,27 +68,6 @@
       "id": 1
     },
     {
-      "userId": 3,
-      "messageId": 3,
-      "commenter": "David",
-      "comment": "Prilosec has worked wonders for me, but I would recommend checking with your doctor first. ",
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "messageId": 2,
-      "commenter": "Matt",
-      "comment": "I am currently taking Zyrtec and it has help tremendously with my allergies. No side effects, for me at least. ",
-      "id": 3
-    },
-    {
-      "userId": 5,
-      "messageId": 3,
-      "commenter": "Rebecca",
-      "comment": "I personally prefer Nexium, however, I have taken Prilosec before and it did work ok for me. ",
-      "id": 4
-    },
-    {
       "userId": 6,
       "messageId": 2,
       "commenter": "Austin",
@@ -103,11 +75,11 @@
       "id": 5
     },
     {
-      "userId": 1,
-      "messageId": 3,
+      "id": 6,
+      "messageId": 2,
+      "comment": "Yes, I am currently taking Zyrtec and it has worked wonders for my allergies.  I also have had no side effects",
       "commenter": "Matt",
-      "comment": "Thank you for your recommendations! I will reach out to my doctor and see what's best for me.",
-      "id": 6
+      "userId": 1
     }
   ],
   "days": [
@@ -199,13 +171,6 @@
       "dayId": 7,
       "status": false,
       "id": 7
-    },
-    {
-      "userId": 1,
-      "dayId": 8,
-      "medicationId": 1,
-      "status": false,
-      "id": 8
     }
   ]
 }

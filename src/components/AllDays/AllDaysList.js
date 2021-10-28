@@ -13,8 +13,12 @@ export const AllDaysList = () => {
 
 
     return (
-        <div className="everyDayList">
-        <DayList />
-        </div>
+        <>
+
+            <div className="everyDayList">
+                <DayList />
+            </div>
+
+        </>
     )
 }

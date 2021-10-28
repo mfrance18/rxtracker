@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { addMessage } from "../../modules/MessageDataManager";
-import { Button, Input, Label } from "reactstrap";
+import { Button, Label } from "reactstrap";
 import { Form } from "react-bootstrap";
 import { formatAMPM } from "./Date";
 

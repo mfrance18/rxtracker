@@ -25,7 +25,7 @@ export const MessageCard = ({ message, handleDeleteMessage, reload, messageId })
 
 
                         <div className="messenger">
-                            <img className="messagePic" src={userImage} alt="User Image" />
+                            <img className="messagePic" src={userImage} alt="User" />
                             {message.messenger}
                         </div>
 
@@ -67,7 +67,7 @@ export const MessageCard = ({ message, handleDeleteMessage, reload, messageId })
                 <section className="messageCardContainer">
                     <section className="message">
                         <div className="messenger">
-                            <img className="messagePic" src={userImage} alt="User Image" />
+                            <img className="messagePic" src={userImage} alt="User" />
                             {message.messenger}
                         </div>
                         <CardBody className="messageBody">{message.message}</CardBody>

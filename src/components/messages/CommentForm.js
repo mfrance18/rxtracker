@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { addComment} from "../../modules/MessageDataManager";
-import { Button, Input, Label } from "reactstrap";
+import { Button, Label } from "reactstrap";
 import { Form } from "react-bootstrap";
 
 export const CommentForm = ({toggle,  message, reload}) => {
@@ -39,7 +39,7 @@ export const CommentForm = ({toggle,  message, reload}) => {
     return (
         <section className="commentFormContainer">
         <Form className="commentForm">
-        <h1>Add a Post</h1>
+        <h1>Add a Comment</h1>
             <Form.Group className="commentForm">
                 <div>
                     <Label htmlFor="comment"> </Label>

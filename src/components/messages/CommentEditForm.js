@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { getCommentById, updateComment } from "../../modules/MessageDataManager"
-import { Label, Button, Input} from "reactstrap"
+import { Label, Button} from "reactstrap"
 import { Form } from "react-bootstrap";
 import "./Message.css"
 
@@ -27,7 +27,6 @@ export const CommentEditForm = ({ toggleEdit, comment, reload, message}) => {
             messageId: message,
             comment: comments.comment,
             commenter: comments.commenter,
-            timestamp: comments.timestamp,
             userId: comments.userId
         }
 

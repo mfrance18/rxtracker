@@ -29,8 +29,6 @@ button.allDaysCancel.btn.btn-secondary.btn-sm {
     width: 500px;
     height: 400px;
     justify-content: center;
-    animation: fadeInDown;
-    animation-duration: 1s;
 }
 
 section.allDaysFormContainer {
@@ -39,7 +37,4 @@ section.allDaysFormContainer {
     margin-top: 20px;
 }
 
-.everyDayList {
-    animation: fadeIn; 
-    animation-duration: 1s; 
-}
+

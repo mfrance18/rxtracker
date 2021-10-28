@@ -32,7 +32,7 @@ export const UserCard = ({userInfo, handleUpdateUserInfo, setAuthUser}) => {
                             <p className="img__description">Click To Edit Profile</p>
                         </div>
                         <div>
-                            <img className="profilePic" onClick={() => toggleEdit()} src={userImage} alt="Profile Image" />
+                            <img className="profilePic" onClick={() => toggleEdit()} src={userImage} alt="Profile" />
                         </div>
                     </div>
                 </section>

@@ -37,21 +37,23 @@ export const MedicationList = () => {
 
     return (
         <>
-            <section className="medications">
-                <h1 className="listTitles">Medications</h1>
-                <div>
-                    <Button type="button"
-                        variant="secondary" size="sm"
-                        className="medAdd"
-                        onClick={toggle}>
-                        Add New Medication
-                    </Button>
-                </div>
-            </section>
-            <hr></hr>
-            <section className="medList">
-                {medications.map(medication => <MedicationCard render={render} medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication} />)}
-            </section>
+            
+                    <section className="medications">
+                        <h1 className="listTitles">Medications</h1>
+                        <div>
+                            <Button type="button"
+                                variant="secondary" size="sm"
+                                className="medAdd"
+                                onClick={toggle}>
+                                Add New Medication
+                            </Button>
+                        </div>
+                    </section>
+                    <hr></hr>
+                    <section className="medList">
+                        {medications.map(medication => <MedicationCard render={render} medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication} />)}
+                    </section>
+        
 
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>New Medication</ModalHeader>
