@@ -67,7 +67,10 @@ button.daySave.btn.btn-secondary.btn-sm {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px
+    ;
 }
+
 
 .nameOfDay {
     margin-top: 10px;

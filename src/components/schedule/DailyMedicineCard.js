@@ -18,6 +18,7 @@ export const DailyMedicineCard = ({ reload, medication, medicine, handleDeleteMe
                     <div className="dayCard">
                         <div className="dayMedicineTitle">
                             {medication.name}
+                           <div style={{fontSize: 15, fontWeight: 20}}>{medication.instructions}</div>
                         </div>
 
                         <div className="dayCardButtons">

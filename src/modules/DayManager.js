@@ -11,15 +11,9 @@ export const getAllDailyMedications = () => {
 }
 
 export const getMedicationByDay = (dayId) => {
-    return fetch(`${remoteURL}/dailyMedications?dayId=${dayId}&status=false&_expand=medication`)
+    return fetch(`${remoteURL}/dailyMedications?dayId=${dayId}&status=false&_expand=medication&_sort=id&_order=desc`)
     .then(response => response.json())
 }
-
-export const getMedicationBySingleDay = (dayId) => {
-    return fetch(`${remoteURL}/dailyMedications?dayId=${dayId}`)
-    .then(response => response.json())
-}
-
 
 export const addMedicationToDay = (newMedication) => {
     return fetch (`${remoteURL}/dailyMedications`, {

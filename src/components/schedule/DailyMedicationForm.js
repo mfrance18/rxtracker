@@ -63,7 +63,7 @@ export const DailyMedicationForm = ({ toggle, day, reload }) => {
                     <Form.Select value={days.medicationId} name="usermedicationsId" id="medicationId" onChange={handleControlledInputChange}>
                         <option value="0" >Select</option>
                         {usermedications.map(u => (<option key={u.id} value={u.id}>
-                            {u.name}, Instructions: {u.instructions}
+                            {u.name}
                         </option>))}
                     </Form.Select>
                 </Form>
