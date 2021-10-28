@@ -50,3 +50,9 @@ section.introContainer {
     white-space: nowrap;
     overflow: hidden;
 }
+
+input#image {
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid seagreen
+}

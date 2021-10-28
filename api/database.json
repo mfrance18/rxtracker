@@ -5,7 +5,7 @@
       "firstName": "Matt",
       "lastName": "France",
       "email": "matt@gmail.com",
-      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635384674/nhybeuxjif8elpgsy2xj.jpg"
     },
     {
       "id": 2,
@@ -101,6 +101,13 @@
       "commenter": "Austin",
       "comment": "Yeah it works really well for me, no side effects",
       "id": 5
+    },
+    {
+      "userId": 1,
+      "messageId": 3,
+      "commenter": "Matt",
+      "comment": "Thank you for your recommendations! I will reach out to my doctor and see what's best for me.",
+      "id": 6
     }
   ],
   "days": [
@@ -135,12 +142,12 @@
   ],
   "medications": [
     {
-      "id": 1,
-      "userId": 1,
       "name": "Zyrtec",
+      "userId": 1,
       "amount": "1",
+      "instructions": "Take 1 every 24 hours",
       "dosage": "10mg",
-      "instructions": "Take 1 every 24 hours"
+      "id": 1
     }
   ],
   "dailyMedications": [
@@ -148,121 +155,57 @@
       "userId": 1,
       "medicationId": 1,
       "dayId": 1,
-      "status": true,
-      "id": 1,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 1
     },
     {
       "userId": 1,
       "medicationId": 1,
       "dayId": 2,
-      "status": true,
-      "id": 2,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 2
     },
     {
       "userId": 1,
       "medicationId": 1,
       "dayId": 3,
-      "status": true,
-      "id": 3,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 3
     },
     {
       "userId": 1,
       "medicationId": 1,
       "dayId": 4,
-      "status": true,
-      "id": 4,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 4
     },
     {
       "userId": 1,
       "medicationId": 1,
       "dayId": 5,
-      "status": true,
-      "id": 5,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 5
     },
     {
       "userId": 1,
       "medicationId": 1,
       "dayId": 6,
-      "status": true,
-      "id": 6,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 6
     },
     {
       "userId": 1,
       "medicationId": 1,
       "dayId": 7,
-      "status": true,
-      "id": 7,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 1
-      }
+      "status": false,
+      "id": 7
     },
     {
       "userId": 1,
+      "dayId": 8,
       "medicationId": 1,
-      "dayId": 3,
-      "status": true,
-      "id": 10,
-      "medication": {
-        "id": 1,
-        "userId": 1,
-        "name": "Zyrtec",
-        "amount": "1",
-        "dosage": "10mg",
-        "instructions": "Take 1 every 24 hours"
-      }
+      "status": false,
+      "id": 8
     }
   ]
 }

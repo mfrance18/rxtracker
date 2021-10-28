@@ -98,7 +98,7 @@ export const UserEditForm = ({ toggleEdit, userId, handleUpdateUserInfo, setAuth
                         </div>
                         <div>
                             <Label className="update-user-header" htmlFor="image">Add Image:</Label>{" "}
-                            <Input className="form-control" type="file" id="image" onChange={uploadImage} placeholder="Email" />
+                            <Input className="form-control" type="file" id="image" onChange={uploadImage} placeholder="Image" />
                         </div>
                         <div className="profileImageEdit">
                             {isLoading ? (

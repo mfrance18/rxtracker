@@ -2,9 +2,10 @@
     width: 400px;
     height: 250px;
     margin-left: 10px;
-    border: solid 10px seagreen;
+    border: solid 5px seagreen;
     border-radius: 18px;
     background-color: lightyellow;
+    box-shadow: 2px 5px 5px grey;
 }
 
 form.medUpdateForm {

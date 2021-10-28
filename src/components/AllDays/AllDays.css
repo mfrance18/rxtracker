@@ -23,7 +23,7 @@ button.allDaysCancel.btn.btn-secondary.btn-sm {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 18px double seagreen;
+    border: 5px solid seagreen;
     border-radius: 18px;
     background-color: lightyellow;
     width: 500px;
