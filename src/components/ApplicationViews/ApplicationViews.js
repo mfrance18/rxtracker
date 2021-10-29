@@ -32,27 +32,16 @@ export const ApplicationViews = ({ isAuthenticated, setAuthUser }) => {
             <Route path="/register">
                 <Register setAuthUser={setAuthUser} />
             </Route>
+
             {isAuthenticated ?
                 <SlideRoutes location={location} duration={500} pathList={["/", "/medications", "/publicforum",]}>
-                    {isAuthenticated ? <Route exact path="/" component={AllDaysList} >
-
-                    </Route> : <Redirect to="/login" />}
-
-
-                    {isAuthenticated ? <Route exact path="/medications" component={MedicationList} >
-
-                    </Route> : <Redirect to="/login" />}
-
-                    {isAuthenticated ? <Route exact path="/publicforum" component={MessageList}  >
-
-                    </Route> : <Redirect to="/login" />}
-
-                    {isAuthenticated ? <Route exact path="/create" component={AllDaysForm}>
-
-                    </Route> : <Redirect to="/login" />}
+                   <Route exact path="/" component={AllDaysList} ></Route>  
+                   <Route exact path="/medications" component={MedicationList} > </Route> 
+                   <Route exact path="/publicforum" component={MessageList}></Route> 
+                   <Route exact path="/create" component={AllDaysForm}></Route> 
                 </SlideRoutes>
-                : null}
 
+                : <Redirect to="/login" />}
         </>
     )
 }

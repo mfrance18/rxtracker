@@ -5,7 +5,7 @@
       "firstName": "Matt",
       "lastName": "France",
       "email": "matt@gmail.com",
-      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635517341/eixn8azgzdgmehuggh7v.jpg"
     },
     {
       "id": 2,
@@ -71,6 +71,13 @@
       "messenger": "Austin Shelton",
       "timestamp": "Thu Oct 28 2021 4:08 pm",
       "userId": 6
+    },
+    {
+      "userId": 1,
+      "messenger": "Matt France",
+      "message": "My doctor just recommended Zyrtec for my allergies. How has it worked for you?",
+      "timestamp": "Fri Oct 29 2021 9:22 am",
+      "id": 4
     }
   ],
   "comments": [
@@ -189,6 +196,14 @@
       "instructions": "Take 1 per day",
       "dosage": "20mg",
       "id": 8
+    },
+    {
+      "name": "Zyrtec",
+      "userId": 1,
+      "amount": "1",
+      "instructions": "Take 1 every 24 hours",
+      "dosage": "10mg",
+      "id": 9
     }
   ],
   "dailyMedications": [
@@ -224,8 +239,16 @@
       "userId": 1,
       "medicationId": 2,
       "dayId": 5,
-      "status": false,
-      "id": 5
+      "status": true,
+      "id": 5,
+      "medication": {
+        "id": 2,
+        "userId": 1,
+        "name": "Levothyroxine",
+        "amount": "1",
+        "dosage": "100mg",
+        "instructions": "Take 1 tablet everyday"
+      }
     },
     {
       "userId": 1,
@@ -273,8 +296,16 @@
       "userId": 1,
       "medicationId": 3,
       "dayId": 5,
-      "status": false,
-      "id": 12
+      "status": true,
+      "id": 12,
+      "medication": {
+        "name": "Vitamin D3",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "For Adults, take 1 softgel daily",
+        "dosage": "25mg",
+        "id": 3
+      }
     },
     {
       "userId": 1,
@@ -322,8 +353,16 @@
       "userId": 1,
       "medicationId": 4,
       "dayId": 5,
-      "status": false,
-      "id": 19
+      "status": true,
+      "id": 19,
+      "medication": {
+        "name": "Turmeric Curcumin",
+        "userId": 1,
+        "amount": "2",
+        "instructions": "Take 2 capsules per day, preferably with food",
+        "dosage": "1500mg",
+        "id": 4
+      }
     },
     {
       "userId": 1,
@@ -371,8 +410,16 @@
       "userId": 1,
       "medicationId": 5,
       "dayId": 5,
-      "status": false,
-      "id": 26
+      "status": true,
+      "id": 26,
+      "medication": {
+        "id": 5,
+        "userId": 1,
+        "name": "Vitamin C",
+        "amount": "1",
+        "dosage": "500mg",
+        "instructions": "Take 1 tablet daily"
+      }
     },
     {
       "userId": 1,
@@ -428,8 +475,16 @@
       "userId": 1,
       "medicationId": 6,
       "dayId": 5,
-      "status": false,
-      "id": 33
+      "status": true,
+      "id": 33,
+      "medication": {
+        "name": "Zinc",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 caplet daily with food",
+        "dosage": "50mg",
+        "id": 6
+      }
     },
     {
       "userId": 1,
@@ -572,6 +627,63 @@
       "dayId": 7,
       "status": false,
       "id": 51
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 1,
+      "status": false,
+      "id": 52
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 2,
+      "status": false,
+      "id": 53
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 3,
+      "status": false,
+      "id": 54
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 4,
+      "status": false,
+      "id": 55
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 5,
+      "status": true,
+      "id": 56,
+      "medication": {
+        "name": "Zyrtec",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 every 24 hours",
+        "dosage": "10mg",
+        "id": 9
+      }
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 6,
+      "status": false,
+      "id": 57
+    },
+    {
+      "userId": 1,
+      "medicationId": 9,
+      "dayId": 7,
+      "status": false,
+      "id": 58
     }
   ]
 }
