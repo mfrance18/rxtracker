@@ -35,11 +35,11 @@ section.allDaysFormContainer {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-    animation: fadeInDown;
-    animation-duration: 1s;
+    /* animation: fadeInDown;
+    animation-duration: 1s; */
 }
 
 .everyDayList {
-    animation: fadeIn;
-    animation-duration: 1s;
+    /* animation: fadeIn;
+    animation-duration: 1s; */
 }
