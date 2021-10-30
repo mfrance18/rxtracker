@@ -3,6 +3,7 @@ import { addMedication } from "../../modules/MedicationManager";
 import { Form } from "react-bootstrap";
 import { Button, Label, Input } from 'reactstrap';
 
+
 export const MedicationForm = ({ toggler, render }) => {
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
 
@@ -58,7 +59,7 @@ export const MedicationForm = ({ toggler, render }) => {
                             <Input className="form-control" type="text" id="dosage" onChange={handleControlledInputChange} placeholder="Dosage Amount" value={medication.dosage} />
 
                             <Label htmlFor="instructions">Instructions: </Label>
-                            <Input className="form-control" id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions} />
+                            <Form.Control as="textarea" className="form-control" id="instructions" onChange={handleControlledInputChange} placeholder="Instructions" value={medication.instructions} />
                         </Form.Group>
                     </div>
 

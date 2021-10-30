@@ -1,6 +1,5 @@
-/* .allDaysButtons {
+.dayButtons {
     margin-top: 10px;
-   
 }
 
 button.allDaysSave.btn.btn-secondary.btn-sm {
@@ -20,44 +19,27 @@ button.allDaysCancel.btn.btn-secondary.btn-sm {
     padding-bottom: 1px;
 }
 
-.homeTop {
+.addToAllContainer {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
+    border: 5px solid seagreen;
+    border-radius: 18px;
+    background-color: lightyellow;
+    width: 500px;
+    height: 400px;
     justify-content: center;
 }
-button.weekAdd.btn.btn-secondary.btn-sm {
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 1px;
-    padding-bottom: 1px;
-    margin-left: 10px;
-    background-color: seagreen;
+
+section.allDaysFormContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    animation: fadeInDown;
+    animation-duration: 1s;
 }
 
-.listRows {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.everyDayList {
+    animation: fadeIn;
+    animation-duration: 1s;
 }
-
-.row1 {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.row2 {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-.row3 {
-    display: flex;
-    align-items: baseline;
-    flex-direction: row;
-    flex-wrap: wrap;
-} */

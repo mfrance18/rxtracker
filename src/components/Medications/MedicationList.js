@@ -3,6 +3,8 @@ import { getAllMedications, deleteMedication } from "../../modules/MedicationMan
 import { MedicationCard } from "./MedicationCard";
 import { MedicationForm } from "./MedicationForm";
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import 'animate.css';
+
 
 export const MedicationList = () => {
 
@@ -36,8 +38,9 @@ export const MedicationList = () => {
 
     return (
         <>
+
             <section className="medications">
-                <h1>Medications</h1>
+                <h1 className="listTitles">Medications</h1>
                 <div>
                     <Button type="button"
                         variant="secondary" size="sm"
@@ -47,10 +50,11 @@ export const MedicationList = () => {
                     </Button>
                 </div>
             </section>
-
+            <hr></hr>
             <section className="medList">
                 {medications.map(medication => <MedicationCard render={render} medication={medication} key={medication.id} handleDeleteMedication={handleDeleteMedication} />)}
             </section>
+
 
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>New Medication</ModalHeader>

@@ -1,0 +1,308 @@
+button.messageAdd.btn.btn-secondary.btn-sm {
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+button.messageDelete.btn.btn-secondary {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+button.messageEdit.btn.btn-secondary {
+    margin-left: 5px;
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+.message-update-buttons {
+    background-color: lightyellow;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 1rem;
+    background-color: lightyellow
+}
+
+button.messageComment.btn.btn.btn-secondary {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+    margin-right: 16px;
+}
+
+button.comment-save-button.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 10px;
+    background-color: seagreen;
+}
+
+.messages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.messageList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* animation: fadeIn; 
+    animation-duration: 1s;  */
+}
+
+.message {
+    width: 700px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.messageBody.card-body {
+    background-color: lightyellow;
+}
+
+section.messagesIntro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* animation: fadeIn; 
+    animation-duration: 1s;  */
+}
+
+.messageOrder {
+    display: flex;
+    flex-direction: row;
+}
+
+button.showAll.btn.btn-secondary.btn-sm {
+    margin-left: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blueviolet;
+}
+
+button.message-save-button.btn.btn-secondary {
+    margin-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: seagreen;
+}
+
+select.orderDrop {
+    margin-left: 4px;
+    background-color: lightyellow;
+}
+
+button.myMessages.btn.btn-secondary.btn-sm {
+    margin-left: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+button.commentDelete.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: red;
+}
+
+button.commentEdit.btn.btn-secondary.btn-sm {
+    padding-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-right: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: blue;
+}
+
+.messenger {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    font-size: 23px;
+    background-color: seagreen;
+    font-weight: bold;
+    color: white;
+}
+
+.time {
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.messageMainTitle {
+    display: flex;
+    align-items: center;
+}
+
+section.commentButtonContainer {
+    width: 700px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.commentList {
+    margin-left: 250px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comment {
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+section.commentCard {
+    display: flex;
+    margin-bottom: 5px;
+    min-width: 400px;
+    max-width: 400px;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+section.commentArea {
+    background-color: lightblue;
+    position: relative;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    min-width: 350px;
+    max-width: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section.commentArea:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: lightblue;
+}
+
+section.commentArea:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+}
+
+section.commentArea {
+    background-color: lavender;
+    position: relative;
+    margin-bottom: 8px;
+    margin-left: 10px;
+    min-width: 350px;
+    max-width: 350px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+section.commentArea:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: lavender;
+}
+
+section.commentArea:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+}
+
+.commentTitle {
+    font-size: 18px;
+    font-weight: bold;
+    max-width: 200px;
+}
+
+.comButtons {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+    margin-bottom: 5px;
+}
+
+section.messageCardContainer {
+    border: 1px solid lightslategrey;
+    border-top: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+img.commentPic {
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+
+img.messagePic {
+    height: 80px;
+    border-radius: 47.5px;
+    width: 80px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

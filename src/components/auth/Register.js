@@ -6,7 +6,7 @@ import "./Login.css"
 
 export const Register = ({ setAuthUser }) => {
 
-    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "" })
+    const [registerUser, setRegisterUser] = useState({ firstName: "", lastName: "", email: "", image:"https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"})
 
     const history = useHistory()
 
@@ -42,7 +42,8 @@ export const Register = ({ setAuthUser }) => {
                         body: JSON.stringify({
                             email: registerUser.email,
                             firstName: registerUser.firstName,
-                            lastName: registerUser.lastName
+                            lastName: registerUser.lastName, 
+                            image: registerUser.image
                         })
                     })
                         .then(res => res.json())

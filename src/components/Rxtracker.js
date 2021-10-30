@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { ApplicationViews } from "../components/ApplicationViews/ApplicationViews";
 import { NavBar } from "./nav/NavBar";
+import 'animate.css';
 import "./Rxtracker.css"
 
 
@@ -12,9 +13,10 @@ export const RxTracker = () => {
 
     const setAuthUser = (user) => {
         sessionStorage.setItem("rxtracker_user", user.id)
+        sessionStorage.setItem("rxtracker_image", user.image)
         sessionStorage.setItem("rxtracker_username", user.firstName)
-        setIsAuthenticated(sessionStorage.getItem("rxtracker_user") !== null)
-        
+        sessionStorage.setItem("rxtracker_fullname", user.firstName + " " + user.lastName)
+        setIsAuthenticated(sessionStorage.getItem("rxtracker_user") !== null) 
     }
 
     const clearUser = () => {
@@ -24,7 +26,7 @@ export const RxTracker = () => {
 
     return (
         <>
-            <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} />
+            <NavBar clearUser={clearUser} isAuthenticated={isAuthenticated} setAuthUser={setAuthUser}/>
             <ApplicationViews setAuthUser={setAuthUser} isAuthenticated={isAuthenticated} />
         </>
     )

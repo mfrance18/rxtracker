@@ -1,0 +1,58 @@
+.intro {
+    color: white;
+    margin-left: 132px;
+}
+
+.profilePic {
+    height: 150px;
+    width: 150px;
+    border-radius: 75px;
+}
+  
+  .img__wrap:hover .img__description {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .img__wrap {
+    display: flex;
+    align-items: center;
+}
+
+.img__description {
+    background: seagreen;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    margin-right: 10px;
+}
+
+.profileImageEdit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.introContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-around;
+    margin-right: 20px;
+}
+
+.mainImage {
+    width: 300px;
+    margin-top: 10px;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+input#image {
+    text-align: center;
+    margin-bottom: 10px;
+    border: 2px solid seagreen
+}

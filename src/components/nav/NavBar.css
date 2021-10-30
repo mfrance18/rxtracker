@@ -1,7 +1,7 @@
 .mainTitle {
     color: white;
     font-size: 60px;
-    margin-left: 200px;
+    margin-left: 380px;
 }
 
 nav.navbar {
@@ -23,6 +23,7 @@ nav.navbar {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 section.navContainer {
@@ -30,7 +31,7 @@ section.navContainer {
     flex-direction: column;
     align-content: stretch;
     align-items: flex-end;
-    margin-top: 100px;
+    margin-top: 20px;
 }
 
 a.nav-link {
@@ -44,11 +45,6 @@ a.nav-link:hover {
 
 a.nav-link:focus {
     color: yellow; 
-}
-
-.intro {
-    color: white;
-    margin-right: 13px;
 }
 
 section.welcome {

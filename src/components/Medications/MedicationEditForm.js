@@ -4,6 +4,7 @@ import { Button,  Label, Input } from 'reactstrap';
 import { Form } from "react-bootstrap";
 import "./Medications.css"
 
+
 export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
 
     const [medications, setMedications] = useState(medication)
@@ -30,6 +31,7 @@ export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
             dosage: medications.dosage,
             instructions: medications.instructions
         }
+
         updateMedication(editedMedication)
             .then(toggleEdit)
             .then(render)
@@ -47,7 +49,7 @@ export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
         <>
             <section className="medFormContainer">
                 <Form className="medForm">
-                    <h1>Update Medication</h1>
+                    <h1>Edit Medication</h1>
                     <Form.Group>
                         <Label htmlFor="name">Medication Name: </Label>
                         <Input type="text" id="name" onChange={handleFieldChange} placeholder="Name of Medication" value={medications.name} />
@@ -66,7 +68,7 @@ export const MedicationEditForm = ({ toggleEdit, medication, render }) => {
                         <Input type="text" id="dosage" onChange={handleFieldChange} placeholder="Dosage Amount" value={medications.dosage} />
 
                         <Label htmlFor="instructions">Instructions: </Label>
-                        <Input id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medications.instructions} />
+                        <Form.Control as="textarea" className="form-control" id="instructions" onChange={handleFieldChange} placeholder="Instructions" value={medications.instructions} />
                     </Form.Group>
 
                     <div>

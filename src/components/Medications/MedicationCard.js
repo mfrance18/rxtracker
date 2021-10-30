@@ -3,6 +3,7 @@ import { Card, CardTitle, CardBody, ListGroup, Button, ListGroupItem, Modal, Mod
 import { MedicationEditForm } from "./MedicationEditForm";
 import "./Medications.css"
 
+
 export const MedicationCard = ({ medication, handleDeleteMedication, render }) => {
 
     let user = parseInt(sessionStorage.getItem("rxtracker_user"))
@@ -20,9 +21,9 @@ export const MedicationCard = ({ medication, handleDeleteMedication, render }) =
                         <CardTitle className="medicationCardTitle">{medication.name}</CardTitle>
 
                         <ListGroup>
-                            <ListGroupItem>{medication.instructions}</ListGroupItem>
-                            <ListGroupItem>Dosage: {medication.dosage}</ListGroupItem>
                             <ListGroupItem>Amount: {medication.amount}</ListGroupItem>
+                            <ListGroupItem>Dosage: {medication.dosage}</ListGroupItem>
+                            <ListGroupItem>Instructions: {medication.instructions}</ListGroupItem>
                         </ListGroup>
 
                         <Button className="medDelete"

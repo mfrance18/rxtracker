@@ -4,21 +4,54 @@
       "id": 1,
       "firstName": "Matt",
       "lastName": "France",
-      "email": "matt@gmail.com"
+      "email": "matt@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
     },
     {
       "id": 2,
       "firstName": "Ashley",
       "lastName": "Morphis",
-      "email": "ashley@gmail.com"
+      "email": "ashley@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635196311/yajjklqcly4zqucpmbu2.jpg"
     },
     {
-      "email": "jeff@gmail.com",
-      "firstName": "Jeff",
-      "lastName": "G",
-      "id": 3
+      "id": 3,
+      "firstName": "David",
+      "lastName": "France",
+      "email": "david@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635196534/yybgupn5rjmxixd47rnt.jpg"
+    },
+    {
+      "id": 4,
+      "firstName": "Robyn",
+      "lastName": "Boyce",
+      "email": "robyn@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635198189/mziqnasw34yjwl7alte3.jpg"
+    },
+    {
+      "id": 5,
+      "firstName": "Rebecca",
+      "lastName": "France",
+      "email": "rebecca@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635199028/mxuowqxfuqdmaepngomq.jpg"
+    },
+    {
+      "id": 6,
+      "firstName": "Austin",
+      "lastName": "Shelton",
+      "email": "austin@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635455786/gojna9dezrem6idmqnfz.jpg"
+    },
+    {
+      "id": 7,
+      "firstName": "Janice",
+      "lastName": "France",
+      "email": "janice@gmail.com",
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635464234/vznldlpwobr9zf8jbwch.jpg"
     }
   ],
+  "messages": [],
+  "comments": [],
   "days": [
     {
       "id": 1,
@@ -51,59 +84,59 @@
   ],
   "medications": [
     {
-      "id": 1,
-      "userId": 1,
-      "name": "Zyrtec",
-      "amount": "1",
-      "dosage": "200mg",
-      "instructions": "Take 1 every 24 hours"
-    },
-    {
       "id": 2,
       "userId": 1,
-      "name": "Dicyclomine",
-      "amount": "3",
-      "dosage": "20mg",
-      "instructions": "May Take 3 per day as needed."
+      "name": "Levothyroxine",
+      "amount": "1",
+      "dosage": "100mg",
+      "instructions": "Take 1 tablet everyday"
     },
     {
-      "name": "Duloxetine",
+      "name": "Vitamin D3",
       "userId": 1,
-      "amount": "2",
-      "instructions": "Take 2 per day",
-      "dosage": "20mg",
+      "amount": "1",
+      "instructions": "For Adults, take 1 softgel daily",
+      "dosage": "25mg",
       "id": 3
     },
     {
-      "name": "Hydroxyzine",
+      "name": "Turmeric Curcumin",
       "userId": 1,
-      "amount": "1",
-      "instructions": "Take 1 tablet as needed per day",
-      "dosage": "25 mg",
+      "amount": "2",
+      "instructions": "Take 2 capsules per day, preferably with food",
+      "dosage": "1500mg",
       "id": 4
     },
     {
-      "name": "Fluconazole",
+      "id": 5,
+      "userId": 1,
+      "name": "Vitamin C",
+      "amount": "1",
+      "dosage": "500mg",
+      "instructions": "Take 1 tablet daily"
+    },
+    {
+      "name": "Zinc",
       "userId": 1,
       "amount": "1",
-      "instructions": "Take 1 tablet per week",
-      "dosage": "150mg",
-      "id": 5
+      "instructions": "Take 1 caplet daily with food",
+      "dosage": "50mg",
+      "id": 6
     },
     {
-      "name": "Zyrtec",
-      "userId": 2,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
-      "id": 7
+      "id": 7,
+      "userId": 1,
+      "name": "Fish Oil",
+      "amount": "2",
+      "dosage": "1000mg",
+      "instructions": "Take 2 softgels daily"
     },
     {
-      "name": "Claritin",
-      "userId": 2,
+      "name": "Lisinopril",
+      "userId": 7,
       "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "200mg",
+      "instructions": "Take 1 per day",
+      "dosage": "20mg",
       "id": 8
     }
   ],
@@ -111,235 +144,164 @@
     {
       "userId": 1,
       "medicationId": 2,
-      "dayId": 1,
-      "status": false,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 1,
-      "status": false,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 1,
-      "status": false,
-      "id": 4
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 1,
+      "dayId": 5,
       "status": true,
       "id": 5,
       "medication": {
-        "name": "Fluconazole",
+        "id": 2,
         "userId": 1,
+        "name": "Levothyroxine",
         "amount": "1",
-        "instructions": "Take 1 tablet per week",
-        "dosage": "150mg",
-        "id": 5
+        "dosage": "100mg",
+        "instructions": "Take 1 tablet everyday"
       }
     },
     {
       "userId": 1,
-      "medicationId": 2,
-      "dayId": 2,
-      "status": false,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 2,
-      "status": false,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 2,
-      "status": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 3,
-      "status": false,
-      "id": 11
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 3,
-      "status": false,
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 3,
-      "status": false,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 4,
-      "status": false,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 4,
-      "status": false,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 4,
-      "status": false,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 5,
-      "status": false,
-      "id": 19
-    },
-    {
-      "userId": 1,
       "medicationId": 3,
       "dayId": 5,
-      "status": false,
-      "id": 20
+      "status": true,
+      "id": 12,
+      "medication": {
+        "name": "Vitamin D3",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "For Adults, take 1 softgel daily",
+        "dosage": "25mg",
+        "id": 3
+      }
     },
     {
       "userId": 1,
       "medicationId": 4,
       "dayId": 5,
-      "status": false,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 6,
-      "status": false,
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 6,
-      "status": false,
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 6,
-      "status": false,
-      "id": 25
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 7,
-      "status": false,
-      "id": 28
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 7,
-      "status": false,
-      "id": 29
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 7,
-      "status": false,
-      "id": 30
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 1,
-      "status": false,
-      "id": 31
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 2,
-      "status": false,
-      "id": 32
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 3,
-      "status": false,
-      "id": 33
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 4,
-      "status": false,
-      "id": 34
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 5,
-      "status": false,
-      "id": 35
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 6,
-      "status": false,
-      "id": 36
-    },
-    {
-      "userId": 2,
-      "medicationId": 8,
-      "dayId": 7,
-      "status": false,
-      "id": 37
+      "status": true,
+      "id": 19,
+      "medication": {
+        "name": "Turmeric Curcumin",
+        "userId": 1,
+        "amount": "2",
+        "instructions": "Take 2 capsules per day, preferably with food",
+        "dosage": "1500mg",
+        "id": 4
+      }
     },
     {
       "userId": 1,
       "medicationId": 5,
-      "dayId": 1,
-      "status": false,
-      "id": 38
+      "dayId": 5,
+      "status": true,
+      "id": 26,
+      "medication": {
+        "id": 5,
+        "userId": 1,
+        "name": "Vitamin C",
+        "amount": "1",
+        "dosage": "500mg",
+        "instructions": "Take 1 tablet daily"
+      }
     },
     {
       "userId": 1,
-      "medicationId": 1,
-      "dayId": 1,
+      "medicationId": 6,
+      "dayId": 4,
       "status": true,
-      "id": 39,
+      "id": 32,
       "medication": {
-        "id": 1,
+        "name": "Zinc",
         "userId": 1,
-        "name": "Zyrtec",
         "amount": "1",
-        "dosage": "200mg",
-        "instructions": "Take 1 every 24 hours"
+        "instructions": "Take 1 caplet daily with food",
+        "dosage": "50mg",
+        "id": 6
       }
+    },
+    {
+      "userId": 1,
+      "medicationId": 6,
+      "dayId": 5,
+      "status": true,
+      "id": 33,
+      "medication": {
+        "name": "Zinc",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 caplet daily with food",
+        "dosage": "50mg",
+        "id": 6
+      }
+    },
+    {
+      "userId": 1,
+      "dayId": 4,
+      "medicationId": 6,
+      "status": true,
+      "id": 43,
+      "medication": {
+        "name": "Zinc",
+        "userId": 1,
+        "amount": "1",
+        "instructions": "Take 1 caplet daily with food",
+        "dosage": "50mg",
+        "id": 6
+      }
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 1,
+      "status": false,
+      "id": 45
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 2,
+      "status": false,
+      "id": 46
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 3,
+      "status": false,
+      "id": 47
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 4,
+      "status": true,
+      "id": 48,
+      "medication": {
+        "name": "Lisinopril",
+        "userId": 7,
+        "amount": "1",
+        "instructions": "Take 1 per day",
+        "dosage": "20mg",
+        "id": 8
+      }
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 5,
+      "status": false,
+      "id": 49
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 6,
+      "status": false,
+      "id": 50
+    },
+    {
+      "userId": 7,
+      "medicationId": 8,
+      "dayId": 7,
+      "status": false,
+      "id": 51
     }
   ]
 }

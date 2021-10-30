@@ -2,9 +2,10 @@
     width: 400px;
     height: 250px;
     margin-left: 10px;
-    border: solid 10px seagreen;
+    border: solid 5px seagreen;
     border-radius: 18px;
     background-color: lightyellow;
+    box-shadow: 2px 5px 5px grey;
 }
 
 form.medUpdateForm {
@@ -67,7 +68,6 @@ button.medDelete.btn.btn-secondary {
 }
 
 button.medAdd.btn.btn-secondary {
-    margin-left: 10px;
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 1px;
@@ -80,29 +80,20 @@ button.medAdd.btn.btn-secondary {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    min-height: 50vh;
+
 }
 
 .medications {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: stretch;
+
 }
 
 .medicationCardTitle.card-title {
     font-size: 20px;
     font-weight: bold;
-}
-
-.modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-clip: padding-box;
-    border: 1px solid rgba(0, 0, 0, .2);
-    border-radius: .3rem;
-    outline: 0;
 }
