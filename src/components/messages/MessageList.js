@@ -1,4 +1,3 @@
-//Author: Matt, Purpose: to render the messages in a list, also be able to create new message
 
 import React, { useState, useEffect } from "react";
 import { MessageCard } from "./MessageCard";
