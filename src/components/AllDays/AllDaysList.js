@@ -1,5 +1,8 @@
 import React from "react";
 import { DayList } from "../schedule/DayList";
+import "./AllDays.css"
+import 'animate.css';
+
 
 
 

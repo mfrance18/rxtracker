@@ -2,12 +2,12 @@
 
 import React, { useState, useEffect } from "react";
 import { MessageCard } from "./MessageCard";
-import { getAllMessages, getAllMessagesReversed, getMessagesByUser } from "../../modules/MessageDataManager"
+import { getAllMessages, getMessagesByUser } from "../../modules/MessageDataManager"
 import { deleteMessage } from "../../modules/MessageDataManager";
 import { Modal, ModalBody, ModalHeader, Button } from "reactstrap";
 import "./Message.css"
-import 'animate.css';
 import { MessageForm } from "./MessageForm";
+import 'animate.css';
 
 
 
@@ -28,20 +28,6 @@ export const MessageList = () => {
         return getAllMessages().then(response => {
             setMessages(response)
         })
-    }
-
-    const handleOnChange = (event) => {
-        if (event.target.value === "1") {
-            return getAllMessagesReversed()
-                .then(response => {
-                    setMessages(response)
-                })
-        } else if (event.target.value === "2") {
-            return getAllMessages()
-                .then(response => {
-                    setMessages(response)
-                })
-        }
     }
 
     const myMessages = () => {
@@ -83,11 +69,6 @@ export const MessageList = () => {
                     </Button>
                     <Button onClick={myMessages} className="myMessages" type="button" variant="secondary" size="sm">My Messages</Button>
                     <Button onClick={reload} className="showAll" type="button" variant="secondary" size="sm">Show All</Button>
-                    <select onChange={handleOnChange} type="button" variant="secondary" size="sm" className="orderDrop">
-                        <option >Select Order</option>
-                        <option value="1">Oldest</option>
-                        <option value="2">Newest</option>
-                    </select>
                 </div>
             </section>
             <hr></hr>

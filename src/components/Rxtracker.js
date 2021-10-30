@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { ApplicationViews } from "../components/ApplicationViews/ApplicationViews";
 import { NavBar } from "./nav/NavBar";
+import 'animate.css';
 import "./Rxtracker.css"
 
 

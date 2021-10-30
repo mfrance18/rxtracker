@@ -5,7 +5,7 @@
       "firstName": "Matt",
       "lastName": "France",
       "email": "matt@gmail.com",
-      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635517341/eixn8azgzdgmehuggh7v.jpg"
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
     },
     {
       "id": 2,
@@ -50,66 +50,8 @@
       "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635464234/vznldlpwobr9zf8jbwch.jpg"
     }
   ],
-  "messages": [
-    {
-      "userId": 3,
-      "messenger": "David France",
-      "message": "Has anyone had any side affects when taking Lisinopril? My doctor prescribed it for blood pressure.",
-      "timestamp": "Mon Oct 25 2021 4:28 pm",
-      "id": 1
-    },
-    {
-      "id": 2,
-      "message": " What vitamins do you recommend taking each day?",
-      "messenger": "Ashley Morphis",
-      "timestamp": "Thu Oct 28 2021 12:19 pm",
-      "userId": 2
-    },
-    {
-      "id": 3,
-      "message": "I just started taking Levothyroxine for my thyroid. I have actually started to notice how much better I feel from before. If you start to notice a difference in your moods and feelings, talk to your doctor, as it could be your thyroid",
-      "messenger": "Austin Shelton",
-      "timestamp": "Thu Oct 28 2021 4:08 pm",
-      "userId": 6
-    },
-    {
-      "userId": 1,
-      "messenger": "Matt France",
-      "message": "My doctor just recommended Zyrtec for my allergies. How has it worked for you?",
-      "timestamp": "Fri Oct 29 2021 9:22 am",
-      "id": 4
-    }
-  ],
-  "comments": [
-    {
-      "userId": 4,
-      "messageId": 1,
-      "commenter": "Robyn",
-      "comment": "Yes, I usually feel really tired when I take it so I take it at night. ",
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "messageId": 2,
-      "commenter": "Matt",
-      "comment": "I am currently taking Vitamin C and Vitamin D3 and I have found myself feeling much better throughout the day",
-      "id": 2
-    },
-    {
-      "userId": 5,
-      "messageId": 1,
-      "commenter": "Rebecca",
-      "comment": "Same as Robyn. I usually feel a little drowsy after taking it. ",
-      "id": 3
-    },
-    {
-      "id": 4,
-      "messageId": 2,
-      "comment": "I also take Vitamin B and I have noticed how much more energetic each day",
-      "commenter": "Janice",
-      "userId": 7
-    }
-  ],
+  "messages": [],
+  "comments": [],
   "days": [
     {
       "id": 1,
@@ -196,45 +138,9 @@
       "instructions": "Take 1 per day",
       "dosage": "20mg",
       "id": 8
-    },
-    {
-      "name": "Zyrtec",
-      "userId": 1,
-      "amount": "1",
-      "instructions": "Take 1 every 24 hours",
-      "dosage": "10mg",
-      "id": 9
     }
   ],
   "dailyMedications": [
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 1,
-      "status": false,
-      "id": 1
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 2,
-      "status": false,
-      "id": 2
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 3,
-      "status": false,
-      "id": 3
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 4,
-      "status": false,
-      "id": 4
-    },
     {
       "userId": 1,
       "medicationId": 2,
@@ -249,48 +155,6 @@
         "dosage": "100mg",
         "instructions": "Take 1 tablet everyday"
       }
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 6,
-      "status": false,
-      "id": 6
-    },
-    {
-      "userId": 1,
-      "medicationId": 2,
-      "dayId": 7,
-      "status": false,
-      "id": 7
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 1,
-      "status": false,
-      "id": 8
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 2,
-      "status": false,
-      "id": 9
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 3,
-      "status": false,
-      "id": 10
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 4,
-      "status": false,
-      "id": 11
     },
     {
       "userId": 1,
@@ -309,48 +173,6 @@
     },
     {
       "userId": 1,
-      "medicationId": 3,
-      "dayId": 6,
-      "status": false,
-      "id": 13
-    },
-    {
-      "userId": 1,
-      "medicationId": 3,
-      "dayId": 7,
-      "status": false,
-      "id": 14
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 1,
-      "status": false,
-      "id": 15
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 2,
-      "status": false,
-      "id": 16
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 3,
-      "status": false,
-      "id": 17
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 4,
-      "status": false,
-      "id": 18
-    },
-    {
-      "userId": 1,
       "medicationId": 4,
       "dayId": 5,
       "status": true,
@@ -366,48 +188,6 @@
     },
     {
       "userId": 1,
-      "medicationId": 4,
-      "dayId": 6,
-      "status": false,
-      "id": 20
-    },
-    {
-      "userId": 1,
-      "medicationId": 4,
-      "dayId": 7,
-      "status": false,
-      "id": 21
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 1,
-      "status": false,
-      "id": 22
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 2,
-      "status": false,
-      "id": 23
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 3,
-      "status": false,
-      "id": 24
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 4,
-      "status": false,
-      "id": 25
-    },
-    {
-      "userId": 1,
       "medicationId": 5,
       "dayId": 5,
       "status": true,
@@ -420,41 +200,6 @@
         "dosage": "500mg",
         "instructions": "Take 1 tablet daily"
       }
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 6,
-      "status": false,
-      "id": 27
-    },
-    {
-      "userId": 1,
-      "medicationId": 5,
-      "dayId": 7,
-      "status": false,
-      "id": 28
-    },
-    {
-      "userId": 1,
-      "medicationId": 6,
-      "dayId": 1,
-      "status": false,
-      "id": 29
-    },
-    {
-      "userId": 1,
-      "medicationId": 6,
-      "dayId": 2,
-      "status": false,
-      "id": 30
-    },
-    {
-      "userId": 1,
-      "medicationId": 6,
-      "dayId": 3,
-      "status": false,
-      "id": 31
     },
     {
       "userId": 1,
@@ -488,69 +233,6 @@
     },
     {
       "userId": 1,
-      "medicationId": 6,
-      "dayId": 6,
-      "status": false,
-      "id": 34
-    },
-    {
-      "userId": 1,
-      "medicationId": 6,
-      "dayId": 7,
-      "status": false,
-      "id": 35
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 1,
-      "status": false,
-      "id": 36
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 2,
-      "status": false,
-      "id": 37
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 3,
-      "status": false,
-      "id": 38
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 4,
-      "status": false,
-      "id": 39
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 5,
-      "status": false,
-      "id": 40
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 6,
-      "status": false,
-      "id": 41
-    },
-    {
-      "userId": 1,
-      "medicationId": 7,
-      "dayId": 7,
-      "status": false,
-      "id": 42
-    },
-    {
-      "userId": 1,
       "dayId": 4,
       "medicationId": 6,
       "status": true,
@@ -563,13 +245,6 @@
         "dosage": "50mg",
         "id": 6
       }
-    },
-    {
-      "userId": 1,
-      "dayId": 4,
-      "medicationId": 6,
-      "status": false,
-      "id": 44
     },
     {
       "userId": 7,
@@ -627,63 +302,6 @@
       "dayId": 7,
       "status": false,
       "id": 51
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 1,
-      "status": false,
-      "id": 52
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 2,
-      "status": false,
-      "id": 53
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 3,
-      "status": false,
-      "id": 54
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 4,
-      "status": false,
-      "id": 55
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 5,
-      "status": true,
-      "id": 56,
-      "medication": {
-        "name": "Zyrtec",
-        "userId": 1,
-        "amount": "1",
-        "instructions": "Take 1 every 24 hours",
-        "dosage": "10mg",
-        "id": 9
-      }
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 6,
-      "status": false,
-      "id": 57
-    },
-    {
-      "userId": 1,
-      "medicationId": 9,
-      "dayId": 7,
-      "status": false,
-      "id": 58
     }
   ]
 }

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Card, CardTitle, CardBody, ListGroup, Button, ListGroupItem, Modal, ModalHeader, ModalBody } from "reactstrap";
 import { MedicationEditForm } from "./MedicationEditForm";
 import "./Medications.css"
-import 'animate.css';
+
 
 export const MedicationCard = ({ medication, handleDeleteMedication, render }) => {
 

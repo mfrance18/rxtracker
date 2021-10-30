@@ -10,11 +10,6 @@ export const getMessagesByUser = (userId) => {
      .then(response => response.json())
  }
 
-export const getAllMessagesReversed = () => {
-    return fetch(`http://localhost:8088/messages?_sort=timestamp&_order=asc&_expand=user`)
-     .then(response => response.json())
- }
-
 export const getMessageById = (messageId) => {
 return fetch(`${remoteURL}/messages/${messageId}`)
 .then(response => response.json())
