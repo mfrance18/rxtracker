@@ -5,7 +5,7 @@
       "firstName": "Matt",
       "lastName": "France",
       "email": "matt@gmail.com",
-      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1635191829/piyed1wnh5ehtg0dp5h9.png"
+      "image": "https://res.cloudinary.com/mfrance18/image/upload/v1643935303/sifeguati1dsal8xnzew.jpg"
     },
     {
       "id": 2,
@@ -138,6 +138,14 @@
       "instructions": "Take 1 per day",
       "dosage": "20mg",
       "id": 8
+    },
+    {
+      "name": "Zyrtec",
+      "userId": 1,
+      "amount": "1",
+      "instructions": "Take 1 every 24 hours",
+      "dosage": "10mg",
+      "id": 9
     }
   ],
   "dailyMedications": [
@@ -551,9 +559,17 @@
     {
       "userId": 1,
       "medicationId": 7,
-      "dayId": 7,
-      "status": false,
-      "id": 100
+      "dayId": 6,
+      "status": true,
+      "id": 99,
+      "medication": {
+        "id": 7,
+        "userId": 1,
+        "name": "Fish Oil",
+        "amount": "2",
+        "dosage": "1000mg",
+        "instructions": "Take 2 softgels daily"
+      }
     }
   ]
 }
