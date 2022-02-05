@@ -13,7 +13,7 @@ To start the Application, run the following command in your terminal inside of t
 npm start
 ```
 
-#Tech Used
+# Tech Used
 
 The tech used to create this app:
 <ul>
